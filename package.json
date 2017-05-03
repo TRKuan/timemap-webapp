@@ -1,0 +1,55 @@
+{
+  "name": "timemap-webapp",
+  "version": "1.0.0",
+  "description": "TimeMap is a calendar that makes your scheduling easy and simple.",
+  "main": "src/index.jsx",
+  "scripts": {
+    "build": "webpack -p",
+    "watch": "webpack -w",
+    "start": "webpack-dev-server",
+    "test": "karma start"
+  },
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "https://shwu10.cs.nthu.edu.tw/104060006/timemap-webapp.git"
+  },
+  "author": "TR",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.15.3",
+    "bootstrap": "^4.0.0-alpha.6",
+    "react": "^15.4.2",
+    "react-addons-css-transition-group": "^15.4.2",
+    "react-addons-transition-group": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-router-dom": "^4.0.0",
+    "reactstrap": "^4.3.0",
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "uuid": "^3.0.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-plugin-transform-class-properties": "^6.23.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-react": "^6.23.0",
+    "css-loader": "^0.27.3",
+    "eslint": "^3.19.0",
+    "eslint-plugin-react": "^6.10.3",
+    "style-loader": "^0.14.1",
+    "webpack": "^2.3.1",
+    "webpack-dev-server": "^2.4.2",
+    "expect": "^1.20.2",
+    "karma": "^1.5.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-mocha": "^1.3.0",
+    "karma-mocha-reporter": "^2.2.3",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^2.0.3",
+    "mocha": "^3.2.0",
+    "nodemon": "^1.11.0"
+  }
+}
