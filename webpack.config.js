@@ -8,6 +8,7 @@ module.exports = {
     context: srcPath,
     resolve: {
         alias: {
+            states: path.resolve(srcPath, 'states'),
             components: path.resolve(srcPath, 'components'),
             api: path.resolve(srcPath, 'api')
         }
