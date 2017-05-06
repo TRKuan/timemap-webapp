@@ -1,18 +1,22 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import EventForm from 'components/EventForm.jsx';
+import Map from 'components/Map.jsx';
 
 import './Main.css';
 
 class Main extends React.Component {
     constructor(props) {
         super(props);
-        this.store = null;
     }
 
     render() {
+        const {events} = this.props;
         return (
             <div className="main">
-              <h1>Hello word</h1>
+              <EventForm />
+              {events.map((event, i) => <p key={`event${i}`}>{`${event.title} | Time: ${event.date} | ${event.geolocation}`}</p>)}
+              <Map />
             </div>
         );
     }
@@ -20,6 +24,6 @@ class Main extends React.Component {
 
 export default connect((state) => {
     return {
-        ...state
+        ...state.calendar
     };
 })(Main);
