@@ -46,58 +46,13 @@ class Map extends React.Component {
             zoom: 17
         });
         this.map.on('load', () => {
-            this.initPinPoint();
             this.initEventPoints();
             this.initCurrentPosition();
+            this.initPinPoint();
             this.map.on('click', (e) => {
                 this.setPinPosition(e.lngLat);
             });
         });
-    }
-
-    initPinPoint(){
-        //pin point
-        this.map.addSource('pin-point', {
-            "type": "geojson",
-            "data": {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": []
-                }
-            }
-        });
-        this.map.addLayer({
-            "id": "pin-point",
-            "source": "pin-point",
-            "type": "circle",
-            "paint": {
-                "circle-radius": 10,
-                "circle-color": "rgb(6, 150, 64)"
-            }
-        });
-    }
-    setPinPosition(lngLat){
-        this.props.dispatch(setPinPosition(lngLat));
-        let data = {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [lngLat.lng, lngLat.lat]
-            }
-        };
-        this.map.getSource('pin-point').setData(data);
-    }
-
-    removePinPoint(){
-      let data = {
-          "type": "Feature",
-          "geometry": {
-              "type": "Point",
-              "coordinates": []
-          }
-      };
-      this.map.getSource('pin-point').setData(data);
     }
 
     initEventPoints(){
@@ -159,6 +114,51 @@ class Map extends React.Component {
                 "circle-color": "rgb(63, 83, 217)"
             }
         });
+    }
+
+    initPinPoint(){
+        //pin point
+        this.map.addSource('pin-point', {
+            "type": "geojson",
+            "data": {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": []
+                }
+            }
+        });
+        this.map.addLayer({
+            "id": "pin-point",
+            "source": "pin-point",
+            "type": "circle",
+            "paint": {
+                "circle-radius": 10,
+                "circle-color": "rgb(6, 150, 64)"
+            }
+        });
+    }
+    setPinPosition(lngLat){
+        this.props.dispatch(setPinPosition(lngLat));
+        let data = {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [lngLat.lng, lngLat.lat]
+            }
+        };
+        this.map.getSource('pin-point').setData(data);
+    }
+
+    removePinPoint(){
+        let data = {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": []
+            }
+        };
+        this.map.getSource('pin-point').setData(data);
     }
 
 }
