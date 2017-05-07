@@ -16,6 +16,13 @@ class Map extends React.Component {
         this.initMap();//so the map can find the container
     }
 
+    componentWillReceiveProps(nextProps){
+        if(nextProps.events!==this.props.events){
+            this.updateEventPoints(nextProps.events);
+            this.removePinPoint();
+        }
+    }
+
     render() {
         return (
             <div id="map"></div>
@@ -39,55 +46,12 @@ class Map extends React.Component {
             zoom: 17
         });
         this.map.on('load', () => {
+            this.initPinPoint();
             this.initEventPoints();
             this.initCurrentPosition();
-            this.initPinPoint();
             this.map.on('click', (e) => {
                 this.setPinPosition(e.lngLat);
             });
-        });
-    }
-
-    initEventPoints(){
-        //event points
-        this.map.addSource('event-points', {
-            "type": "geojson",
-            "data": {
-                "type": "FeatureCollection",
-                "features": []
-            }
-        });
-        this.map.addLayer({
-            "id": "event-points",
-            "source": "event-points",
-            "type": "circle",
-            "paint": {
-                "circle-radius": 10,
-                "circle-color": "#ee4a2d"
-            }
-        });
-    }
-
-    initCurrentPosition(){
-        //current position
-        this.map.addSource('current-position', {
-            "type": "geojson",
-            "data": {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [this.props.currentPosition.lng, this.props.currentPosition.lat]
-                }
-            }
-        });
-        this.map.addLayer({
-            "id": "current-position",
-            "source": "current-position",
-            "type": "circle",
-            "paint": {
-                "circle-radius": 10,
-                "circle-color": "rgb(63, 83, 217)"
-            }
         });
     }
 
@@ -125,10 +89,83 @@ class Map extends React.Component {
         this.map.getSource('pin-point').setData(data);
     }
 
+    removePinPoint(){
+      let data = {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": []
+          }
+      };
+      this.map.getSource('pin-point').setData(data);
+    }
+
+    initEventPoints(){
+        //event points
+        this.map.addSource('event-points', {
+            "type": "geojson",
+            "data": {
+                "type": "FeatureCollection",
+                "features": []
+            }
+        });
+        this.map.addLayer({
+            "id": "event-points",
+            "source": "event-points",
+            "type": "circle",
+            "paint": {
+                "circle-radius": 10,
+                "circle-color": "#ee4a2d"
+            }
+        });
+    }
+
+    updateEventPoints(events){
+        let features = [];
+        for(const event of events){
+            let feature = {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [event.geolocation.lng, event.geolocation.lat]
+                }
+            };
+            features.push(feature);
+        }
+        let data = this.map.getSource('event-points')._data;
+        data.features = features;
+        this.map.getSource('event-points').setData(data);
+    }
+
+
+    initCurrentPosition(){
+        //current position
+        this.map.addSource('current-position', {
+            "type": "geojson",
+            "data": {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [this.props.currentPosition.lng, this.props.currentPosition.lat]
+                }
+            }
+        });
+        this.map.addLayer({
+            "id": "current-position",
+            "source": "current-position",
+            "type": "circle",
+            "paint": {
+                "circle-radius": 10,
+                "circle-color": "rgb(63, 83, 217)"
+            }
+        });
+    }
+
 }
 
 export default connect((state) => {
     return {
+        ...state.calendar,
         ...state.map
     };
 })(Map);
