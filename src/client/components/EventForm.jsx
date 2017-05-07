@@ -59,6 +59,7 @@ class EventForm extends React.Component {
             inputDate: "",
             inputTime: ""
         });
+        console.log(this.props.pinPosition);
         var event = {
             title: this.state.inputText,
             date: new Date(this.state.inputDate+" "+this.state.inputTime),
