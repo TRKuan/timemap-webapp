@@ -1,5 +1,6 @@
 const initCalendarState = {
-    events:[]
+    events:[],
+    transportation: 'walking'
 };
 
 export function calendar(state = initCalendarState, action) {
@@ -11,6 +12,11 @@ export function calendar(state = initCalendarState, action) {
             ...state,
             events
         };
+    case '@CALENDAR/SET_TRANSPORTATION':
+        return {
+            ...state,
+            transportation: action.trans
+        }
     default:
         return state;
     }
