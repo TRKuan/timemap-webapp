@@ -7,6 +7,7 @@ import {
     Input,
     Button
 } from 'reactstrap';
+import moment from 'moment';
 import {addEvent} from 'states/calendar-actions.js';
 
 class EventForm extends React.Component {
@@ -59,10 +60,9 @@ class EventForm extends React.Component {
             inputDate: "",
             inputTime: ""
         });
-        console.log(this.props.pinPosition);
         var event = {
             title: this.state.inputText,
-            date: new Date(this.state.inputDate+" "+this.state.inputTime),
+            date: moment(this.state.inputDate+" "+this.state.inputTime),
             geolocation: this.props.pinPosition
         };
         this.props.dispatch(addEvent(event));

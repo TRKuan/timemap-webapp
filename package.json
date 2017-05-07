@@ -23,6 +23,7 @@
     "express": "^4.15.2",
     "mapbox-gl": "^0.37.0",
     "mapbox-gl-geocoder": "^2.0.1",
+    "moment": "^2.18.1",
     "react": "^15.4.2",
     "react-addons-css-transition-group": "^15.4.2",
     "react-addons-transition-group": "^15.4.2",

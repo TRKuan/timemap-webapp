@@ -15,7 +15,7 @@ class Main extends React.Component {
         return (
             <div className="main">
               <EventForm />
-              {events.map((event, i) => <p key={`event${i}`}>{`${event.title} | Time: ${event.date} | ${event.geolocation}`}</p>)}
+              {events.map((event, i) => <p key={`event${i}`}>{`${event.title} | Time: ${event.date.format('MMM Do YYYY, h:mm:ss a')} | ${event.geolocation}`}</p>)}
               <Map />
             </div>
         );
