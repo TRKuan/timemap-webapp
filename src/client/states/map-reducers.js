@@ -1,6 +1,5 @@
 import mapboxgl from 'mapbox-gl';
 const initMapState = {
-    map: null,
     accessToken: '',
     currentPosition: {lng:122, lat:25},
     pinPosition: {lng:122, lat:25}
@@ -8,7 +7,11 @@ const initMapState = {
 
 export function map(state = initMapState, action) {
     switch (action.type) {
-    case '@MAP/SET_ACCESS_TOKEN':
+    case '@MAP/GET_ACCESS_TOKEN_START':
+        return{
+            ...state,
+        }
+    case '@MAP/GET_ACCESS_TOKEN_END':
         return{
             ...state,
             accessToken: action.token
@@ -22,15 +25,10 @@ export function map(state = initMapState, action) {
             ...state,
             currentPosition: action.lngLat
         };
-    case '@MAP/SET_Pin_POSITION':
+    case '@MAP/SET_PIN_POSITION':
         return{
             ...state,
             pinPosition: action.lngLat
-        }
-    case '@MAP/SET_MAP':
-        return{
-            ...state,
-            map: action.map
         }
     default:
         return state;
