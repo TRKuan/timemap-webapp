@@ -5,3 +5,12 @@ export function addEvent(event) {
         event
     };
 }
+
+export function setEvent(id, key, value) {
+    return {
+        type: '@CALENDAR/SET_EVENT',
+        event,
+        key,
+        value
+    };
+}
