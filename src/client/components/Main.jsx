@@ -2,15 +2,12 @@ import React from 'react';
 import {connect} from 'react-redux';
 import EventForm from 'components/EventForm.jsx';
 import Map from 'components/Map.jsx';
-import {setTransportation} from 'states/calendar-actions.js';
 
 import './Main.css';
 
 class Main extends React.Component {
     constructor(props) {
         super(props);
-
-        this.props.dispatch(setTransportation('wlaking'));
     }
 
     render() {
