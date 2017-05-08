@@ -35,6 +35,35 @@ function getCurrentPositionEnd(lngLat) {
     };
 }
 
+function updateCurrentPosition(lngLat){
+    return {
+        type: '@MAP/UPDATE_CURRENT_POSITION',
+        lngLat
+    };
+}
+
+function watchCurrentPositionStart(watchID){
+    return {
+        type: '@MAP/WATCH_CURRENT_POSITION_START',
+        watchID
+    };
+}
+
+function watchCurrentPosition(){
+    return (dispatch, getState) => {
+        navigator.geolocation.clearWatch(getState().map.watchID);
+        let watchID = navigator.geolocation.watchPosition((position) => {
+            const lat = position.coords.latitude;
+            const lng = position.coords.longitude;
+            dispatch(updateCurrentPosition({lng, lat}));
+        }, () => {
+            console.error("watchPosition error");
+        });
+        dispatch(watchCurrentPositionStart(watchID));
+    };
+
+}
+
 export function getCurrentPosition(){
     return (dispatch) => {
         dispatch(getCurrentPositionStart());
@@ -43,8 +72,9 @@ export function getCurrentPosition(){
                 const lat = position.coords.latitude;
                 const lng = position.coords.longitude;
                 dispatch(getCurrentPositionEnd({lng, lat}));
+                dispatch(watchCurrentPosition());
                 resolve();
-            });
+            }, (error) => reject(error));
         });
     };
 }

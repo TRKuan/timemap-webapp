@@ -25,6 +25,16 @@ export function map(state = initMapState, action) {
             ...state,
             currentPosition: action.lngLat
         };
+    case '@MAP/UPDATE_CURRENT_POSITION':
+        return {
+            ...state,
+            currentPosition: action.lngLat
+        }
+    case '@MAP/WATCH_CURRENT_POSITION_START':
+        return {
+            ...state,
+            watchID: action.watchID
+        }
     case '@MAP/SET_PIN_POSITION':
         return{
             ...state,
