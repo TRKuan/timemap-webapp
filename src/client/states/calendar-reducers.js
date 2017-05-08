@@ -16,7 +16,7 @@ export function calendar(state = initCalendarState, action) {
         return {
             ...state,
             transportation: action.trans
-        }
+        };
     default:
         return state;
     }
