@@ -21,6 +21,10 @@ class Map extends React.Component {
             this.updateEventPoints(nextProps.events);
             this.removePinPoint();
         }
+        if(nextProps.currentPosition!==this.props.currentPosition){
+            if(this.map)
+                this.updateCurrentPosition(nextProps.currentPosition);
+        }
     }
 
     render() {
@@ -129,6 +133,9 @@ class Map extends React.Component {
             }
         };
         this.map.getSource('current-position').setData(data);
+        this.map.flyTo({
+            center: [lngLat.lng, lngLat.lat]
+        });
     }
 
     initPinPoint(){
