@@ -5,3 +5,10 @@ export function addEvent(event) {
         event
     };
 }
+
+export function setTransportation(trans) {
+    return {
+        type: '@CALENDAR/SET_TRANSPORTATION',
+        trans
+    };
+}

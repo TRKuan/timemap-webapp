@@ -1,5 +1,6 @@
 const initCalendarState = {
-    events:[] //event{location, geolocation, date, title, decription, lable, trans}
+    events:[], //event{location, geolocation, date, title, decription, lable, trans}
+    transportation: 'walking'
 };
 
 export function calendar(state = initCalendarState, action) {
