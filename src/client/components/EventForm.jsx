@@ -9,7 +9,7 @@ import {
 } from 'reactstrap';
 import moment from 'moment';
 import uuid from 'uuid/v4'
-import {addEvent} from 'states/calendar-actions.js';
+import {addEvent, updateEventInfo} from 'states/calendar-actions.js';
 
 class EventForm extends React.Component {
 
@@ -68,6 +68,7 @@ class EventForm extends React.Component {
             geolocation: this.props.pinPosition
         };
         this.props.dispatch(addEvent(event));
+        this.props.dispatch(updateEventInfo(event.id));
     }
 
 }

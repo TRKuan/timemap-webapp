@@ -1,5 +1,5 @@
 const initCalendarState = {
-    events:[] //event{id, location, geolocation, date, title, decription, lable, trans}
+    events:[] //event{id, location, geolocation, date, title, decription, lable, trans, duration, distance}
 };
 
 export function calendar(state = initCalendarState, action) {
@@ -24,6 +24,14 @@ export function calendar(state = initCalendarState, action) {
             ...state,
             events
         };
+    case '@CALENDAR/UPDATE_EVENT_INFO_START':
+        return {
+            ...state
+        }
+    case '@CALENDAR/UPDATE_EVENT_INFO_END':
+        return {
+            ...state
+        }
     default:
         return state;
     }
