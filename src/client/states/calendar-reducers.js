@@ -1,6 +1,5 @@
 const initCalendarState = {
-    events:[], //event{location, geolocation, date, title, decription, lable, trans}
-    transportation: 'walking'
+    events:[] //event{location, geolocation, date, title, decription, lable, trans}
 };
 
 export function calendar(state = initCalendarState, action) {
@@ -11,11 +10,6 @@ export function calendar(state = initCalendarState, action) {
         return {
             ...state,
             events
-        };
-    case '@CALENDAR/SET_TRANSPORTATION':
-        return {
-            ...state,
-            transportation: action.trans
         };
     default:
         return state;
