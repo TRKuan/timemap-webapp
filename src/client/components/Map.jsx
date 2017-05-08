@@ -25,7 +25,7 @@ class Map extends React.Component {
 
     render() {
         return (
-            <div id="map"></div>
+            <div id="map">{this.props.currentPosition?"":"can't get location"}</div>
         );
     }
 
@@ -33,8 +33,10 @@ class Map extends React.Component {
         this.props.dispatch(getCurrentPosition()).then(() => {
             this.props.dispatch(getAccessToken()).then(() => {
                 this.createMap();
-            });
-        });
+            }).
+            catch(() => console.error("get AccessToken faild"));
+        }).
+        catch(() => console.error("get current position faild"));
     }
 
     createMap() {
@@ -78,6 +80,7 @@ class Map extends React.Component {
     updateEventPoints(events){
         let features = [];
         for(const event of events){
+            if(!event.geolocation)continue;
             let feature = {
                 "type": "Feature",
                 "geometry": {
@@ -116,6 +119,18 @@ class Map extends React.Component {
         });
     }
 
+    updateCurrentPosition(lngLat){
+        if(!lngLat)return;
+        let data = {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [lngLat.lng, lngLat.lat]
+            }
+        };
+        this.map.getSource('current-position').setData(data);
+    }
+
     initPinPoint(){
         //pin point
         this.map.addSource('pin-point', {
@@ -139,6 +154,7 @@ class Map extends React.Component {
         });
     }
     setPinPosition(lngLat){
+        if(!lngLat)return;
         this.props.dispatch(setPinPosition(lngLat));
         let data = {
             "type": "Feature",

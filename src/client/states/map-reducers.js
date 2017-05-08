@@ -1,8 +1,9 @@
 import mapboxgl from 'mapbox-gl';
 const initMapState = {
     accessToken: '',
-    currentPosition: {lng:122, lat:25},
-    pinPosition: {lng:null, lat:null}
+    currentPosition: null, //{lng, lat}
+    watchID: null,
+    pinPosition: null //{lng, lat}
 };
 
 export function map(state = initMapState, action) {
