@@ -1,5 +1,5 @@
 const initCalendarState = {
-    events:[],
+    events:[], //event{location, geolocation, date, title, decription, lable, trans}
     transportation: 'walking'
 };
 
