@@ -9,7 +9,7 @@ export function addEvent(event) {
 export function setEvent(id, key, value) {
     return {
         type: '@CALENDAR/SET_EVENT',
-        event,
+        id,
         key,
         value
     };
