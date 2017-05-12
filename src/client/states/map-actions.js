@@ -1,3 +1,4 @@
+import {getAccessToken as getAccessTokenFromAPI} from 'api/mapboxAPI.js';
 function getAccessTokenStart(){
     return {
         type: '@MAP/GET_ACCESS_TOKEN_START'
@@ -14,10 +15,9 @@ function getAccessTokenEnd(token){
 export function getAccessToken() {
     return (dispatch) => {
         dispatch(getAccessTokenStart());
-        return new Promise((resolve, reject) => {
-            let token = 'pk.eyJ1IjoidHJrdWFuIiwiYSI6ImNqMXlsYnE1ZjAwdHcyeHJxa3lrYWg2dHcifQ.tBkscd-d-S0Z374VcVw3Qg'; //TODO: get from server side
-            dispatch(getAccessTokenEnd(token));
-            resolve();
+        return getAccessTokenFromAPI().then((data) => {
+            dispatch(getAccessTokenEnd(data.token));
+            return data.token;
         });
     };
 }
