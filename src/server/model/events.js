@@ -27,6 +27,7 @@ function create(location, geolocation, ts, endts, allday, title, decription, lab
         const newEvent = {
             id: uuid(),
             location: location,
+            geolocation: geolocation,
             lng: geolocation.lng,
             lat: geolocation.lat,
             ts: ts,
