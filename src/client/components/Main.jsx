@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import EventForm from 'components/EventForm.jsx';
 import Map from 'components/Map.jsx';
+import moment from 'moment';
 
 import './Main.css';
 
@@ -15,7 +16,7 @@ class Main extends React.Component {
         return (
             <div className="main">
               <EventForm />
-              {events.map((event, i) => <p key={`event${i}`}>{`${event.title} | Time: ${event.ts.format('MMM Do YYYY, h:mm:ss a')} | ${event.geolocation} | ${event.duration} s | ${event.distance} m`}</p>)}
+              {events.map((event, i) => <p key={`event${i}`}>{`${event.title} | Time: ${moment(event.ts).format('MMM Do YYYY, h:mm:ss a')} | ${event.geolocation} | ${event.duration} s | ${event.distance} m`}</p>)}
               <Map />
             </div>
         );
