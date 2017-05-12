@@ -20,7 +20,7 @@ router.post('/events', function(req, res) {
     const {location, geolocation, ts, endts, allday, title, decription, lable, trans} = req.body;
     console.log(geolocation);
     if(allday == 0){
-      if (!ts || !title ||!endts) {
+      if (!ts || !title) {
           const err = new Error('ts and title and endts are required');
           err.status = 400;
           throw err;
