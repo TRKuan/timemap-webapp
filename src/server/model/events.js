@@ -58,7 +58,14 @@ function create(location, geolocation, ts, endts, allday, title, decription, lab
     });
 }
 
+function accesstoken() {
+  return new Promise((resolve, reject) => {
+    resolve(JSON.parse('{"token": "pk.eyJ1IjoidHJrdWFuIiwiYSI6ImNqMXlsYnE1ZjAwdHcyeHJxa3lrYWg2dHcifQ.tBkscd-d-S0Z374VcVw3Qg"}'));
+  });
+}
+
 module.exports = {
     list,
-    create
+    create,
+    accesstoken
 };

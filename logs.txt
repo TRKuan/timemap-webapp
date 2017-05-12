@@ -53,3 +53,696 @@
     at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
     at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\read.js:129:5
     at invokeCallback (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\raw-body\index.js:262:16)
+1494599609 ERROR  TypeError: eventModel.accesstoken is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:14
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601116 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601118 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601119 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601119 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601120 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601120 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601120 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601180 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601180 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601181 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601181 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601181 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601182 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601182 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601182 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601211 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601212 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601213 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601214 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601214 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601215 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601216 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601236 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601236 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601236 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601237 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601237 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601237 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601237 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601237 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601238 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601238 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601253 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601343 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601344 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601344 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601345 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601345 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601345 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601345 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601345 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601345 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601345 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601346 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601346 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601346 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601346 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601355 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601355 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601355 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601355 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601355 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601355 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601385 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601436 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601437 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601437 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601437 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601437 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601456 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:49:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494601761 ERROR  TypeError: eventModel.accesstoken(...).then is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:50:28
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1494602361 ERROR  Error: trans is required
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:37:21
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\read.js:129:5
+    at invokeCallback (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\raw-body\index.js:262:16)

@@ -44,6 +44,13 @@ router.post('/events', function(req, res) {
     });
 });
 
+//AccessToken
+router.get('/accesstoken', function(req, res){
+  eventModel.accesstoken().then(accesstoken => {
+      res.json(accesstoken);
+  });
+});
+
 // Vote
 /*router.post('/posts/:id/:mood(clear|clouds|drizzle|rain|thunder|snow|windy)Votes', function(req, res) {
     const {id, mood} = req.params;
