@@ -15,8 +15,9 @@ export function addEventEnd(event) {
 export function addEvent(event) {
     return (dispatch) => {
         dispatch(addEventStart());
-        return addEventFormAPI(event).then(() => {
-            dispatch(addEventEnd(event));
+        return addEventFormAPI(event).then((data) => {
+            dispatch(addEventEnd(data));
+            dispatch(updateEventInfo(data.id));
         }).
         catch(() => {
             console.error("Can't add event to server");
