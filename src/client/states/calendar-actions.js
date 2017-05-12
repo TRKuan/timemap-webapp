@@ -1,4 +1,5 @@
 import {getDirection as getDirectionFormAPI} from 'api/mapboxAPI.js';
+import {addEvent as addEventFormAPI} from 'api/calendarAPI.js';
 export function addEventStart() {
     return {
         type: '@CALENDAR/ADD_EVENT_START'
@@ -14,10 +15,11 @@ export function addEventEnd(event) {
 export function addEvent(event) {
     return (dispatch) => {
         dispatch(addEventStart());
-        return new Promise((resolve, reject) => {
-            //postEvent
+        return addEventFormAPI(event).then(() => {
             dispatch(addEventEnd(event));
-            resolve(event);
+        }).
+        catch(() => {
+            console.error("Can't add event to server");
         });
     };
 }
