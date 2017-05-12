@@ -65,8 +65,46 @@ function accesstoken() {
   });
 }
 
+function modify(eventId, location, geolocation, ts, endts, allday, title, decription, lable, trans) {
+    return new Promise((resolve, reject) => {
+        let eventPost = null;
+        list().then(events => {
+            events = events.map(e => {
+                if (e.id === eventId) {
+                    eventPost = e;
+                    e.location = location;
+                    e.geolocation = geolocation;
+                    e.lng = geolocation.lng,
+                    e.lat = geolocation.lat,
+                    e.ts = ts,
+                    e.endts = endts,
+                    e.year = new Date(ts).getFullYear(),
+                    e.month = new Date(ts).getMonth(),
+                    e.day = new Date(ts).getDate(),
+                    e.endyear = new Date(endts).getFullYear(),
+                    e.endmonth = new Date(endts).getMonth(),
+                    e.endday = new Date(endts).getDate(),
+                    e.allday = allday,
+                    e.title = title,
+                    e.decription = decription,
+                    e.lable = lable,
+                    e.trans = trans
+                }
+                return e;
+            });
+
+            fs.writeFile('data-events.json', JSON.stringify(events), err => {
+                if (err) reject(err);
+
+                resolve(eventPost);
+            });
+        });
+    });
+}
+
 module.exports = {
     list,
     create,
-    accesstoken
+    accesstoken,
+    modify
 };

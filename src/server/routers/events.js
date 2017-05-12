@@ -51,17 +51,34 @@ router.get('/accesstoken', function(req, res){
   });
 });
 
-// Vote
-/*router.post('/posts/:id/:mood(clear|clouds|drizzle|rain|thunder|snow|windy)Votes', function(req, res) {
-    const {id, mood} = req.params;
-    if (!id || !mood) {
-        const err = new Error('Post ID and mood are required');
+// setEvent
+router.post('/events/:id', function(req, res) {
+    const {id, location, geolocation, ts, endts, allday, title, decription, lable, trans} = req.body;
+    if(allday == 0){
+      if (!ts || !title) {
+          const err = new Error('ts and title and endts are required');
+          err.status = 400;
+          throw err;
+      }
+    }else if(allday == 1){
+      if (!ts || !title) {
+          const err = new Error('ts and title are required');
+          err.status = 400;
+          throw err;
+      }
+    }
+    console.log(trans);
+    console.log(geolocation);
+    if(geolocation !== null){
+      if(!trans){
+        const err = new Error('trans is required');
         err.status = 400;
         throw err;
+      }
     }
-    voteModel.create(id, mood).then(post => {
-        res.json(post);
+    eventModel.modify(id, location, geolocation, ts, endts, allday, title, decription, lable, trans).then(event => {
+        res.json(event);
     });
-});*/
+});
 
 module.exports = router;

@@ -757,3 +757,69 @@
     at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
     at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\read.js:129:5
     at invokeCallback (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\raw-body\index.js:262:16)
+1494608156 ERROR  Error: trans is required
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:72:21
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at param (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:354:14)
+    at param (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:410:3)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+1494608224 ERROR  Error: trans is required
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:72:21
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at param (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:354:14)
+    at param (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:410:3)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+1494608306 ERROR  Error: trans is required
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:73:21
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at param (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:354:14)
+    at param (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:410:3)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+1494608364 ERROR  ReferenceError: voteModel is not defined
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:78:5
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at param (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:354:14)
+    at param (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:410:3)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+1494608606 ERROR  Error: trans is required
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:73:21
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at param (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:354:14)
+    at param (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:410:3)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+1494608662 ERROR  Error: trans is required
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:74:21
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at param (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:354:14)
+    at param (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:410:3)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
