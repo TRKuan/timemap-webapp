@@ -5,7 +5,11 @@ const initCalendarState = {
 export function calendar(state = initCalendarState, action) {
     let events = null;
     switch (action.type) {
-    case '@CALENDAR/ADD_EVENT':
+    case '@CALENDAR/ADD_EVENT_START':
+        return {
+            ...state
+        };
+    case '@CALENDAR/ADD_EVENT_END':
         events = state.events.slice();
         events.push(action.event);
         return {

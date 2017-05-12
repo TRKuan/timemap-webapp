@@ -1,8 +1,24 @@
 import {getDirection as getDirectionFormAPI} from 'api/mapboxAPI.js';
-export function addEvent(event) {
+export function addEventStart() {
     return {
-        type: '@CALENDAR/ADD_EVENT',
+        type: '@CALENDAR/ADD_EVENT_START'
+    };
+}
+export function addEventEnd(event) {
+    return {
+        type: '@CALENDAR/ADD_EVENT_END',
         event
+    };
+}
+
+export function addEvent(event) {
+    return (dispatch) => {
+        dispatch(addEventStart());
+        return new Promise((resolve, reject) => {
+            //postEvent
+            dispatch(addEventEnd(event));
+            resolve(event);
+        });
     };
 }
 
