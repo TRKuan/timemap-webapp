@@ -55,7 +55,7 @@ export function updateEventInfo(id){
                 break;
             }
         }
-        if(!geolocation)throw Error("can't fint event");
+        if(!geolocation)throw Error("can't find event");
         if(!trans)trans = 'walking';
         return getDirectionFormAPI(getstate().map.currentPosition, geolocation, trans, getstate().map.accessToken).then((res) => {
             dispatch(setEvent(id, 'duration', res.duration));
