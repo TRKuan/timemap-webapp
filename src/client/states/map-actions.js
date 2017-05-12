@@ -73,7 +73,7 @@ export function getCurrentPosition(){
                 const lng = position.coords.longitude;
                 dispatch(getCurrentPositionEnd({lng, lat}));
                 dispatch(watchCurrentPosition());
-                resolve();
+                resolve({lng, lat});
             }, (error) => reject(error));
         });
     };
