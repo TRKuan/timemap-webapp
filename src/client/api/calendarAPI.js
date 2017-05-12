@@ -1,9 +1,9 @@
 import axios from 'axios';
 
-const postBaseUrl = 'http://localhost:8080/api';
+const baseUrl = 'http://localhost:8080/api';
 
 export function addEvent(event) {
-    let url = `${postBaseUrl}/events`;
+    let url = `${baseUrl}/events`;
 
     console.log(`Making POST request to: ${url}`);
 
