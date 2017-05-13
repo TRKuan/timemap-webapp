@@ -1,8 +1,27 @@
 import {getDirection as getDirectionFormAPI} from 'api/mapboxAPI.js';
-export function addEvent(event) {
+import {addEvent as addEventFormAPI} from 'api/calendarAPI.js';
+export function addEventStart() {
     return {
-        type: '@CALENDAR/ADD_EVENT',
+        type: '@CALENDAR/ADD_EVENT_START'
+    };
+}
+export function addEventEnd(event) {
+    return {
+        type: '@CALENDAR/ADD_EVENT_END',
         event
+    };
+}
+
+export function addEvent(event) {
+    return (dispatch) => {
+        dispatch(addEventStart());
+        return addEventFormAPI(event).then((data) => {
+            dispatch(addEventEnd(data));
+            dispatch(updateEventInfo(data.id));
+        }).
+        catch(() => {
+            console.error("Can't add event to server");
+        });
     };
 }
 
@@ -39,11 +58,11 @@ export function updateEventInfo(id){
                 break;
             }
         }
-        if(!geolocation)throw Error("can't fint event");
+        if(!geolocation)throw Error("can't find event");
         if(!trans)trans = 'walking';
-        return getDirectionFormAPI(getstate().map.currentPosition, geolocation, trans, getstate().map.accessToken).then((res) => {
-            dispatch(setEvent(id, 'duration', res.duration));
-            dispatch(setEvent(id, 'distance', res.distance));
+        return getDirectionFormAPI(getstate().map.currentPosition, geolocation, trans, getstate().map.accessToken).then((data) => {
+            dispatch(setEvent(id, 'duration', data.duration));
+            dispatch(setEvent(id, 'distance', data.distance));
             dispatch(updateEventInfoEnd());
         });
     };

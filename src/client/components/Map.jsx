@@ -13,7 +13,11 @@ class Map extends React.Component {
     }
 
     componentDidMount() {
-        this.initMap();//so the map can find the container
+        try{
+            this.initMap();//so the map can find the container
+        }catch (err){
+            console.error("Can't init map\n" + err);
+        }
     }
 
     componentWillReceiveProps(nextProps){
@@ -29,31 +33,38 @@ class Map extends React.Component {
 
     render() {
         return (
-            <div id="map">{this.props.currentPosition?"":"can't get location"}</div>
+            <div id="map"></div>
         );
     }
 
     initMap() {
-        this.props.dispatch(getCurrentPosition()).then(() => {
-            this.props.dispatch(getAccessToken()).then(() => {
-                this.createMap();
+        this.props.dispatch(getAccessToken()).then(() => {
+            this.props.dispatch(getCurrentPosition()).then(() => {
+                this.createMap(this.props.currentPosition);
             }).
-            catch(() => console.error("get AccessToken faild"));
+            catch((err) => {
+                console.error("get current position faild: " + err.message);
+                this.createMap({lng:121, lat:24});
+            });
         }).
-        catch(() => console.error("get current position faild"));
+        catch((err) => console.error("get AccessToken faild: "+ err.message));
     }
 
-    createMap() {
+    createMap(center) {
         mapboxgl.accessToken = this.props.accessToken;
         this.map = new mapboxgl.Map({
             container: 'map',
             style: 'mapbox://styles/mapbox/streets-v9',
-            center: this.props.currentPosition,
+            center,
             zoom: 17
         });
         this.map.on('load', () => {
             this.initEventPoints();
-            this.initCurrentPosition();
+            try{
+                this.initCurrentPosition();
+            }catch(err){
+                console.error("init current position failed in map: " + err.message);
+            }
             this.initPinPoint();
             this.map.on('click', (e) => {
                 this.setPinPosition(e.lngLat);

@@ -62,13 +62,13 @@ class EventForm extends React.Component {
             inputTime: ""
         });
         var event = {
-            id: uuid(),
             title: this.state.inputText,
-            date: moment(this.state.inputDate+" "+this.state.inputTime),
-            geolocation: this.props.pinPosition
+            ts: moment(this.state.inputDate+" "+this.state.inputTime).valueOf(),
+            geolocation: this.props.pinPosition,
+            trans: 'walking',
+            allday: 0
         };
         this.props.dispatch(addEvent(event));
-        this.props.dispatch(updateEventInfo(event.id));
     }
 
 }

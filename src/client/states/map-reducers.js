@@ -1,4 +1,3 @@
-import mapboxgl from 'mapbox-gl';
 const initMapState = {
     accessToken: '',
     currentPosition: null, //{lng, lat}
