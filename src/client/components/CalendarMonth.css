@@ -1,0 +1,62 @@
+.calendar-month{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color:white;
+}
+.calendar-header{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(54, 208, 176);
+    color: white;
+    padding: 0.5rem;
+}
+.calendar-header .month-select{
+  height: 4rem;
+}
+.calendar-header .current-month{
+    font-size: 1.5rem;
+    padding:0;
+}
+.calendar-header .month-select-button{
+  font-size: 1rem;
+  border: none;
+  border-radius: 0;
+  background-color: rgb(54, 208, 176);
+  color: white;
+}
+.calendar-header .month-select-button:hover{
+  background-color: rgb(74, 228, 196);
+  color: white;
+}
+.days-of-week-row{
+  height:3rem;
+  margin-bottom: 1rem;
+}
+.calendar-body{
+    width: 100%;
+}
+.week{
+    text-align: center;
+    height: 4rem;
+}
+
+.calendar-month .calendar-body .day:hover{
+    color: rgb(74, 228, 196);
+}
+.not-this-month{
+    color: LightGrey;
+}
+
+.vertical-center-parent {
+    display: table;
+    table-layout: fixed;
+    height: 100%;
+    width: 100%;
+}
+
+.vertical-center-child {
+    display:table-cell;
+    vertical-align:middle;
+    text-align:center;
+}

@@ -1,0 +1,13 @@
+.calendar-event-item{
+    display: inline-block;
+    height: 5rem;
+    width: 100%;
+    padding: 1.7rem;
+    border-left: 0.5rem blue solid;
+    background-color: white;
+    margin-bottom: 0.5rem;
+}
+
+.list-group-item{
+  padding: 0;
+}

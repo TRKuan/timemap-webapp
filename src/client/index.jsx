@@ -7,8 +7,10 @@ import {calendar} from 'states/calendar-reducers.js';
 import {map} from 'states/map-reducers.js';
 
 import Main from 'components/Main.jsx';
+import MainClient from 'components/Main-client.jsx';
 
 import './index.css';
+import 'bootstrap/dist/css/bootstrap.css';
 
 window.onload = function() {
     const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -18,8 +20,9 @@ window.onload = function() {
     }), composeEnhancers(applyMiddleware(thunkMiddleware)));
 
     ReactDOM.render((
+         
         <Provider store={this.store}>
-          <Main/>
+          <MainClient/>
         </Provider>
         ),
         document.getElementById('root')
