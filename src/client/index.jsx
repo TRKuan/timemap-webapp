@@ -11,6 +11,7 @@ import MainClient from 'components/Main-client.jsx';
 
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.css';
+import './css/font-awesome.css'
 
 window.onload = function() {
     const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -20,7 +21,7 @@ window.onload = function() {
     }), composeEnhancers(applyMiddleware(thunkMiddleware)));
 
     ReactDOM.render((
-         
+
         <Provider store={this.store}>
           <MainClient/>
         </Provider>

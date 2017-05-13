@@ -19,10 +19,10 @@ export default class CalendarPanel extends React.Component {
         return (
           <div className='calendar-panel'>
               <div className='button-nav d-flex flex-row'>
-                  <Button className='month-button'>Month</Button>
-                  <Button>Week</Button>
-                  <Button>Day</Button>
-                  <Button>Event</Button>
+                  <Button className='col-2 current-mode'>Month</Button>
+                  <Button className='col-2'>Week</Button>
+                  <Button className='col-2'>Day</Button>
+                  <Button className='col-2'>Event</Button>
               </div>
               <div className='calendars'>
                   <CalendarMonth/>

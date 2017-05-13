@@ -41,11 +41,40 @@
     height: 4rem;
 }
 
-.calendar-month .calendar-body .day:hover{
-    color: rgb(74, 228, 196);
+.calendar-month .current-day{
+    background-color: LightGrey;
+    color: white;
+}
+.calendar-month .picked-day{
+    background-color: rgb(74, 228, 196);
+    color: white;
+}
+.has-event-picked, .has-event-current, .has-event-others{
+    width: 50%;
+    min-width: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.3rem 0 0.3rem 0;
+}
+.has-event-picked{
+    border-top: 0.4rem solid rgb(74, 228, 196);
+    border-bottom: 0.4rem solid white;
+}
+.has-event-current{
+    border-top: 0.4rem solid LightGrey;
+    border-bottom: 0.4rem solid white;
+}
+.has-event-others{
+    border-top: 0.4rem solid white;
+    border-bottom: 0.4rem solid rgb(74, 228, 196);
 }
 .not-this-month{
     color: LightGrey;
+}
+
+.calendar-month .calendar-body .day:hover{
+  color: rgb(74, 228, 196);
+  background-color: white;
 }
 
 .vertical-center-parent {

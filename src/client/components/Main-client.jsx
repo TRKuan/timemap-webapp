@@ -26,6 +26,7 @@ import TodayPanel from 'components/TodayPanel.jsx';
 
 import './Main.css';
 
+
 export default class MainClient extends React.Component {
     constructor(props) {
         super(props);

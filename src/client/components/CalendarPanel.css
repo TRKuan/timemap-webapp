@@ -18,7 +18,7 @@
 
 .button-nav .btn{
     margin: 0 0.2rem 0 0;
-    padding: 0.2rem 1.5rem;
+    padding: 0.3rem 0;
     border: none;
     border-radius: 0;
     background-color: white;
@@ -30,6 +30,10 @@
     background-color: white;
 }
 .button-nav .btn:active{
+    color: white;
+    background-color: rgb(54, 208, 176);
+}
+.button-nav .current-mode{
     color: white;
     background-color: rgb(54, 208, 176);
 }

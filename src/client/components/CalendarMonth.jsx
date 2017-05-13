@@ -2,8 +2,10 @@ import React from 'react';
 import {
     Button
 } from 'reactstrap';
+import FontAwesome from 'react-fontawesome';
 
 import './CalendarMonth.css';
+
 
 export default class CalendarMonth extends React.Component {
     constructor(props) {
@@ -16,12 +18,11 @@ export default class CalendarMonth extends React.Component {
             <div className='calendar-month'>
                 <div className='calendar-header container-fluid'>
                   <div className='month-select row justify-content-center'>
-                    <Button className='month-select-button btn'>pre</Button>
+                    <Button className='month-select-button btn'><i className='fa fa-angle-left fa-2x' aria-hidden="true"></i></Button>
                     <div className='vertical-center-parent current-month col-6'>
-                        <div className='vertical-center-child'>DECEMBER 2017</div>
+                        <div className='vertical-center-child'>DECEMBER&nbsp;&nbsp;2017</div>
                     </div>
-
-                    <Button className='month-select-button'>nxt</Button>
+                    <Button className='month-select-button'><i className='fa fa-angle-right fa-2x' aria-hidden="true"></i></Button>
                   </div>
                   <div className='days-of-the-week row'>
                       <div className='col' style={{padding: 0}}>SUN</div>
@@ -35,307 +36,307 @@ export default class CalendarMonth extends React.Component {
                 </div>
                 <div className='calendar-body container-fluid'>
                   <div className='week row'>
-                    <div className='col'>
-                      <div className='day vertical-center-parent not-this-month' style={{padding: 0}}>
+                    <div className='day col'>
+                      <div className='vertical-center-parent not-this-month' style={{padding: 0}}>
                         <div className='vertical-center-child'>
-                          26
+                          <div className=''>8</div>
                         </div>
                       </div>
                     </div>
-                    <div className='col'>
-                      <div className='day vertical-center-parent not-this-month' style={{padding: 0}}>
+                    <div className='day col'>
+                      <div className='vertical-center-parent not-this-month' style={{padding: 0}}>
                         <div className='vertical-center-child'>
-                          27
+                          <div className=''>8</div>
                         </div>
                       </div>
                     </div>
-                    <div className='col'>
-                      <div className='day vertical-center-parent not-this-month' style={{padding: 0}}>
+                    <div className='day col'>
+                      <div className='vertical-center-parent not-this-month' style={{padding: 0}}>
                         <div className='vertical-center-child'>
-                          28
+                          <div className=''>8</div>
                         </div>
                       </div>
                     </div>
-                    <div className='col'>
-                      <div className='day vertical-center-parent not-this-month' style={{padding: 0}}>
+                    <div className='day col'>
+                      <div className='vertical-center-parent not-this-month' style={{padding: 0}}>
                         <div className='vertical-center-child'>
-                          29
+                          <div className=''>8</div>
                         </div>
                       </div>
                     </div>
-                    <div className='col'>
-                      <div className='day vertical-center-parent not-this-month' style={{padding: 0}}>
+                    <div className='day col'>
+                      <div className='vertical-center-parent not-this-month' style={{padding: 0}}>
                         <div className='vertical-center-child'>
-                          30
+                          <div className=''>8</div>
                         </div>
                       </div>
                     </div>
-                    <div className='col'>
-                      <div className='day vertical-center-parent' style={{padding: 0}}>
+                    <div className='day col'>
+                      <div className='vertical-center-parent' style={{padding: 0}}>
                         <div className='vertical-center-child'>
-                          1
+                          <div className=''>8</div>
                         </div>
                       </div>
                     </div>
-                    <div className='col'>
-                      <div className='day vertical-center-parent' style={{padding: 0}}>
+                    <div className='day col'>
+                      <div className='vertical-center-parent' style={{padding: 0}}>
                         <div className='vertical-center-child'>
-                          2
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className='week row'>
-                    <div className='col'>
-                      <div className='day vertical-center-parent' style={{padding: 0}}>
-                        <div className='vertical-center-child'>
-                          3
-                        </div>
-                      </div>
-                    </div>
-                    <div className='col'>
-                      <div className='day vertical-center-parent' style={{padding: 0}}>
-                        <div className='vertical-center-child'>
-                          4
-                        </div>
-                      </div>
-                    </div>
-                    <div className='col'>
-                      <div className='day vertical-center-parent' style={{padding: 0}}>
-                        <div className='vertical-center-child'>
-                          5
-                        </div>
-                      </div>
-                    </div>
-                    <div className='col'>
-                      <div className='day vertical-center-parent' style={{padding: 0}}>
-                        <div className='vertical-center-child'>
-                          6
-                        </div>
-                      </div>
-                    </div>
-                    <div className='col'>
-                      <div className='day vertical-center-parent' style={{padding: 0}}>
-                        <div className='vertical-center-child'>
-                          7
-                        </div>
-                      </div>
-                    </div>
-                    <div className='col'>
-                      <div className='day vertical-center-parent' style={{padding: 0}}>
-                        <div className='vertical-center-child'>
-                          8
-                        </div>
-                      </div>
-                    </div>
-                    <div className='col'>
-                      <div className='day vertical-center-parent' style={{padding: 0}}>
-                        <div className='vertical-center-child'>
-                          9
+                          <div className=''>8</div>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div className='week row'>
-                    <div className='col'>
-                      <div className='day vertical-center-parent' style={{padding: 0}}>
+                    <div className='day col'>
+                      <div className='vertical-center-parent' style={{padding: 0}}>
                         <div className='vertical-center-child'>
-                          10
+                          <div className='has-event-others'>8</div>
                         </div>
                       </div>
                     </div>
-                    <div className='col'>
-                      <div className='day vertical-center-parent' style={{padding: 0}}>
+                    <div className='day col'>
+                      <div className='vertical-center-parent' style={{padding: 0}}>
                         <div className='vertical-center-child'>
-                        11
+                          <div className='has-event-others'>8</div>
                         </div>
                       </div>
                     </div>
-                    <div className='col'>
-                      <div className='day vertical-center-parent' style={{padding: 0}}>
+                    <div className='day col'>
+                      <div className='vertical-center-parent' style={{padding: 0}}>
                         <div className='vertical-center-child'>
-                          12
+                          <div className=''>8</div>
                         </div>
                       </div>
                     </div>
-                    <div className='col'>
-                      <div className='day vertical-center-parent' style={{padding: 0}}>
+                    <div className='day col'>
+                      <div className='vertical-center-parent' style={{padding: 0}}>
                         <div className='vertical-center-child'>
-                          13
+                          <div className=''>8</div>
                         </div>
                       </div>
                     </div>
-                    <div className='col'>
-                      <div className='day vertical-center-parent' style={{padding: 0}}>
+                    <div className='day col'>
+                      <div className='vertical-center-parent' style={{padding: 0}}>
                         <div className='vertical-center-child'>
-                          14
+                          <div className=''>8</div>
                         </div>
                       </div>
                     </div>
-                    <div className='col'>
-                      <div className='day vertical-center-parent' style={{padding: 0}}>
+                    <div className='day col picked-day container'>
+                      <div className='vertical-center-parent' style={{padding: 0}}>
                         <div className='vertical-center-child'>
-                          15
+                          <div className='has-event-picked'>8</div>
                         </div>
                       </div>
                     </div>
-                    <div className='col'>
-                      <div className='day vertical-center-parent' style={{padding: 0}}>
+                    <div className='day col'>
+                      <div className='vertical-center-parent' style={{padding: 0}}>
                         <div className='vertical-center-child'>
-                          16
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className='week row'>
-                    <div className='col'>
-                      <div className='day vertical-center-parent' style={{padding: 0}}>
-                        <div className='vertical-center-child'>
-                          17
-                        </div>
-                      </div>
-                    </div>
-                    <div className='col'>
-                      <div className='day vertical-center-parent' style={{padding: 0}}>
-                        <div className='vertical-center-child'>
-                          18
-                        </div>
-                      </div>
-                    </div>
-                    <div className='col'>
-                      <div className='day vertical-center-parent' style={{padding: 0}}>
-                        <div className='vertical-center-child'>
-                          19
-                        </div>
-                      </div>
-                    </div>
-                    <div className='col'>
-                      <div className='day vertical-center-parent' style={{padding: 0}}>
-                        <div className='vertical-center-child'>
-                          20
-                        </div>
-                      </div>
-                    </div>
-                    <div className='col'>
-                      <div className='day vertical-center-parent' style={{padding: 0}}>
-                        <div className='vertical-center-child'>
-                          21
-                        </div>
-                      </div>
-                    </div>
-                    <div className='col'>
-                      <div className='day vertical-center-parent' style={{padding: 0}}>
-                        <div className='vertical-center-child'>
-                          22
-                        </div>
-                      </div>
-                    </div>
-                    <div className='col'>
-                      <div className='day vertical-center-parent' style={{padding: 0}}>
-                        <div className='vertical-center-child'>
-                          23
+                          <div className='has-event-others'>8</div>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div className='week row'>
-                    <div className='col'>
-                      <div className='day vertical-center-parent' style={{padding: 0}}>
+                    <div className='day col'>
+                      <div className='vertical-center-parent' style={{padding: 0}}>
                         <div className='vertical-center-child'>
-                          24
+                          <div className='h'>8</div>
                         </div>
                       </div>
                     </div>
-                    <div className='col'>
-                      <div className='day vertical-center-parent' style={{padding: 0}}>
+                    <div className='day col'>
+                      <div className='vertical-center-parent' style={{padding: 0}}>
                         <div className='vertical-center-child'>
-                          25
+                          <div className=''>8</div>
                         </div>
                       </div>
                     </div>
-                    <div className='col'>
-                      <div className='day vertical-center-parent' style={{padding: 0}}>
+                    <div className='day col'>
+                      <div className='vertical-center-parent' style={{padding: 0}}>
                         <div className='vertical-center-child'>
-                          26
+                          <div className='has-event-others'>8</div>
                         </div>
                       </div>
                     </div>
-                    <div className='col'>
-                      <div className='day vertical-center-parent' style={{padding: 0}}>
+                    <div className='day col'>
+                      <div className='vertical-center-parent' style={{padding: 0}}>
                         <div className='vertical-center-child'>
-                          27
+                          <div className='has-event-others'>8</div>
                         </div>
                       </div>
                     </div>
-                    <div className='col'>
-                      <div className='day vertical-center-parent' style={{padding: 0}}>
+                    <div className='day col'>
+                      <div className='vertical-center-parent' style={{padding: 0}}>
                         <div className='vertical-center-child'>
-                          28
+                          <div className='has-event-others'>8</div>
                         </div>
                       </div>
                     </div>
-                    <div className='col'>
-                      <div className='day vertical-center-parent' style={{padding: 0}}>
+                    <div className='day col'>
+                      <div className='vertical-center-parent' style={{padding: 0}}>
                         <div className='vertical-center-child'>
-                          29
+                          <div className=''>8</div>
                         </div>
                       </div>
                     </div>
-                    <div className='col'>
-                      <div className='day vertical-center-parent' style={{padding: 0}}>
+                    <div className='day col'>
+                      <div className='vertical-center-parent' style={{padding: 0}}>
                         <div className='vertical-center-child'>
-                          30
+                          <div className='hhas-event-others'>8</div>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div className='week row'>
-                    <div className='col'>
-                      <div className='day vertical-center-parent' style={{padding: 0}}>
+                    <div className='day col'>
+                      <div className='vertical-center-parent' style={{padding: 0}}>
                         <div className='vertical-center-child'>
-                          31
+                          <div className=''>8</div>
                         </div>
                       </div>
                     </div>
-                    <div className='col'>
-                      <div className='day vertical-center-parent not-this-month' style={{padding: 0}}>
+                    <div className='day col'>
+                      <div className='vertical-center-parent' style={{padding: 0}}>
                         <div className='vertical-center-child'>
-                          1
+                          <div className=''>8</div>
                         </div>
                       </div>
                     </div>
-                    <div className='col'>
-                      <div className='day vertical-center-parent not-this-month' style={{padding: 0}}>
+                    <div className='day col'>
+                      <div className='vertical-center-parent' style={{padding: 0}}>
                         <div className='vertical-center-child'>
-                          2
+                          <div className='has-event-others'>8</div>
                         </div>
                       </div>
                     </div>
-                    <div className='col'>
-                      <div className='day vertical-center-parent not-this-month' style={{padding: 0}}>
+                    <div className='day col'>
+                      <div className='vertical-center-parent' style={{padding: 0}}>
                         <div className='vertical-center-child'>
-                          3
+                          <div className=''>8</div>
                         </div>
                       </div>
                     </div>
-                    <div className='col'>
-                      <div className='day vertical-center-parent not-this-month' style={{padding: 0}}>
+                    <div className='day col'>
+                      <div className='vertical-center-parent' style={{padding: 0}}>
                         <div className='vertical-center-child'>
-                          4
+                          <div className='has-event-others'>8</div>
                         </div>
                       </div>
                     </div>
-                    <div className='col'>
-                      <div className='day vertical-center-parent not-this-month' style={{padding: 0}}>
+                    <div className='day col'>
+                      <div className='vertical-center-parent' style={{padding: 0}}>
                         <div className='vertical-center-child'>
-                          5
+                          <div className='has-event-others'>8</div>
                         </div>
                       </div>
                     </div>
-                    <div className='col'>
-                      <div className='day vertical-center-parent not-this-month' style={{padding: 0}}>
+                    <div className='day col'>
+                      <div className='vertical-center-parent' style={{padding: 0}}>
                         <div className='vertical-center-child'>
-                          6
+                          <div className=''>8</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='week row'>
+                    <div className='day col'>
+                      <div className='vertical-center-parent' style={{padding: 0}}>
+                        <div className='vertical-center-child'>
+                          <div className='has-event-others'>8</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className='day col'>
+                      <div className='vertical-center-parent' style={{padding: 0}}>
+                        <div className='vertical-center-child'>
+                          <div className=''>8</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className='day current-day col'>
+                      <div className='vertical-center-parent' style={{padding: 0}}>
+                        <div className='vertical-center-child'>
+                          <div className='has-event-current'>8</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className='day col'>
+                      <div className='vertical-center-parent' style={{padding: 0}}>
+                        <div className='vertical-center-child'>
+                          <div className=''>8</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className='day col'>
+                      <div className='vertical-center-parent' style={{padding: 0}}>
+                        <div className='vertical-center-child'>
+                          <div className=''>8</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className='day col'>
+                      <div className='vertical-center-parent' style={{padding: 0}}>
+                        <div className='vertical-center-child'>
+                          <div className=''>8</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className='day col'>
+                      <div className='vertical-center-parent' style={{padding: 0}}>
+                        <div className='vertical-center-child'>
+                          <div className=''>8</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='week row'>
+                    <div className='day col'>
+                      <div className='vertical-center-parent' style={{padding: 0}}>
+                        <div className='vertical-center-child'>
+                          <div className=''>8</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className='day col'>
+                      <div className='vertical-center-parent not-this-month' style={{padding: 0}}>
+                        <div className='vertical-center-child'>
+                          <div className=''>8</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className='day col'>
+                      <div className='vertical-center-parent not-this-month' style={{padding: 0}}>
+                        <div className='vertical-center-child'>
+                          <div className=''>8</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className='day col'>
+                      <div className='vertical-center-parent not-this-month' style={{padding: 0}}>
+                        <div className='vertical-center-child'>
+                          <div className=''>8</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className='day col'>
+                      <div className='vertical-center-parent not-this-month' style={{padding: 0}}>
+                        <div className='vertical-center-child'>
+                          <div className=''>8</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className='day col'>
+                      <div className='vertical-center-parent not-this-month' style={{padding: 0}}>
+                        <div className='vertical-center-child'>
+                          <div className=''>8</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className='day col'>
+                      <div className='vertical-center-parent not-this-month' style={{padding: 0}}>
+                        <div className='vertical-center-child'>
+                            <div className=''>8</div>
                         </div>
                       </div>
                     </div>
