@@ -7,6 +7,7 @@
     "build": "webpack -p",
     "watch": "webpack -w",
     "start": "webpack-dev-server",
+    "server": "node src/server/server.js",
     "test": "karma start"
   },
   "keywords": [],
