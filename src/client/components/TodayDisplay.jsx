@@ -17,7 +17,7 @@ export default class TodayDisplay extends React.Component {
     render() {
         return (
             <div className='today-display'>
-                <TodayDate/>
+                <TodayDate todaysDate={this.props.todaysDate}/>
                 <TodayNextEvent/>
             </div>
         );

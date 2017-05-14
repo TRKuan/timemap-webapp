@@ -19,7 +19,7 @@ export default class TodayPanel extends React.Component {
             <div className='today-panel'>
               <div className='row'>
                 <div className='col-12 col-sm-5' style={{padding: 0}}>
-                  <TodayDisplay/>
+                  <TodayDisplay todaysDate={this.props.todaysDate}/>
                 </div>
                 <div className='col-12 col-sm-7' style={{padding: 0}}>
                   <TodayLocation/>

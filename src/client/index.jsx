@@ -6,6 +6,8 @@ import {Provider} from 'react-redux';
 import {calendar} from 'states/calendar-reducers.js';
 import {map} from 'states/map-reducers.js';
 
+import {main} from 'states/main-client-reducers.js';
+
 import Main from 'components/Main.jsx';
 import MainClient from 'components/Main-client.jsx';
 
@@ -17,7 +19,8 @@ window.onload = function() {
     const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
     this.store = createStore(combineReducers({
         calendar,
-        map
+        map,
+        main
     }), composeEnhancers(applyMiddleware(thunkMiddleware)));
 
     ReactDOM.render((

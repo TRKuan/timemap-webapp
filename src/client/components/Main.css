@@ -14,9 +14,9 @@ body {
 }
 html{font-size: 14px;}/**xs**/
 @media (min-width:575px) {html{font-size: 15px;}}/**sm**/
-@media (min-width:767px) {html{font-size: 16px;}}/**md**/
-@media (min-width:991px) {html{font-size: 16px;}}/**lg**/
-@media (min-width:1199px) {html{font-size: 16px;}}/**xl**/
+@media (min-width:767px) {html{font-size: 17px;}}/**md**/
+@media (min-width:991px) {html{font-size: 17px;}}/**lg**/
+@media (min-width:1199px) {html{font-size: 17px;}}/**xl**/
 .main{
     min-height: 100%;
     background-color: rgb(240, 240, 240);

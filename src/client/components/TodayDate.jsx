@@ -16,8 +16,8 @@ export default class TodayDate extends React.Component {
     render() {
         return (
             <div className='today-date'>
-                    <div className='todays-date'>December 26, 2017</div>
-                    <div className='today-week-of-the-day'>Tuesday</div>
+                    <div className='todays-date'>{this.props.todaysDate.month}&nbsp;{this.props.todaysDate.date},&nbsp;&nbsp;{this.props.todaysDate.year}</div>
+                    <div className='today-week-of-the-day'>{this.props.todaysDate.day}</div>
             </div>
         );
     }
