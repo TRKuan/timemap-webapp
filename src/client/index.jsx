@@ -7,6 +7,7 @@ import {calendar} from 'states/calendar-reducers.js';
 import {map} from 'states/map-reducers.js';
 
 import {main} from 'states/main-client-reducers.js';
+import {todayNextEvent} from 'states/today-reducers.js';
 
 import Main from 'components/Main.jsx';
 import MainClient from 'components/Main-client.jsx';
@@ -20,7 +21,8 @@ window.onload = function() {
     this.store = createStore(combineReducers({
         calendar,
         map,
-        main
+        main,
+        todayNextEvent
     }), composeEnhancers(applyMiddleware(thunkMiddleware)));
 
     ReactDOM.render((

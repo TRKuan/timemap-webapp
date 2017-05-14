@@ -16,8 +16,7 @@ import {
 } from 'reactstrap';
 
 import {connect} from 'react-redux';
-import {toggleNavbar} from 'states/main-client-actions.js';
-import {updateCurrentDate} from 'states/main-client-actions.js';
+import {toggleNavbar, updateCurrentDate} from 'states/main-client-actions.js';
 
 import CalendarPanel from 'components/CalendarPanel.jsx';
 import TodayPanel from 'components/TodayPanel.jsx';
@@ -40,7 +39,7 @@ class MainClient extends React.Component {
     }
     componentDidMount() {
         this.updateDate();
-        setInterval(this.updateDate, 10000);
+        setInterval(this.updateDate, 1000);
     }
     render() {
         return (
@@ -87,45 +86,19 @@ class MainClient extends React.Component {
         let currentMonth = currentTime.getMonth();
         let currentDate = currentTime.getDate();
         let currentDay = currentTime.getDay();
-        var month = [
-            "January",
-            "February",
-            "March",
-            "April",
-            "May",
-            "June",
-            "July",
-            "August",
-            "September",
-            "October",
-            "November",
-            "December"
+
+        let month = [
+            "January", "February", "March", "April", "May", "June", "July", "August", "September",
+            "October", "November", "December"
         ];
+        let day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
         currentMonth = month[currentMonth];
-        switch (currentDay) {
-            case 0:
-                currentDay = "Sunday";
-                break;
-            case 1:
-                currentDay = "Monday";
-                break;
-            case 2:
-                currentDay = "Tuesday";
-                break;
-            case 3:
-                currentDay = "Wednesday";
-                break;
-            case 4:
-                currentDay = "Thursday";
-                break;
-            case 5:
-                currentDay = "Friday";
-                break;
-            case 6:
-                currentDay = "Saturday";
-        }
+        currentDay = day[currentDay];
+
         currentTime = {month: currentMonth, date: currentDate, year: currentYear, day: currentDay};
-        this.props.dispatch(updateCurrentDate(currentTime));
+        if(currentDate !== this.props.todaysDate.date){
+            this.props.dispatch(updateCurrentDate(currentTime));
+        }
     }
 }
 
