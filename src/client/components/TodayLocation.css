@@ -1,6 +1,10 @@
-.map{
-    width: 100%;
+.today-location{
     height: 100%;
-    max-width: 50rem;
-    max-height: 50rem;
+
+}
+.map{
+    height: 100%;
+}
+.map-img{
+  height: 100%;
 }

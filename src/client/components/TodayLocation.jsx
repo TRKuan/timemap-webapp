@@ -14,10 +14,9 @@ export default class TodayLocation extends React.Component {
     render() {
         return (
             <div className='today-location'>
-                <div>Your Location</div>
-                <div className='map container-fluid d-flex align-items-center justify-content-center'>
-                    <img src='/images/mapbox-example.jpg' className='condition-icon'></img>
-                </div>
+              <div className='map'>
+                <img src='/images/dark-map-example.jpg' className='col map-img' style={{padding: 0}}></img>
+              </div>
             </div>
         );
     }

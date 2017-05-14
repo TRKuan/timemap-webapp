@@ -53,10 +53,10 @@ export default class MainClient extends React.Component {
                                 <Collapse isOpen={this.state.isOpen} navbar>
                                     <Nav navbar>
                                         <NavItem>
-                                            <NavLink tag={Link} to='/today'>Today</NavLink>
+                                            <NavLink tag={Link} to='/'>Today</NavLink>
                                         </NavItem>
                                         <NavItem>
-                                            <NavLink tag={Link} to='/'>Calendar</NavLink>
+                                            <NavLink tag={Link} to='/calendar'>Calendar</NavLink>
                                         </NavItem>
                                     </Nav>
                                 </Collapse>
@@ -64,10 +64,10 @@ export default class MainClient extends React.Component {
                         </div>
                     </div>
 
-                    <Route exact path="/today" render={() => (
+                    <Route exact path="/" render={() => (
                         <TodayPanel />
                     )}/>
-                    <Route exact path="/" render={() => (
+                    <Route exact path="/calendar" render={() => (
                         <CalendarPanel />
                     )}/>
                     {/*<div className='footer'>

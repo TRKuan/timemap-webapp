@@ -1,0 +1,34 @@
+.today-next-event{
+    width: 100%;
+    background-color: rgb(54, 208, 176);
+    color: white;
+    padding: 2rem 3rem;
+
+}
+
+.next-event{
+    margin-bottom: 2rem;
+}
+.today-next-event .next-event-header{
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+.next-event-header .fa{
+    margin-right: 0.5rem;
+}
+.next-event .fa{
+    width: 1.5rem;
+    margin: 0.1rem;
+}
+.next-event .event-title{
+    font-size: 1.5rem;
+    padding-left : 1rem;
+    margin-bottom: 0.5rem;
+}
+.next-event .event-label{
+    border-left: 0.5rem solid rgb(238, 233, 111);
+}
+.leave-time, .event-time, .event-location{
+    margin: 0.2rem 0;
+}

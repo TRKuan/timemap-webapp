@@ -6,6 +6,7 @@ import {
 import TodayDisplay from 'components/TodayDisplay.jsx';
 import TodayLocation from 'components/TodayLocation.jsx';
 
+import './TodayPanel.css';
 
 export default class TodayPanel extends React.Component {
     constructor(props) {
@@ -16,8 +17,14 @@ export default class TodayPanel extends React.Component {
     render() {
         return (
             <div className='today-panel'>
-                <TodayDisplay/>
-                <TodayLocation/>
+              <div className='row'>
+                <div className='col-12 col-sm-5' style={{padding: 0}}>
+                  <TodayDisplay/>
+                </div>
+                <div className='col-12 col-sm-7' style={{padding: 0}}>
+                  <TodayLocation/>
+                </div>
+              </div>
             </div>
         );
     }

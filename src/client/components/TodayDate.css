@@ -1,0 +1,19 @@
+.today-date{
+    width: 100%;
+    background-color: white;
+    color: rgb(76, 80, 102);
+    padding: 2rem;
+}
+.today-date .todays-date, .today-week-of-the-day{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.today-date .todays-date{
+    font-size: 1.3rem;
+
+}
+.today-date .today-week-of-the-day{
+    font-size: 3.5rem;
+}
