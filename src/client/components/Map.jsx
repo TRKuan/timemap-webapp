@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import mapboxgl from 'mapbox-gl';
 
-import {getAccessToken, getCurrentPosition, setPinPosition} from 'states/map-actions.js';
+import {getAccessToken, getCurrentPosition, setPinPosition, clearWatchPosition} from 'states/map-actions.js';
 
 import './Map.css';
 
@@ -21,6 +21,7 @@ class Map extends React.Component {
     }
 
     componentWillUnmount(){
+        this.props.dispatch(clearWatchPosition());
         if(this.map)
             this.map.remove();
     }
