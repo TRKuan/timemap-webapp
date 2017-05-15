@@ -823,3 +823,157 @@
     at param (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:365:14)
     at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:410:3)
     at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+1494611157 ERROR  Error: ts and title and endts are required
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:24:23
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\read.js:129:5
+    at invokeCallback (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\raw-body\index.js:262:16)
+1494611161 ERROR  Error: ts and title and endts are required
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:24:23
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\read.js:129:5
+    at invokeCallback (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\raw-body\index.js:262:16)
+1494611162 ERROR  Error: ts and title and endts are required
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:24:23
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\read.js:129:5
+    at invokeCallback (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\raw-body\index.js:262:16)
+1494611162 ERROR  Error: ts and title and endts are required
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:24:23
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\read.js:129:5
+    at invokeCallback (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\raw-body\index.js:262:16)
+1494611163 ERROR  Error: ts and title and endts are required
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:24:23
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\read.js:129:5
+    at invokeCallback (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\raw-body\index.js:262:16)
+1494611172 ERROR  Error: ts and title and endts are required
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:24:23
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\read.js:129:5
+    at invokeCallback (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\raw-body\index.js:262:16)
+1494866763 ERROR  ReferenceError: geolocation is not defined
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:22:17
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\read.js:129:5
+    at invokeCallback (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\raw-body\index.js:262:16)
+1494866801 ERROR  ReferenceError: geolocation is not defined
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:22:17
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\read.js:129:5
+    at invokeCallback (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\raw-body\index.js:262:16)
+1494866826 ERROR  ReferenceError: allday is not defined
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:23:8
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\read.js:129:5
+    at invokeCallback (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\raw-body\index.js:262:16)
+1494866883 ERROR  ReferenceError: geolocation is not defined
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:36:8
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\read.js:129:5
+    at invokeCallback (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\raw-body\index.js:262:16)
+1494867955 ERROR  Error: trans is required
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:38:21
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\read.js:129:5
+    at invokeCallback (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\raw-body\index.js:262:16)
+1494868001 ERROR  Error: trans is required
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:38:21
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\read.js:129:5
+    at invokeCallback (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\raw-body\index.js:262:16)
+1494868045 ERROR  Error: trans is required
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:38:21
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\read.js:129:5
+    at invokeCallback (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\raw-body\index.js:262:16)
+1494868065 ERROR  Error: trans is required
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:38:21
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\read.js:129:5
+    at invokeCallback (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\raw-body\index.js:262:16)

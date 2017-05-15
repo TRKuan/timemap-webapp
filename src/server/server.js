@@ -1,3 +1,4 @@
+require('../../config.js');
 const express = require('express');
 var cors = require('cors');
 

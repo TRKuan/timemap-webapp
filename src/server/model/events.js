@@ -1,62 +1,44 @@
-const fs = require('fs');
-const uuid = require('uuid/v4');
-const moment = require('moment');
+if (!global.db) {
+    const pgp = require('pg-promise')();
+    db = pgp(process.env.DB_URL);
+}
+//const fs = require('fs');
+//const uuid = require('uuid/v4');
+//const moment = require('moment');
 
 function list(searchId = '') {
-    return new Promise((resolve, reject) => {
-        if (!fs.existsSync('data-events.json')) {
-            fs.writeFileSync('data-events.json', '');
-        }
-
-        fs.readFile('data-events.json', 'utf8', (err, data) => {
-            if (err) reject(err);
-
-            let events = data ? JSON.parse(data) : [];
-            if (events.length > 0 && searchId) {
-                events = events.filter(p => {
-                    return e.id.toLowerCase().indexOf(searchId.toLowerCase()) !== -1
-                });
-            }
-            resolve(events);
-        });
-    });
+    const sql = `
+        SELECT *
+        FROM events
+        WHERE "userId" = $1
+        ORDER BY "startTs" ASC
+    `;
+    return db.any(sql, searchId);
 }
 
-function create(location, geolocation, ts, endts, allday, title, decription, lable, trans) {
-    return new Promise((resolve, reject) => {
-        const newEvent = {
-            id: uuid(),
-            location: location,
-            geolocation: geolocation,
-            lng: geolocation.lng,
-            lat: geolocation.lat,
-            ts: ts,
-            endts: endts,
-            year: new Date(ts).getFullYear(),
-            month: new Date(ts).getMonth(),
-            day: new Date(ts).getDate(),
-            endyear: new Date(endts).getFullYear(),
-            endmonth: new Date(endts).getMonth(),
-            endday: new Date(endts).getDate(),
-            allday: allday,
-            title: title,
-            decription: decription,
-            lable: lable,
-            trans: trans
-        };
-
-        list().then(events => {
-            events = [
-                newEvent,
-                ...events
-            ];
-            fs.writeFile('data-events.json', JSON.stringify(events), err => {
-                if (err) reject(err);
-
-                resolve(newEvent);
-            });
-        });
-    });
+function create(userId, location, lng, lat, startTs, endTs, allDay, title, decription, lable, trans) {
+    const sql = `
+        INSERT INTO events ("userId", "location", "lng", "lat", "startTs", "endTs", "startYear", "startMonth", "startDay", "endYear", "endMonth", "endDay", "allDay", "title", "decription", "lable", "trans")
+        $1,
+        $2,
+        $3,
+        $4,
+        $5,
+        $6,
+        EXTRACT(YEAR FROM TIMESTAMP $5),
+        EXTRACT(MONTH FROM TIMESTAMP $5),
+        EXTRACT(DAY FROM TIMESTAMP $5),
+        EXTRACT(YEAR FROM TIMESTAMP $6),
+        EXTRACT(MONTH FROM TIMESTAMP $6),
+        EXTRACT(DAY FROM TIMESTAMP $6),
+        $7,
+        $8,
+        $9,
+        $10,
+        $11
+        RETURNING *
+    `;
+    return db.one(sql, [userId, location, lng, lat, startTs, endTs, allDay, title, decription, lable, trans]);
 }
 
 function accesstoken() {
@@ -65,46 +47,71 @@ function accesstoken() {
   });
 }
 
-function modify(eventId, location, geolocation, ts, endts, allday, title, decription, lable, trans) {
-    return new Promise((resolve, reject) => {
-        let eventPost = null;
-        list().then(events => {
-            events = events.map(e => {
-                if (e.id === eventId) {
-                    eventPost = e;
-                    e.location = location;
-                    e.geolocation = geolocation;
-                    e.lng = geolocation.lng,
-                    e.lat = geolocation.lat,
-                    e.ts = ts,
-                    e.endts = endts,
-                    e.year = new Date(ts).getFullYear(),
-                    e.month = new Date(ts).getMonth(),
-                    e.day = new Date(ts).getDate(),
-                    e.endyear = new Date(endts).getFullYear(),
-                    e.endmonth = new Date(endts).getMonth(),
-                    e.endday = new Date(endts).getDate(),
-                    e.allday = allday,
-                    e.title = title,
-                    e.decription = decription,
-                    e.lable = lable,
-                    e.trans = trans
-                }
-                return e;
-            });
+function modify(eventId, userID, location, lng, lat, startTs, endTs, allDay, title, decription, lable, trans) {
+    const sql = `
+        UPDATE events
+        SET "location" = $3,
+        "lng" = $4,
+        "lat" = $5,
+        "startTs" = $6,
+        "endTs" = $7,
+        "startYear" = EXTRACT(YEAR FROM TIMESTAMP $6),
+        "startMonth" = EXTRACT(MONTH FROM TIMESTAMP $6),
+        "startDay" = EXTRACT(DAY FROM TIMESTAMP $6),
+        "endYear" = EXTRACT(YEAR FROM TIMESTAMP $7),
+        "endMONTH" = EXTRACT(MONTH FROM TIMESTAMP $7),
+        "endDay" = EXTRACT(DAY FROM TIMESTAMP $7),
+        "allDay" = $8,
+        "title" = $9,
+        "decription" = $10,
+        "lable" = $11,
+        "trans" = $12
+        WHERE "eventId" = $1
+        AND "userID" = $2
+        RETURNING *
+    `;
+    return db.one(sql, [eventId, userId, location, lng, lat, startTs, endTs, allDay, title, decription, lable, trans]);
+}
 
-            fs.writeFile('data-events.json', JSON.stringify(events), err => {
-                if (err) reject(err);
+function day(userId, day) {
+    const sql = `
+        SELECT *
+        FROM events
+        WHERE "userId" = $1
+        AND "day" = $2
+        ORDER BY "startTs" ASC
+    `;
+    return db.any(sql, [userId, day]);
+}
 
-                resolve(eventPost);
-            });
-        });
-    });
+function month(userId, month) {
+    const sql = `
+        SELECT *
+        FROM events
+        WHERE "userId" = $1
+        AND "month" = $2
+        ORDER BY "startTs" ASC
+    `;
+    return db.any(sql, [userId, month]);
+}
+
+function next(userId) {
+    const sql = `
+        SELECT *
+        FROM events
+        WHERE "userId" = $1
+        AND "startTs" > now()
+        ORDER BY "startTs" ASC
+    `;
+    return db.one(sql, [userId, day]);
 }
 
 module.exports = {
     list,
     create,
     accesstoken,
-    modify
+    modify,
+    month,
+    day,
+    next
 };

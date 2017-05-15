@@ -6,6 +6,7 @@
   "scripts": {
     "build": "webpack -p",
     "watch": "webpack -w",
+    "schema": "node src/server/model/schema.js",
     "start": "webpack-dev-server",
     "server": "node src/server/server.js",
     "test": "karma start"
@@ -26,6 +27,7 @@
     "mapbox-gl": "^0.37.0",
     "mapbox-gl-geocoder": "^2.0.1",
     "moment": "^2.18.1",
+    "pg-promise": "^5.7.0",
     "react": "^15.4.2",
     "react-addons-css-transition-group": "^15.4.2",
     "react-addons-transition-group": "^15.4.2",

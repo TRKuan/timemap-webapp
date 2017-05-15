@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+//const accessController = require('../middleware/access-controller.js');
 
 const eventModel = require('../model/events.js');
 //const voteModel = require('../model/votes.js');
@@ -10,36 +11,30 @@ router.use(bodyParser.json());
 
 // List
 router.get('/events', function(req, res) {
-    eventModel.list(req.query.searchId).then(events => {
+    const {userID} = req.query;
+    eventModel.list(userID).then(events => {
         res.json(events);
     });
 });
 
 // Create
 router.post('/events', function(req, res) {
-    const {location, geolocation, ts, endts, allday, title, decription, lable, trans} = req.body;
-    console.log(geolocation);
-    if(allday == 0){
-      if (!ts || !title) {
-          const err = new Error('ts and title and endts are required');
+    const {userId, location, lng, lat, startTs, endTs, allDay, title, decription, lable, trans} = req.params;
+    //console.log(geolocation);
+    if(allDay == 0){
+      if (!startTs || !title || !userId || !endTs) {
+          const err = new Error('ts and title and endts and userId are required');
           err.status = 400;
           throw err;
       }
-    }else if(allday == 1){
-      if (!ts || !title) {
-          const err = new Error('ts and title are required');
+    }else if(allDay == 1){
+      if (!startTs || !title || !userId) {
+          const err = new Error('ts and title and userId are required');
           err.status = 400;
           throw err;
       }
     }
-    if(geolocation !== null){
-      if(!trans){
-        const err = new Error('trans is required');
-        err.status = 400;
-        throw err;
-      }
-    }
-    eventModel.create(location, geolocation, ts, endts, allday, title, decription, lable, trans).then(event => {
+    eventModel.create(userId, location, lng, lat, startTs, endTs, allDay, title, decription, lable, trans).then(event => {
         res.json(event);
     });
 });
@@ -52,32 +47,56 @@ router.get('/accesstoken', function(req, res){
 });
 
 // setEvent
-router.post('/events/:id', function(req, res) {
-    const {id, location, geolocation, ts, endts, allday, title, decription, lable, trans} = req.body;
-    if(allday == 0){
-      if (!ts || !title) {
-          const err = new Error('ts and title and endts are required');
+router.post('/events/:eventId', function(req, res) {
+    const {eventId, userId, location, lng, lat, startTs, endTs, allDay, title, decription, lable, trans} = req.body;
+    if(allDay == 0){
+      if (!startTs || !title || !userId || !endTs) {
+          const err = new Error('ts and title and endts and userId are required');
           err.status = 400;
           throw err;
       }
-    }else if(allday == 1){
-      if (!ts || !title) {
-          const err = new Error('ts and title are required');
+    }else if(allDay == 1){
+      if (!startTs || !title || !userId) {
+          const err = new Error('ts and title and userId are required');
           err.status = 400;
           throw err;
       }
     }
     console.log(trans);
-    console.log(geolocation);
-    if(geolocation !== null){
+    //console.log(geolocation);
+    if(lng !== null){
       if(!trans){
         const err = new Error('trans is required');
         err.status = 400;
         throw err;
       }
     }
-    eventModel.modify(id, location, geolocation, ts, endts, allday, title, decription, lable, trans).then(event => {
+    eventModel.modify(eventId, userId, location, lng, lat, startTs, endTs, allDay, title, decription, lable, trans).then(event => {
         res.json(event);
+    });
+});
+
+//getDay
+router.get('/day', function(req, res) {
+    const {userID, day} = req.query;
+    eventModel.day(userID, day).then(events => {
+        res.json(events);
+    });
+});
+
+//getMonth
+router.get('/month', function(req, res) {
+    const {userID, month} = req.query;
+    eventModel.month(userID, month).then(events => {
+        res.json(events);
+    });
+});
+
+//getNextEvent
+router.get('/nextevent', function(req, res) {
+    const {userID, month} = req.query;
+    eventModel.next(userID, month).then(events => {
+        res.json(events);
     });
 });
 
