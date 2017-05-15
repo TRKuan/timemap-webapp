@@ -1,0 +1,19 @@
+.ant-form-item{
+    margin: 0;
+}
+.submit-button{
+  margin-top: 1rem;
+}
+
+.title, .time-header, .label-header, .transportation-header{
+    margin-left: 0.5rem;
+}
+.title-header, .time-header, .label-header, .transportation-header, .description-header, .location-header{
+  font-size: 1.2rem;
+}
+.time-header, .label-header, .transportation-header, .location-header{
+  margin-top: 0.5rem;
+}
+.ant-col-16{
+    margin-left: 0.5rem;
+}

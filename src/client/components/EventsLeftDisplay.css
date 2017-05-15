@@ -1,0 +1,21 @@
+.events-left-display{
+    background-color: #18CBEB;
+    height: 100%;
+    color: white;
+
+}
+.new-event-header{
+  font-size: 2.5rem;
+  padding: 1rem 0 0 2rem;
+  height: 25%
+
+}
+
+.map{
+
+  height: 75%;
+
+}
+.map-img{
+  height: 100%;
+}

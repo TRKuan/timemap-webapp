@@ -18,8 +18,12 @@ import {
 import {connect} from 'react-redux';
 import {toggleNavbar, updateCurrentDate} from 'states/main-client-actions.js';
 
+import {LocaleProvider} from 'antd';
+import enUS from 'antd/lib/locale-provider/en_US';
+
 import CalendarPanel from 'components/CalendarPanel.jsx';
 import TodayPanel from 'components/TodayPanel.jsx';
+import EventsPanel from 'components/EventsPanel.jsx';
 
 import './Main.css';
 
@@ -43,6 +47,7 @@ class MainClient extends React.Component {
     }
     render() {
         return (
+            <LocaleProvider locale={enUS}>
             <Router>
                 <div className='main'>
                     <div className='bg-inverse'>
@@ -60,6 +65,9 @@ class MainClient extends React.Component {
                                         <NavItem>
                                             <NavLink tag={Link} to='/calendar'>Calendar</NavLink>
                                         </NavItem>
+                                        <NavItem>
+                                            <NavLink tag={Link} to='/events'>Events</NavLink>
+                                        </NavItem>
                                     </Nav>
                                 </Collapse>
                             </Navbar>
@@ -68,13 +76,13 @@ class MainClient extends React.Component {
 
                     <Route exact path="/" render={() => (<TodayPanel todaysDate={this.props.todaysDate}/>)}/>
                     <Route exact path="/calendar" render={() => (<CalendarPanel todaysDate={this.props.todaysDate}/>)}/>
-                    {/*<div className='footer'>
+                    <Route exact path="/events" render={() => (<EventsPanel todaysDate={this.props.todaysDate}/>)}/> {/*<div className='footer'>
                         TimMap.
                     </div>*/}
                 </div>
             </Router>
-
-        );
+        </LocaleProvider>
+      );
     }
     handleNavbarToggle() {
         this.props.dispatch(toggleNavbar());
@@ -88,15 +96,38 @@ class MainClient extends React.Component {
         let currentDay = currentTime.getDay();
 
         let month = [
-            "January", "February", "March", "April", "May", "June", "July", "August", "September",
-            "October", "November", "December"
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"
         ];
-        let day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        let day = [
+            "Sunday",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+        ];
         currentMonth = month[currentMonth];
         currentDay = day[currentDay];
 
-        currentTime = {month: currentMonth, date: currentDate, year: currentYear, day: currentDay};
-        if(currentDate !== this.props.todaysDate.date){
+        currentTime = {
+            month: currentMonth,
+            date: currentDate,
+            year: currentYear,
+            day: currentDay
+        };
+        if (currentDate !== this.props.todaysDate.date) {
             this.props.dispatch(updateCurrentDate(currentTime));
         }
     }

@@ -40,7 +40,12 @@ module.exports = {
                             ],
                             plugins: [
                                 'babel-plugin-transform-class-properties',
-                                'transform-object-rest-spread'
+                                'transform-object-rest-spread',
+                                [
+                                    "import", {
+                                        libraryName: "antd", style: "css" 
+                                    }
+                                ] // `style: true` for less
                             ]
                         }
                     }
@@ -48,15 +53,26 @@ module.exports = {
             }, {
                 test: /\.css$/,
                 use: [
-                    'style-loader',
-                    {
+                    'style-loader', {
                         loader: 'css-loader',
-                        options : {
+                        options: {
                             url: false
                         }
                     }
                 ]
+            }, {
+                test: /\.less$/,
+                use: [
+                    {
+                        loader: "style-loader" // creates style nodes from JS strings
+                    }, {
+                        loader: "css-loader" // translates CSS into CommonJS
+                    }, {
+                        loader: "less-loader" // compiles Less to CSS
+                    }
+                ]
             }
+
         ]
     },
     //plugins: [new webpack.optimize.CommonsChunkPlugin({name: 'vendor', filename: 'vendor.bundle.js', minChunks: 2})],
