@@ -1,3 +1,4 @@
+import moment from 'moment';
 import {getDirection as getDirectionFormAPI} from 'api/mapboxAPI.js';
 import {addEvent as addEventFormAPI} from 'api/calendarAPI.js';
 export function addEventStart() {
@@ -65,5 +66,22 @@ export function updateEventInfo(id){
             dispatch(setEvent(id, 'distance', data.distance));
             dispatch(updateEventInfoEnd());
         });
+    };
+}
+
+export function updateMonthNumbers(year, month){
+    let monthNumbers = [];
+    let m = moment({
+        year,
+        month: month-1,
+        date: 1
+    });
+    var firstDay = m.day();
+    for(let i=0;i<m.daysInMonth();i++){
+        monthNumbers[i+firstDay]=i+1;
+    }
+    return {
+        type: '@CALENDAR/UPDATE_MONTH_NUMBERS',
+        monthNumbers
     };
 }

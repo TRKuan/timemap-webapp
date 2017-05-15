@@ -1,16 +1,21 @@
 import React from 'react';
+import {connect} from 'react-redux';
 import {
     Button
 } from 'reactstrap';
 import FontAwesome from 'react-fontawesome';
-
+import {updateMonthNumbers} from 'states/calendar-actions.js'
 import './CalendarMonth.css';
 
 
-export default class CalendarMonth extends React.Component {
+class CalendarMonth extends React.Component {
     constructor(props) {
         super(props);
 
+    }
+
+    componentWillMount(){
+        this.props.dispatch(updateMonthNumbers(this.props.year, this.props.month));
     }
 
     render() {
@@ -347,3 +352,9 @@ export default class CalendarMonth extends React.Component {
     }
 
 }
+
+export default connect((state) => {
+    return {
+        ...state.calendar
+    };
+})(CalendarMonth);

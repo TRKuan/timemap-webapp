@@ -1,5 +1,9 @@
+import moment from 'moment';
 const initCalendarState = {
-    events:[] //event{id, location, geolocation, date, title, decription, lable, trans, duration, distance}
+    events:[],
+    year: moment().year(),
+    month: moment().month()+1,
+    monthNumbers:[]
 };
 
 export function calendar(state = initCalendarState, action) {
@@ -31,11 +35,16 @@ export function calendar(state = initCalendarState, action) {
     case '@CALENDAR/UPDATE_EVENT_INFO_START':
         return {
             ...state
-        }
+        };
     case '@CALENDAR/UPDATE_EVENT_INFO_END':
         return {
             ...state
-        }
+        };
+    case '@CALENDAR/UPDATE_MONTH_NUMBERS':
+        return {
+            ...state,
+            monthNumbers: action.monthNumbers
+        };
     default:
         return state;
     }
