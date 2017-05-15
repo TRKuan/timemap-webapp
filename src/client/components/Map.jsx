@@ -20,6 +20,11 @@ class Map extends React.Component {
         }
     }
 
+    componentWillUnmount(){
+        if(this.map)
+            this.map.remove();
+    }
+
     componentWillReceiveProps(nextProps){
         if(nextProps.events!==this.props.events){
             this.updateEventPoints(nextProps.events);
@@ -39,12 +44,15 @@ class Map extends React.Component {
 
     initMap() {
         this.props.dispatch(getAccessToken()).then(() => {
-            this.props.dispatch(getCurrentPosition()).then(() => {
+            this.props.dispatch(getCurrentPosition()).
+            catch((err) => {
+                console.error("get current position faild: " + err.message);
+            }).
+            then(() => {
                 this.createMap(this.props.currentPosition);
             }).
             catch((err) => {
-                console.error("get current position faild: " + err.message);
-                this.createMap({lng:121, lat:24});
+                console.error("creat map faild: " + err.message);
             });
         }).
         catch((err) => console.error("get AccessToken faild: "+ err.message));
