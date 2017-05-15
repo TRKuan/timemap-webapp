@@ -49,6 +49,12 @@ function watchCurrentPositionStart(watchID){
     };
 }
 
+function watchCurrentPositionEnd(){
+    return {
+        type: '@MAP/WATCH_CURRENT_POSITION_END'
+    };
+}
+
 function watchCurrentPosition(){
     return (dispatch, getState) => {
         navigator.geolocation.clearWatch(getState().map.watchID);
@@ -61,7 +67,13 @@ function watchCurrentPosition(){
         });
         dispatch(watchCurrentPositionStart(watchID));
     };
+}
 
+export function clearWatchPosition(){
+    return (dispatch, getState) => {
+        navigator.geolocation.clearWatch(getState().map.watchID);
+        dispatch(watchCurrentPositionStart(watchCurrentPositionEnd()));
+    };
 }
 
 export function getCurrentPosition(){

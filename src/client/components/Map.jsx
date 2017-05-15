@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import mapboxgl from 'mapbox-gl';
 
-import {getAccessToken, getCurrentPosition, setPinPosition} from 'states/map-actions.js';
+import {getAccessToken, getCurrentPosition, setPinPosition, clearWatchPosition} from 'states/map-actions.js';
 
 import './Map.css';
 
@@ -18,6 +18,12 @@ class Map extends React.Component {
         }catch (err){
             console.error("Can't init map\n" + err);
         }
+    }
+
+    componentWillUnmount(){
+        this.props.dispatch(clearWatchPosition());
+        if(this.map)
+            this.map.remove();
     }
 
     componentWillReceiveProps(nextProps){
@@ -39,12 +45,15 @@ class Map extends React.Component {
 
     initMap() {
         this.props.dispatch(getAccessToken()).then(() => {
-            this.props.dispatch(getCurrentPosition()).then(() => {
+            this.props.dispatch(getCurrentPosition()).
+            catch((err) => {
+                console.error("get current position faild: " + err.message);
+            }).
+            then(() => {
                 this.createMap(this.props.currentPosition);
             }).
             catch((err) => {
-                console.error("get current position faild: " + err.message);
-                this.createMap({lng:121, lat:24});
+                console.error("creat map faild: " + err.message);
             });
         }).
         catch((err) => console.error("get AccessToken faild: "+ err.message));
