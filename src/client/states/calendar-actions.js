@@ -69,6 +69,20 @@ export function updateEventInfo(id){
     };
 }
 
+export function setMonth(month){
+    return {
+        type: '@CALENDAR/SET_MONTH',
+        month
+    };
+}
+
+export function setYear(year){
+    return {
+        type: '@CALENDAR/SET_YEAR',
+        year
+    };
+}
+
 export function updateMonthNumbers(year, month){
     let monthNumbers = [];
     let m = moment({

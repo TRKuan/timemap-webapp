@@ -40,6 +40,16 @@ export function calendar(state = initCalendarState, action) {
         return {
             ...state
         };
+    case '@CALENDAR/SET_MONTH':
+        return {
+            ...state,
+            month: action.month
+        };
+    case '@CALENDAR/SET_YEAR':
+        return {
+            ...state,
+            year: action.year
+        };
     case '@CALENDAR/UPDATE_MONTH_NUMBERS':
         return {
             ...state,
