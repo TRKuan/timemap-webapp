@@ -17,7 +17,8 @@ export function addEventEnd(event) {
 }
 
 export function addEvent(event) {
-    return (dispatch) => {
+    return (dispatch, getState) => {
+        event.userId = getState().calendar.userId;
         dispatch(addEventStart());
         return addEventFormAPI(event).then((data) => {
             dispatch(addEventEnd(data));
