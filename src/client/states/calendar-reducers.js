@@ -3,7 +3,8 @@ const initCalendarState = {
     events:[],
     year: moment().year(),
     month: moment().month()+1,
-    monthNumbers:[]
+    monthNumbers:[],
+    nextEvent: null
 };
 
 export function calendar(state = initCalendarState, action) {
