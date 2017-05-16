@@ -106,6 +106,7 @@ function next(userId) {
         WHERE "userId" = $1
         AND "startTs" > now()
         ORDER BY "startTs" ASC
+        LIMIT 1
     `;
     let tmp = {};
     try{
