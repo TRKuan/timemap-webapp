@@ -21,13 +21,13 @@ router.get('/events', function(req, res) {
 router.post('/events', function(req, res) {
     const {userId, location, lng, lat, startTs, endTs, allDay, title, decription, lable, trans} = req.body;
     //console.log(geolocation);
-    if(allDay == 0){
+    if(!allDay){
       if (!startTs || !title || !userId || !endTs) {
           const err = new Error('ts and title and endts and userId are required');
           err.status = 400;
           throw err;
       }
-    }else if(allDay == 1){
+    }else if(allDay){
       if (!startTs || !title || !userId) {
           const err = new Error('ts and title and userId are required');
           err.status = 400;

@@ -106,7 +106,13 @@ function next(userId) {
         AND "startTs" > now()
         ORDER BY "startTs" ASC
     `;
-    return db.one(sql, userId);
+    let tmp = {};
+    try{
+      tmp = db.one(sql, userId);
+    }catch(err){
+
+    }
+    return tmp;
 }
 
 module.exports = {
