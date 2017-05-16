@@ -38,8 +38,8 @@ class EventsForm extends React.Component {
                 let lng = null;
                 let lat = null;
                 if(this.props.pinPosition){
-                    lng = this.props.lng;
-                    lat = this.props.lat;
+                    lng = this.props.pinPosition.lng;
+                    lat = this.props.pinPosition.lat;
                 }
                 let event = {
                     location: values.location,
@@ -164,7 +164,7 @@ class EventsForm extends React.Component {
                     <div className='transportation-header'>Transportation</div>
                     <FormItem>
                         {getFieldDecorator('transportation', {
-                            initialValue: 'Driving'
+                            initialValue: 'driving'
                         }, {
                             rules: [
                                 {
@@ -174,9 +174,9 @@ class EventsForm extends React.Component {
                             ]
                         })(
                             <RadioGroup >
-                                <RadioButton value="Driving">Driving</RadioButton>
-                                <RadioButton value="Cycling">Cycling</RadioButton>
-                                <RadioButton value="Walking">Walking</RadioButton>
+                                <RadioButton value="driving">Driving</RadioButton>
+                                <RadioButton value="cycling">Cycling</RadioButton>
+                                <RadioButton value="walking">Walking</RadioButton>
                             </RadioGroup>
                         )}
                     </FormItem>
