@@ -4,7 +4,7 @@ if (!global.db) {
 }
 //const fs = require('fs');
 //const uuid = require('uuid/v4');
-//const moment = require('moment');
+const moment = require('moment');
 
 function list(userId = '') {
     const sql = `
@@ -89,7 +89,7 @@ function day(userId, year, month, day) {
 
 function month(userId, year, month) {
     const sql = `
-        SELECT *
+        SELECT "startDay"
         FROM events
         WHERE "userId" = $1
         AND "startYear" = $2
