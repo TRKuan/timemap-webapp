@@ -1,17 +1,20 @@
 import React from 'react';
+import {connect} from 'react-redux';
 
 import { DatePicker } from 'antd';
+import {} from 'states/events-form-actions.js';
 
 import 'antd/dist/antd.css';
+
 import './DatePick.css';
 
-export default class DatePick extends React.Component{
+
+class DatePick extends React.Component{
   state = {
     startValue: null,
     endValue: null,
-    endOpen: false,
+    endOpen: false
   };
-
   disabledStartDate = (startValue) => {
     const endValue = this.state.endValue;
     if (!startValue || !endValue) {
@@ -19,7 +22,6 @@ export default class DatePick extends React.Component{
     }
     return startValue.valueOf() > endValue.valueOf();
   }
-
   disabledEndDate = (endValue) => {
     const startValue = this.state.startValue;
     if (!endValue || !startValue) {
@@ -27,27 +29,23 @@ export default class DatePick extends React.Component{
     }
     return endValue.valueOf() <= startValue.valueOf();
   }
-
   onChange = (field, value) => {
+    this.props.dispatch(updateTime(field, value));
     this.setState({
-      [field]: value,
-    }, ()=>{console.log(this.state.startValue);});
+      [field]: value
+    }, ()=>{});
   }
-
   onStartChange = (value) => {
     this.onChange('startValue', value);
   }
-
   onEndChange = (value) => {
     this.onChange('endValue', value);
   }
-
   handleStartOpenChange = (open) => {
     if (!open) {
       this.setState({ endOpen: true });
     }
   }
-
   handleEndOpenChange = (open) => {
     this.setState({ endOpen: open });
   }
@@ -84,3 +82,6 @@ export default class DatePick extends React.Component{
     );
   }
 }
+export default connect(state => ({
+    ...state.eventsForm
+}))(DatePick);
