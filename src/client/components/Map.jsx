@@ -39,7 +39,7 @@ class Map extends React.Component {
 
     render() {
         return (
-            <div id="map"></div>
+            <div id={this.props.id} style={{height: "100%", width: "100%"}}></div>
         );
     }
 
@@ -62,7 +62,7 @@ class Map extends React.Component {
     createMap(center) {
         mapboxgl.accessToken = this.props.accessToken;
         this.map = new mapboxgl.Map({
-            container: 'map',
+            container: this.props.id,
             style: 'mapbox://styles/mapbox/streets-v9',
             center,
             zoom: 17
@@ -74,10 +74,12 @@ class Map extends React.Component {
             }catch(err){
                 console.error("init current position failed in map: " + err.message);
             }
-            this.initPinPoint();
-            this.map.on('click', (e) => {
-                this.setPinPosition(e.lngLat);
-            });
+            if(this.props.pinnable){
+                this.initPinPoint();
+                this.map.on('click', (e) => {
+                    this.setPinPosition(e.lngLat);
+                });
+            }
         });
     }
 
