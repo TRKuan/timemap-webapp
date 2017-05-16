@@ -13,7 +13,7 @@ function list(searchId = '') {
         WHERE "userId" = $1
         ORDER BY "startTs" ASC
     `;
-    return db.any(sql, searchId);
+    return db.any(sql, userId);
 }
 
 function create(userId, location, lng, lat, startTs, endTs, allDay, title, decription, lable, trans) {
@@ -78,9 +78,9 @@ function day(userId, year, month, day) {
         SELECT *
         FROM events
         WHERE "userId" = $1
-        AND "year" = $2
-        AND "month" = $3
-        AND "day" = $4
+        AND "startYear" = $2
+        AND "startMonth" = $3
+        AND "startDay" = $4
         ORDER BY "startTs" ASC
     `;
     return db.any(sql, [userId, year, month, day]);
@@ -91,24 +91,22 @@ function month(userId, year, month) {
         SELECT *
         FROM events
         WHERE "userId" = $1
-        AND "year" = $2
-        AND "month" = $3
+        AND "startYear" = $2
+        AND "startMonth" = $3
         ORDER BY "startTs" ASC
     `;
     return db.any(sql, [userId, year, month]);
 }
 
-function next(userId, year, month) {
+function next(userId) {
     const sql = `
         SELECT *
         FROM events
         WHERE "userId" = $1
-        AND "year" = $2
-        AND "month" = $3
         AND "startTs" > now()
         ORDER BY "startTs" ASC
     `;
-    return db.one(sql, [userId, year, month]);
+    return db.one(sql, userId);
 }
 
 module.exports = {
