@@ -19,6 +19,7 @@ function list(userId = '') {
 function create(userId, location, lng, lat, startTs, endTs, allDay, title, decription, lable, trans) {
     const sql = `
         INSERT INTO events ("userId", "location", "lng", "lat", "startTs", "endTs", "startYear", "startMonth", "startDay", "endYear", "endMonth", "endDay", "allDay", "title", "decription", "lable", "trans")
+        VALUES(
         $1,
         $2,
         $3,
@@ -35,7 +36,7 @@ function create(userId, location, lng, lat, startTs, endTs, allDay, title, decri
         $8,
         $9,
         $10,
-        $11
+        $11)
         RETURNING *
     `;
     return db.one(sql, [userId, location, lng, lat, startTs, endTs, allDay, title, decription, lable, trans]);
@@ -106,7 +107,13 @@ function next(userId) {
         AND "startTs" > now()
         ORDER BY "startTs" ASC
     `;
-    return db.one(sql, userId);
+    let tmp = {};
+    try{
+      tmp = db.one(sql, userId);
+    }catch(err){
+
+    }
+    return tmp;
 }
 
 module.exports = {
