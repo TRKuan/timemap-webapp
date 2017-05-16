@@ -35,36 +35,29 @@ export function setEvent(id, key, value) {
     };
 }
 
-function updateEventInfoStart(){
+function updateNextEventStart(){
     return {
-        type: '@CALENDAR/UPDATE_EVENT_INFO_START'
+        type: '@CALENDAR/UPDATE_NEXT_EVENT_START'
     };
 }
 
-function updateEventInfoEnd(){
+function updateNextEventEnd(event){
     return {
-        type: '@CALENDAR/UPDATE_EVENT_INFO_START'
+        type: '@CALENDAR/UPDATE_NEXT_EVENT_END',
+        event
     };
 }
 
-export function updateEventInfo(id){
-    return (dispatch, getstate) => {
-        dispatch(updateEventInfoStart());
-        let geolocation = null;
-        let trans = 'walking';
-        for(let event of getstate().calendar.events){
-            if(id === event.id){
-                geolocation = event.geolocation;
-                trans = event.trans;
-                break;
-            }
-        }
-        if(!geolocation)throw Error("can't find event");
-        if(!trans)trans = 'walking';
-        return getDirectionFormAPI(getstate().map.currentPosition, geolocation, trans, getstate().map.accessToken).then((data) => {
-            dispatch(setEvent(id, 'duration', data.duration));
-            dispatch(setEvent(id, 'distance', data.distance));
-            dispatch(updateEventInfoEnd());
+export function updateNextEvent(){
+    return (dispatch, getState) => {
+        dispatch(updateNextEventStart());
+        let {geolocation, trans} = getState().calendar.nextEvent;
+        if(!geolocation||!trans)throw Error("can't find event");
+        return getDirectionFormAPI(getState().map.currentPosition, geolocation, trans, getState().map.accessToken).then((data) => {
+            let event = JSON.parse(JSON.stringify(getState().calendar.nextEvent));
+            event.duration = data.duration;
+            event.distance = data.distance;
+            dispatch(updateNextEventEnd(event));
         });
     };
 }

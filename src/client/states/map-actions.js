@@ -1,3 +1,4 @@
+import {updateNextEvent} from 'states/calendar-actions.js'
 import {getAccessToken as getAccessTokenFromAPI} from 'api/mapboxAPI.js';
 function getAccessTokenStart(){
     return {
@@ -62,6 +63,7 @@ function watchCurrentPosition(){
             const lat = position.coords.latitude;
             const lng = position.coords.longitude;
             dispatch(updateCurrentPosition({lng, lat}));
+            dispatch(updateNextEvent());
         }, () => {
             console.error("watchPosition error");
         });

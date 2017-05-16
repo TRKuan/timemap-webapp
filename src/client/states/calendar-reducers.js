@@ -3,6 +3,7 @@ const initCalendarState = {
     events:[],
     year: moment().year(),
     month: moment().month()+1,
+    monthHasEventList:[],
     monthNumbers:[],
     nextEvent: null
 };
@@ -33,13 +34,14 @@ export function calendar(state = initCalendarState, action) {
             ...state,
             events
         };
-    case '@CALENDAR/UPDATE_EVENT_INFO_START':
+    case '@CALENDAR/UPDATE_NEXT_EVENT_START':
         return {
             ...state
         };
-    case '@CALENDAR/UPDATE_EVENT_INFO_END':
+    case '@CALENDAR/UPDATE_NEXT_EVENT_END':
         return {
-            ...state
+            ...state,
+            nextEvent: action.event
         };
     case '@CALENDAR/SET_MONTH':
         return {
