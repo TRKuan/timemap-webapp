@@ -95,7 +95,7 @@ router.get('/month', function(req, res) {
 //getNextEvent
 router.get('/nextevent', function(req, res) {
     const {userId} = req.query;
-    eventModel.next(userId, year, month).then(events => {
+    eventModel.next(userId).then(events => {
         res.json(events);
     });
 });
