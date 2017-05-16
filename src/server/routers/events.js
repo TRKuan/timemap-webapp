@@ -1,3 +1,4 @@
+const moment = require('moment');
 const express = require('express');
 const bodyParser = require('body-parser');
 //const accessController = require('../middleware/access-controller.js');
@@ -88,7 +89,19 @@ router.get('/day', function(req, res) {
 router.get('/month', function(req, res) {
     const {userId, year, month} = req.query;
     eventModel.month(userId, year, month).then(events => {
-        res.json(events);
+        console.log(events[0].startDay);
+        let array = [];
+        let m = moment({
+          month: month-1
+        }).daysInMonth();
+        for (var i = 0; i < m; i++) {
+          array[i]=false;
+        }
+        for (var j = 0; j < events.length; j++){
+          array[events[j].startDay-1]=true
+        }
+        res.json(array);
+
     });
 });
 
