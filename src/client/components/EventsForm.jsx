@@ -12,12 +12,13 @@ import {
     TimePicker
 } from 'antd';
 import {Row, Col} from 'antd';
-
+import moment from 'moment';
 const FormItem = Form.Item;
 const RadioButton = Radio.Button;
 const RadioGroup = Radio.Group;
 
 import {submitForm, cleanForm} from 'states/events-form-actions.js';
+import {addEvent} from 'states/calendar-actions.js';
 
 import DatePick from 'components/DatePick.jsx';
 
@@ -32,10 +33,32 @@ class EventsForm extends React.Component {
         e.preventDefault();
         this.props.form.validateFields((err, values) => {
             if (!err) {
+                let startTime = moment({year: values.startTimeYMD.year(), month: values.startTimeYMD.month(), date: values.startTimeYMD.date(), hour: values.startTimeHM.hour(), minute: values.startTimeYMD.minute()});
+                let endTime = moment({year: values.endTimeYMD.year(), month: values.endTimeYMD.month(), date: values.endTimeYMD.date(), hour: values.endTimeHM.hour(), minute: values.endTimeHM.minute()});
+                let lng = null;
+                let lat = null;
+                if(this.props.pinPosition){
+                    lng = this.props.lng;
+                    lat = this.props.lat;
+                }
+                let event = {
+                    location: values.location,
+                    lng: lng,
+                    lat: lat,
+                    startTs: startTime.toISOString(),
+                    endTs: endTime.toISOString(),
+                    allDay: false,
+                    title: values.title,
+                    description: values.description,
+                    label: values.label,
+                    trans: values.transportation
+                }
+                console.log(event);
+                this.props.dispatch(addEvent(event));
 
-                this.props.dispatch(submitForm(values));
+                //console.log(this.props.pinPosition);
+
                 //  this.props.dispatch(cleanForm());
-                console.log('Received values of form: ', values);
                 setTimeout(this.props.form.resetFields(), 1000);
             }
         });
@@ -43,6 +66,23 @@ class EventsForm extends React.Component {
     render() {
         const FormItem = Form.Item;
         const {getFieldDecorator} = this.props.form;
+        const startTimeRules = {
+            rules: [
+                {
+                    required: true,
+                    message: 'Please set start time!'
+                }
+            ]
+        };
+        const endTimeRules = {
+            rules: [
+                {
+                    required: true,
+                    message: 'Please set end time!'
+                }
+            ]
+        };
+
         const formItemLayout = {
             labelCol: {
                 span: 4
@@ -76,32 +116,31 @@ class EventsForm extends React.Component {
                     </Col>
                 </Row>
                 <Row>
-                  <Col xs={24} sm={10}>
-                    <div className='start-time'>
-                        <div className='start-time-header'>Start Time</div>
-                        <FormItem >
-                            {getFieldDecorator('startTimeYMD')(
-                              <DatePicker  format="YYYY-MM-DD"/>)}
-                        </FormItem>
-                        <FormItem >
-                            {getFieldDecorator('startTimeHM')(
-                              <TimePicker format="HH:mm"/>)}
-                        </FormItem>
-                    </div>
-                  </Col>
-                  <Col xs={24} sm={{span:10, offset: 2}}>
-                    <div className='end-time'>
-                        <div className='end-time-header'>End Time</div>
-                        <FormItem >
-                            {getFieldDecorator('endTimeYMD')(
-                              <DatePicker format="YYYY-MM-DD"/>)}
-                        </FormItem>
-                        <FormItem >
-                            {getFieldDecorator('endTimeHM')(
-                              <TimePicker format="HH:mm"/>)}
-                        </FormItem>
-                    </div>
-                  </Col>
+                    <Col xs={24} sm={10}>
+                        <div className='start-time'>
+                            <div className='start-time-header'>Start Time</div>
+                            <FormItem >
+                                {getFieldDecorator('startTimeYMD', startTimeRules)(<DatePicker format="YYYY-MM-DD"/>)}
+                            </FormItem>
+                            <FormItem >
+                                {getFieldDecorator('startTimeHM', startTimeRules)(<TimePicker format="HH:mm"/>)}
+                            </FormItem>
+                        </div>
+                    </Col>
+                    <Col xs={24} sm={{
+                        span: 10,
+                        offset: 2
+                    }}>
+                        <div className='end-time'>
+                            <div className='end-time-header'>End Time</div>
+                            <FormItem >
+                                {getFieldDecorator('endTimeYMD', endTimeRules)(<DatePicker format="YYYY-MM-DD"/>)}
+                            </FormItem>
+                            <FormItem >
+                                {getFieldDecorator('endTimeHM', endTimeRules)(<TimePicker format="HH:mm"/>)}
+                            </FormItem>
+                        </div>
+                    </Col>
                 </Row>
 
                 <Row>
@@ -192,5 +231,6 @@ class EventsForm extends React.Component {
     }
 }
 export default connect(state => ({
-    ...state.eventsForm
+    ...state.eventsForm,
+    ...state.map
 }))(EventsForm);
