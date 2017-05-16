@@ -33,7 +33,7 @@ export default class CalendarMonthDay extends React.Component {
           <div className={`day col ${currentDay} ${pickedDay}`}>
             <div className={`vertical-center-parent ${notThisMonth}`} style={{padding: 0}}>
               <div className='vertical-center-child'>
-                <div className={hasEvent}>{this.props.date}</div>
+                <div className={hasEvent}>{this.props.num}</div>
               </div>
             </div>
           </div>

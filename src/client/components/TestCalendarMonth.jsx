@@ -36,7 +36,7 @@ class TestCalendarMonth extends React.Component {
       let month = [];
       for(let i=0; i<6; i++){
         for(let j=0; j<7; j++){
-            week[i].push(<CalendarMonthDay key={i*7+j} {...monthNumbers[i*7+j]}/>);
+            week[i].push(<CalendarMonthDay key={i*7+j} num={this.props.monthNumbers[i*7+j]?this.props.monthNumbers[i*7+j]:""} {...monthNumbers[i*7+j]}/>);
         }
       }
       for(let i=0; i<6; i++){
