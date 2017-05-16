@@ -28,6 +28,7 @@
 .calendar-header .month-select-button:hover{
   background-color: rgb(74, 228, 196);
   color: white;
+  border-top-color: transparent;
 }
 .days-of-week-row{
   height:3rem;
@@ -58,14 +59,16 @@
 }
 .has-event-picked{
     border-top: 0.4rem solid rgb(74, 228, 196);
+    border-top-color: transparent;
     border-bottom: 0.4rem solid white;
 }
 .has-event-current{
-    border-top: 0.4rem solid LightGrey;
+    border-top: 0.4rem solid transparent;
     border-bottom: 0.4rem solid white;
 }
 .has-event-others{
     border-top: 0.4rem solid white;
+    border-top-color: transparent;
     border-bottom: 0.4rem solid rgb(74, 228, 196);
 }
 .not-this-month{
@@ -75,7 +78,9 @@
 .calendar-month .calendar-body .day:hover{
   color: rgb(74, 228, 196);
   background-color: white;
+  border-color: transparent;
 }
+
 
 .vertical-center-parent {
     display: table;

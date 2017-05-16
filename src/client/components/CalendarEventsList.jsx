@@ -17,6 +17,11 @@ export default class CalendarEventsList extends React.Component {
 
     render() {
         {/*const {events} = this.props;*/}
+        let event = {
+            title: 'SS project QQ',
+            time: '3:00AM - 6:30AM',
+            location: 'Shu Dormitory'
+        }
         let children = (
             <ListGroupItem className='empty d-flex justify-content-center align-items-center'>
                 <div className='empty-text'>No events.<br/>Go add some events.</div>
@@ -32,15 +37,8 @@ export default class CalendarEventsList extends React.Component {
 
         return (
             <div className='calendar-events-list'>
-                <CalendarEventItem/>
-                <CalendarEventItem/>
-                <CalendarEventItem/>
-                <CalendarEventItem/>
-                <CalendarEventItem/>
-                <CalendarEventItem/>
-                <CalendarEventItem/>
-                <CalendarEventItem/>
-                <CalendarEventItem/>
+                <CalendarEventItem {...event}/>
+
             </div>
         );
     }
