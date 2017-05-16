@@ -1,6 +1,6 @@
 .today-location{
     height: 100%;
-
+    min-height: 25rem;
 }
 .map{
     height: 100%;
