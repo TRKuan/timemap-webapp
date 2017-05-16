@@ -16,3 +16,70 @@ export function addEvent(event) {
         return res.data;
     });
 }
+//TODO:haven't test yet
+export function setEvent(event, eventID) {
+    let url = `${baseUrl}/events/${eventID}`;
+
+    console.log(`Making POST request to: ${url}`);
+
+    return axios.post(url, {
+        ...event
+    }).then((res) => {
+        if (res.status !== 200)
+            throw new Error(`Unexpected response code: ${res.status}`);
+
+        return res.data;
+    });
+}
+
+export function getDay(userId, year, month, day) {
+    let url = `${baseUrl}/day?userId=${userId}&year=${year}&month=${month}&day=${day}`;
+
+    console.log(`Making GET request to: ${url}`);
+
+    return axios.get(url).then((res) => {
+        if (res.status !== 200)
+            throw new Error(`Unexpected response code: ${res.status}`);
+
+        return res.data;
+    });
+}
+
+export function getMonth(userId, year, month) {
+    let url = `${baseUrl}/month?userId=${userId}&year=${year}&month=${month}`;
+
+    console.log(`Making GET request to: ${url}`);
+
+    return axios.get(url).then((res) => {
+        if (res.status !== 200)
+            throw new Error(`Unexpected response code: ${res.status}`);
+
+        return res.data;
+    });
+}
+
+export function getNextEvent(userId) {
+    let url = `${baseUrl}/next?userId=${userId}`;
+
+    console.log(`Making GET request to: ${url}`);
+
+    return axios.get(url).then((res) => {
+        if (res.status !== 200)
+            throw new Error(`Unexpected response code: ${res.status}`);
+
+        return res.data;
+    });
+}
+
+export function getEvent(userId) {
+    let url = `${baseUrl}/events?userId=${userId}`;
+
+    console.log(`Making GET request to: ${url}`);
+
+    return axios.get(url).then((res) => {
+        if (res.status !== 200)
+            throw new Error(`Unexpected response code: ${res.status}`);
+
+        return res.data;
+    });
+}
