@@ -20,5 +20,5 @@ yarn-error.log*
 
 env.sh
 env.bat
-logs.txt
+logs.txt*
 npm-debug.log

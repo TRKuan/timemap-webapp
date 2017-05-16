@@ -6,7 +6,7 @@ if (!global.db) {
 //const uuid = require('uuid/v4');
 //const moment = require('moment');
 
-function list(searchId = '') {
+function list(userId = '') {
     const sql = `
         SELECT *
         FROM events
