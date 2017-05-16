@@ -5,6 +5,7 @@ import {
 
 
 import CalendarMonth from 'components/CalendarMonth.jsx';
+import TestCalendarMonth from 'components/TestCalendarMonth.jsx';
 import CalendarEventsList from 'components/CalendarEventsList.jsx';
 
 import './CalendarPanel.css';
@@ -25,7 +26,7 @@ export default class CalendarPanel extends React.Component {
                   <Button className='col-2'>Event</Button>
               </div>
               <div className='calendars'>
-                  <CalendarMonth/>
+                  <TestCalendarMonth/>
                   <CalendarEventsList/>
               </div>
           </div>
