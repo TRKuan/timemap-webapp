@@ -48,9 +48,13 @@ class Map extends React.Component {
             this.props.dispatch(getCurrentPosition()).
             catch((err) => {
                 console.error("get current position faild: " + err.message);
+                this.props.dispatch(clearWatchPosition());
             }).
             then(() => {
-                this.createMap(this.props.currentPosition);
+                if(this.props.currentPosition)
+                    this.createMap(this.props.currentPosition);
+                else
+                    this.createMap({lng: 121, lat: 25});
             }).
             catch((err) => {
                 console.error("creat map faild: " + err.message);
@@ -123,6 +127,8 @@ class Map extends React.Component {
 
 
     initCurrentPosition(){
+        let coordinates = [];
+        if(this.props.currentPosition)coordinates = [this.props.currentPosition.lng, this.props.currentPosition.lat];
         //current position
         this.map.addSource('current-position', {
             "type": "geojson",
@@ -130,7 +136,7 @@ class Map extends React.Component {
                 "type": "Feature",
                 "geometry": {
                     "type": "Point",
-                    "coordinates": [this.props.currentPosition.lng, this.props.currentPosition.lat]
+                    coordinates
                 }
             }
         });
@@ -155,9 +161,7 @@ class Map extends React.Component {
             }
         };
         this.map.getSource('current-position').setData(data);
-        this.map.flyTo({
-            center: [lngLat.lng, lngLat.lat]
-        });
+        //this.map.panTo(lngLat);
     }
 
     initPinPoint(){
