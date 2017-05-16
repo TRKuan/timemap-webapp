@@ -77,7 +77,7 @@ function updateNextEventEnd(event){
 
 export function updateNextEvent(){
     return (dispatch, getState) => {
-        if(getState().calendar.nextEvent)return;
+        if(!getState().calendar.nextEvent)return;
         dispatch(updateNextEventStart());
         let {geolocation, trans} = getState().calendar.nextEvent;
         if(!geolocation||!trans)throw Error("geolocation or trans is null");
