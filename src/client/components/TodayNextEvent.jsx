@@ -1,11 +1,12 @@
 import React from 'react';
+import moment from 'moment';
 import PropTypes from 'prop-types';
 import {
     Button
 } from 'reactstrap';
 
 import {connect} from 'react-redux';
-import {} from 'states/today-actions.js';
+import {getNextEvent} from 'states/calendar-actions.js';
 
 import './TodayNextEvent.css';
 
@@ -21,14 +22,17 @@ class TodayNextEvent extends React.Component {
     constructor(props) {
         super(props);
     }
+    componentWillMount(){
+        this.props.dispatch(getNextEvent());
+    }
     render() {
         return (
             <div className='today-next-event'>
                 <div className='next-event-header'><i className='fa fa-bullseye fa-1x' aria-hidden="true"></i>Next Event</div>
                 <div className='next-event'>
                     <div className='event-title event-label'>{this.props.title}</div>
-                    <div className='leave-time'><i className='fa fa-bell-o fa-1x ' aria-hidden="true"></i>Leave in {this.props.leaveTime} mins</div>
-                    <div className='event-time'><i className='fa fa-clock-o fa-1x ' aria-hidden="true"></i>{this.props.time}</div>
+                    <div className='leave-time'><i className='fa fa-bell-o fa-1x ' aria-hidden="true"></i>Leave in {moment(this.props.startTs).subtract(moment.duration({seconds: this.props.duration})).format()}</div>
+                    <div className='event-time'><i className='fa fa-clock-o fa-1x ' aria-hidden="true"></i>{this.props.startTs}</div>
                     <div className='event-location'><i className='fa fa-map-marker fa-1x ' aria-hidden="true"></i>{this.props.location}</div>
                 </div>
             </div>
@@ -38,5 +42,5 @@ class TodayNextEvent extends React.Component {
 
 }
 export default connect(state => ({
-    ...state.todayNextEvent
+    ...state.calendar.nextEvent
 }))(TodayNextEvent);

@@ -59,14 +59,13 @@ export function getMonth(userId, year, month) {
 }
 
 export function getNextEvent(userId) {
-    let url = `${baseUrl}/next?userId=${userId}`;
+    let url = `${baseUrl}/nextevent?userId=${userId}`;
 
     console.log(`Making GET request to: ${url}`);
 
     return axios.get(url).then((res) => {
         if (res.status !== 200)
             throw new Error(`Unexpected response code: ${res.status}`);
-
         return res.data;
     });
 }
