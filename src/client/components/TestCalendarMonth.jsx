@@ -22,7 +22,17 @@ class TestCalendarMonth extends React.Component {
     }
 
     render() {
-
+        let tempPickedDay = {date: 1, isThisMonth: false, isToday: false, isPickedDay: true, hasEvent: false};
+        let tempTodayDay = {date: 2, isThisMonth: false, isToday: true, isPickedDay: false, hasEvent: false};
+        let monthNumbers = [tempTodayDay, tempTodayDay, tempTodayDay, tempTodayDay, tempTodayDay, tempTodayDay, tempTodayDay,
+                            tempPickedDay, tempPickedDay, tempPickedDay, tempPickedDay, tempPickedDay, tempPickedDay, tempPickedDay,
+                            tempTodayDay, tempTodayDay, tempTodayDay, tempTodayDay, tempTodayDay, tempTodayDay, tempTodayDay,
+                            tempPickedDay, tempPickedDay, tempPickedDay, tempPickedDay, tempPickedDay, tempPickedDay, tempPickedDay,
+                            tempTodayDay, tempTodayDay, tempTodayDay, tempTodayDay, tempTodayDay, tempTodayDay, tempTodayDay,
+                            tempPickedDay, tempPickedDay, tempPickedDay, tempPickedDay, tempPickedDay, tempPickedDay, tempPickedDay,
+                            tempTodayDay, tempTodayDay, tempTodayDay, tempTodayDay, tempTodayDay, tempTodayDay, tempTodayDay
+                          ]
+        
         let monthWeek = (
           <div className='week row'>
               <CalendarMonthDay date='8'/>
