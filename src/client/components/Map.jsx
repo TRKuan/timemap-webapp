@@ -54,7 +54,7 @@ class Map extends React.Component {
                 if(this.props.currentPosition)
                     this.createMap(this.props.currentPosition);
                 else
-                    this.createMap({lng: 121, lat: 25});
+                    this.createMap({lng: 120.9917471227813, lat: 24.79567369463787});
             }).
             catch((err) => {
                 console.error("creat map faild: " + err.message);
