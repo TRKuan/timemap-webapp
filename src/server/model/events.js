@@ -48,7 +48,7 @@ function accesstoken() {
   });
 }
 
-function modify(eventId, userID, location, lng, lat, startTs, endTs, allDay, title, decription, lable, trans) {
+function modify(eventId, userId, location, lng, lat, startTs, endTs, allDay, title, decription, lable, trans) {
     const sql = `
         UPDATE events
         SET "location" = $3,
@@ -60,7 +60,7 @@ function modify(eventId, userID, location, lng, lat, startTs, endTs, allDay, tit
         "startMonth" = EXTRACT(MONTH FROM TIMESTAMP $6),
         "startDay" = EXTRACT(DAY FROM TIMESTAMP $6),
         "endYear" = EXTRACT(YEAR FROM TIMESTAMP $7),
-        "endMONTH" = EXTRACT(MONTH FROM TIMESTAMP $7),
+        "endMonth" = EXTRACT(MONTH FROM TIMESTAMP $7),
         "endDay" = EXTRACT(DAY FROM TIMESTAMP $7),
         "allDay" = $8,
         "title" = $9,
@@ -68,7 +68,7 @@ function modify(eventId, userID, location, lng, lat, startTs, endTs, allDay, tit
         "lable" = $11,
         "trans" = $12
         WHERE "eventId" = $1
-        AND "userID" = $2
+        AND "userId" = $2
         RETURNING *
     `;
     return db.one(sql, [eventId, userId, location, lng, lat, startTs, endTs, allDay, title, decription, lable, trans]);
