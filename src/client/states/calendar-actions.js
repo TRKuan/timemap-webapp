@@ -77,9 +77,10 @@ function updateNextEventEnd(event){
 
 export function updateNextEvent(){
     return (dispatch, getState) => {
+        if(getState().calendar.nextEvent)return;
         dispatch(updateNextEventStart());
         let {geolocation, trans} = getState().calendar.nextEvent;
-        if(!geolocation||!trans)throw Error("can't find event");
+        if(!geolocation||!trans)throw Error("geolocation or trans is null");
         return getDirectionFormAPI(getState().map.currentPosition, geolocation, trans, getState().map.accessToken).then((data) => {
             let event = JSON.parse(JSON.stringify(getState().calendar.nextEvent));
             event.duration = data.duration;
