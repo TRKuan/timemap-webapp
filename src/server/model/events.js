@@ -73,37 +73,42 @@ function modify(eventId, userID, location, lng, lat, startTs, endTs, allDay, tit
     return db.one(sql, [eventId, userId, location, lng, lat, startTs, endTs, allDay, title, decription, lable, trans]);
 }
 
-function day(userId, day) {
+function day(userId, year, month, day) {
     const sql = `
         SELECT *
         FROM events
         WHERE "userId" = $1
-        AND "day" = $2
+        AND "year" = $2
+        AND "month" = $3
+        AND "day" = $4
         ORDER BY "startTs" ASC
     `;
-    return db.any(sql, [userId, day]);
+    return db.any(sql, [userId, year, month, day]);
 }
 
-function month(userId, month) {
+function month(userId, year, month) {
     const sql = `
         SELECT *
         FROM events
         WHERE "userId" = $1
-        AND "month" = $2
+        AND "year" = $2
+        AND "month" = $3
         ORDER BY "startTs" ASC
     `;
-    return db.any(sql, [userId, month]);
+    return db.any(sql, [userId, year, month]);
 }
 
-function next(userId) {
+function next(userId, year, month) {
     const sql = `
         SELECT *
         FROM events
         WHERE "userId" = $1
+        AND "year" = $2
+        AND "month" = $3
         AND "startTs" > now()
         ORDER BY "startTs" ASC
     `;
-    return db.one(sql, [userId, day]);
+    return db.one(sql, [userId, year, month]);
 }
 
 module.exports = {

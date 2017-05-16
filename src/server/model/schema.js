@@ -52,24 +52,24 @@ const dataSql = `
     -- Populate dummy posts
     INSERT INTO events ("userId", "location", "lng", "lat", "startTs", "endTs", "startYear", "startMonth", "startDay", "endYear", "endMonth", "endDay", "allDay", "title", "decription", "lable", "trans")
     SELECT
-        i,
+        2,
         '',
         null,
-        i,
+        null,
+        '2013-02-04T22:44:30.652Z',
         now(),
-        now(),
+        EXTRACT(YEAR FROM TIMESTAMP '2013-02-04T22:44:30.652Z'),
+        EXTRACT(MONTH FROM TIMESTAMP '2013-02-04T22:44:30.652Z'),
+        EXTRACT(DAY FROM TIMESTAMP '2013-02-04T22:44:30.652Z'),
         EXTRACT(YEAR FROM TIMESTAMP 'now()'),
         EXTRACT(MONTH FROM TIMESTAMP 'now()'),
         EXTRACT(DAY FROM TIMESTAMP 'now()'),
-        EXTRACT(YEAR FROM TIMESTAMP 'now()'),
-        EXTRACT(MONTH FROM TIMESTAMP 'now()'),
-        EXTRACT(DAY FROM TIMESTAMP 'now()'),
-        'no',
+        '0',
         'word' || i || ' word' || (i+1) || ' word' || (i+2),
         '',
         '',
         ''
-    FROM generate_series(1, 20) AS s(i);
+    FROM generate_series(1, 2) AS s(i);
 `;
 
 

@@ -11,15 +11,15 @@ router.use(bodyParser.json());
 
 // List
 router.get('/events', function(req, res) {
-    const {userID} = req.query;
-    eventModel.list(userID).then(events => {
+    const {userId} = req.query;
+    eventModel.list(userId).then(events => {
         res.json(events);
     });
 });
 
 // Create
 router.post('/events', function(req, res) {
-    const {userId, location, lng, lat, startTs, endTs, allDay, title, decription, lable, trans} = req.params;
+    const {userId, location, lng, lat, startTs, endTs, allDay, title, decription, lable, trans} = req.body;
     //console.log(geolocation);
     if(allDay == 0){
       if (!startTs || !title || !userId || !endTs) {
@@ -78,24 +78,24 @@ router.post('/events/:eventId', function(req, res) {
 
 //getDay
 router.get('/day', function(req, res) {
-    const {userID, day} = req.query;
-    eventModel.day(userID, day).then(events => {
+    const {userId, year, month, day} = req.query;
+    eventModel.day(userId, year, month, day).then(events => {
         res.json(events);
     });
 });
 
 //getMonth
 router.get('/month', function(req, res) {
-    const {userID, month} = req.query;
-    eventModel.month(userID, month).then(events => {
+    const {userId, year, month} = req.query;
+    eventModel.month(userId, year, month).then(events => {
         res.json(events);
     });
 });
 
 //getNextEvent
 router.get('/nextevent', function(req, res) {
-    const {userID, month} = req.query;
-    eventModel.next(userID, month).then(events => {
+    const {userId, year, month} = req.query;
+    eventModel.next(userId, year, month).then(events => {
         res.json(events);
     });
 });
