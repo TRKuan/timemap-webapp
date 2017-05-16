@@ -8,6 +8,7 @@ import {map} from 'states/map-reducers.js';
 
 import {main} from 'states/main-client-reducers.js';
 import {todayNextEvent} from 'states/today-reducers.js';
+import {eventsForm} from 'states/events-form-reducers.js';
 
 import Main from 'components/Main.jsx';
 import MainClient from 'components/Main-client.jsx';
@@ -22,7 +23,8 @@ window.onload = function() {
         calendar,
         map,
         main,
-        todayNextEvent
+        todayNextEvent,
+        eventsForm
     }), composeEnhancers(applyMiddleware(thunkMiddleware)));
 
     ReactDOM.render((

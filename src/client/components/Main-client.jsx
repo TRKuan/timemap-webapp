@@ -60,13 +60,13 @@ class MainClient extends React.Component {
                                 <Collapse isOpen={this.props.navbarToggle} navbar>
                                     <Nav navbar>
                                         <NavItem>
-                                            <NavLink tag={Link} to='/'>Today</NavLink>
+                                            <NavLink tag={Link} to='/events'>Today</NavLink>
                                         </NavItem>
                                         <NavItem>
                                             <NavLink tag={Link} to='/calendar'>Calendar</NavLink>
                                         </NavItem>
                                         <NavItem>
-                                            <NavLink tag={Link} to='/events'>Events</NavLink>
+                                            <NavLink tag={Link} to='/'>Events</NavLink>
                                         </NavItem>
                                     </Nav>
                                 </Collapse>
@@ -74,9 +74,9 @@ class MainClient extends React.Component {
                         </div>
                     </div>
 
-                    <Route exact path="/" render={() => (<TodayPanel todaysDate={this.props.todaysDate}/>)}/>
+                    <Route exact path="/events" render={() => (<TodayPanel todaysDate={this.props.todaysDate}/>)}/>
                     <Route exact path="/calendar" render={() => (<CalendarPanel todaysDate={this.props.todaysDate}/>)}/>
-                    <Route exact path="/events" render={() => (<EventsPanel todaysDate={this.props.todaysDate}/>)}/> {/*<div className='footer'>
+                    <Route exact path="/" render={() => (<EventsPanel todaysDate={this.props.todaysDate}/>)}/> {/*<div className='footer'>
                         TimMap.
                     </div>*/}
                 </div>

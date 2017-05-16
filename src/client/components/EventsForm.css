@@ -5,15 +5,28 @@
   margin-top: 1rem;
 }
 
-.title, .time-header, .label-header, .transportation-header{
+.title, .start-time-header, .end-time-header, .transportation-header, .description-header{
     margin-left: 0.5rem;
 }
-.title-header, .time-header, .label-header, .transportation-header, .description-header, .location-header{
+.title-header, .start-time-header, .end-time-header, .label-header, .transportation-header, .description-header, .location-header{
   font-size: 1.2rem;
 }
-.time-header, .label-header, .transportation-header, .location-header{
-  margin-top: 0.5rem;
+.start-time-header, .end-time-header, .label-header, .transportation-header, .location-header{
+    margin-top: 0.5rem;
 }
 .ant-col-16{
     margin-left: 0.5rem;
+}
+.ant-radio-group{
+    margin: 0.5rem;
+}
+.ant-radio-button-wrapper{
+    font-size: 1rem;
+    padding: 0 1rem;
+    border-radius: 0;
+}
+.ant-time-picker-input{
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+    border-radius: 0;
 }
