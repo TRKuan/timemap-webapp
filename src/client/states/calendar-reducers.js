@@ -5,9 +5,10 @@ const initCalendarState = {
     events: [],
     year: moment().year(),
     month: moment().month()+1,
-    monthHasEventList:[],
-    monthNumbers:[],
-    nextEvent: null
+    monthHasEventList: [],
+    monthNumbers: [],
+    nextEvent: null,
+    dayEvents: []
 };
 
 export function calendar(state = initCalendarState, action) {
@@ -54,6 +55,15 @@ export function calendar(state = initCalendarState, action) {
             ...state,
             nextEvent: action.event
         };
+    case '@CALENDAR/GET_DAY_EVENTS_START':
+        return {
+            ...state
+        }
+    case '@CALENDAR/GET_DAY_EVENTS_END':
+        return {
+            ...state,
+            dayEvents: action.events
+        }
     case '@CALENDAR/SET_MONTH':
         return {
             ...state,
