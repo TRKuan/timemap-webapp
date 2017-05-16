@@ -15,9 +15,9 @@ export default class CalendarEventItem extends React.Component {
         return (
             <div className='calendar-event-item'>
                 <div className='row'>
-                <div className='col-6'>This is a event</div>
-                <div className='col-3'>Time</div>
-                <div className='col-3'>Location</div>
+                <div className='col-4'>{this.props.title}</div>
+                <div className='col-4 event-time'><i className="fa fa-clock-o" aria-hidden="true"></i>&nbsp;&nbsp;{this.props.time}</div>
+                <div className='col-4 event-location'><i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;&nbsp;{this.props.location}</div>
                 </div>
             </div>
         );

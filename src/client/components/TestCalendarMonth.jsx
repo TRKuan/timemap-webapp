@@ -14,37 +14,38 @@ import './CalendarMonth.css';
 class TestCalendarMonth extends React.Component {
     constructor(props) {
         super(props);
+        this.updateCalendarMonth = this.updateCalendarMonth.bind(this);
 
     }
 
     componentWillMount(){
         this.props.dispatch(updateMonthNumbers(this.props.year, this.props.month));
     }
+    updateCalendarMonth(){
+      let tempPickedDay = {date: 1, notThisMonth: false, isToday: false, isPickedDay: false, hasEvent: true};
+      let tempTodayDay = {date: 2, notThisMonth: true, isToday: false, isPickedDay: false, hasEvent: true};
+      let monthNumbers = [tempTodayDay, tempPickedDay, tempTodayDay, tempTodayDay, tempTodayDay, tempTodayDay, tempTodayDay,
+                          tempTodayDay, tempPickedDay, tempTodayDay, tempPickedDay, tempPickedDay, tempPickedDay, tempPickedDay,
+                          tempTodayDay, tempTodayDay, tempTodayDay, tempTodayDay, tempTodayDay, tempTodayDay, tempTodayDay,
+                          tempPickedDay, tempPickedDay, tempPickedDay, tempPickedDay, tempPickedDay, tempPickedDay, tempPickedDay,
+                          tempTodayDay, tempTodayDay, tempTodayDay, tempTodayDay, tempTodayDay, tempTodayDay, tempTodayDay,
+                          tempPickedDay, tempPickedDay, tempPickedDay, tempPickedDay, tempPickedDay, tempPickedDay, tempPickedDay,
+                          tempTodayDay, tempTodayDay, tempTodayDay, tempTodayDay, tempTodayDay, tempTodayDay, tempTodayDay
+                        ]
+      let week = [[],[],[],[],[],[],[]];
+      let month = [];
+      for(let i=0; i<6; i++){
+        for(let j=0; j<7; j++){
+            week[i].push(<CalendarMonthDay key={i*7+j} {...monthNumbers[i*7+j]}/>);
+        }
+      }
+      for(let i=0; i<6; i++){
+          month.push(<div className='week row' key={i+42}>{week[i]}</div>);
+      }
+      return month;
+    }
 
     render() {
-        let tempPickedDay = {date: 1, isThisMonth: false, isToday: false, isPickedDay: true, hasEvent: false};
-        let tempTodayDay = {date: 2, isThisMonth: false, isToday: true, isPickedDay: false, hasEvent: false};
-        let monthNumbers = [tempTodayDay, tempTodayDay, tempTodayDay, tempTodayDay, tempTodayDay, tempTodayDay, tempTodayDay,
-                            tempPickedDay, tempPickedDay, tempPickedDay, tempPickedDay, tempPickedDay, tempPickedDay, tempPickedDay,
-                            tempTodayDay, tempTodayDay, tempTodayDay, tempTodayDay, tempTodayDay, tempTodayDay, tempTodayDay,
-                            tempPickedDay, tempPickedDay, tempPickedDay, tempPickedDay, tempPickedDay, tempPickedDay, tempPickedDay,
-                            tempTodayDay, tempTodayDay, tempTodayDay, tempTodayDay, tempTodayDay, tempTodayDay, tempTodayDay,
-                            tempPickedDay, tempPickedDay, tempPickedDay, tempPickedDay, tempPickedDay, tempPickedDay, tempPickedDay,
-                            tempTodayDay, tempTodayDay, tempTodayDay, tempTodayDay, tempTodayDay, tempTodayDay, tempTodayDay
-                          ]
-        
-        let monthWeek = (
-          <div className='week row'>
-              <CalendarMonthDay date='8'/>
-              <CalendarMonthDay date='7'/>
-              <CalendarMonthDay date='6'/>
-              <CalendarMonthDay date='5'/>
-              <CalendarMonthDay date='4'/>
-              <CalendarMonthDay date='4'/>
-              <CalendarMonthDay date='2'/>
-              <CalendarMonthDay date='1'/>
-          </div>
-        )
         return (
             <div className='calendar-month'>
                 <div className='calendar-header container-fluid'>
@@ -66,66 +67,7 @@ class TestCalendarMonth extends React.Component {
                   </div>
                 </div>
                 <div className='calendar-body container-fluid'>
-                  <div className='week row'>
-                      <CalendarMonthDay date='8'/>
-                      <CalendarMonthDay date='7'/>
-                      <CalendarMonthDay date='6'/>
-                      <CalendarMonthDay date='5'/>
-                      <CalendarMonthDay date='4'/>
-                      <CalendarMonthDay date='4'/>
-                      <CalendarMonthDay date='2'/>
-                      <CalendarMonthDay date='1'/>
-                  </div>
-                  <div className='week row'>
-                      <CalendarMonthDay date='8'/>
-                      <CalendarMonthDay date='7'/>
-                      <CalendarMonthDay date='6'/>
-                      <CalendarMonthDay date='5'/>
-                      <CalendarMonthDay date='4'/>
-                      <CalendarMonthDay date='4'/>
-                      <CalendarMonthDay date='2'/>
-                      <CalendarMonthDay date='1'/>
-                  </div>
-                  <div className='week row'>
-                      <CalendarMonthDay date='8'/>
-                      <CalendarMonthDay date='7'/>
-                      <CalendarMonthDay date='6'/>
-                      <CalendarMonthDay date='5'/>
-                      <CalendarMonthDay date='4'/>
-                      <CalendarMonthDay date='4'/>
-                      <CalendarMonthDay date='2'/>
-                      <CalendarMonthDay date='1'/>
-                  </div>
-                  <div className='week row'>
-                      <CalendarMonthDay date='8'/>
-                      <CalendarMonthDay date='7'/>
-                      <CalendarMonthDay date='6'/>
-                      <CalendarMonthDay date='5'/>
-                      <CalendarMonthDay date='4'/>
-                      <CalendarMonthDay date='4'/>
-                      <CalendarMonthDay date='2'/>
-                      <CalendarMonthDay date='1'/>
-                  </div>
-                  <div className='week row'>
-                      <CalendarMonthDay date='8'/>
-                      <CalendarMonthDay date='7'/>
-                      <CalendarMonthDay date='6'/>
-                      <CalendarMonthDay date='5'/>
-                      <CalendarMonthDay date='4'/>
-                      <CalendarMonthDay date='4'/>
-                      <CalendarMonthDay date='2'/>
-                      <CalendarMonthDay date='1'/>
-                  </div>
-                  <div className='week row'>
-                      <CalendarMonthDay date='8'/>
-                      <CalendarMonthDay date='7'/>
-                      <CalendarMonthDay date='6'/>
-                      <CalendarMonthDay date='5'/>
-                      <CalendarMonthDay date='4'/>
-                      <CalendarMonthDay date='4'/>
-                      <CalendarMonthDay date='2'/>
-                      <CalendarMonthDay date='1'/>
-                  </div>
+                  {this.updateCalendarMonth()}
                 </div>
             </div>
         );
