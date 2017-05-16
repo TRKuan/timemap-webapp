@@ -1,6 +1,8 @@
 import moment from 'moment';
+import uuid from 'uuid/v4'
 const initCalendarState = {
-    events:[],
+    userId: uuid(),
+    events: [],
     year: moment().year(),
     month: moment().month()+1,
     monthHasEventList:[],
