@@ -34,6 +34,15 @@ export function calendar(state = initCalendarState, action) {
             ...state,
             events
         };
+    case '@CALENDAR/GET_NEXT_EVENT_START':
+        return{
+            ...state
+        };
+    case '@CALENDAR/GET_NEXT_EVENT_END':
+        return{
+            ...state,
+            nextEvent: action.event
+        };
     case '@CALENDAR/UPDATE_NEXT_EVENT_START':
         return {
             ...state

@@ -1,6 +1,6 @@
 import moment from 'moment';
 import {getDirection as getDirectionFormAPI} from 'api/mapboxAPI.js';
-import {addEvent as addEventFormAPI} from 'api/calendarAPI.js';
+import {addEvent as addEventFormAPI, getNextEvent as getNextEventFormAPI} from 'api/calendarAPI.js';
 export function addEventStart() {
     return {
         type: '@CALENDAR/ADD_EVENT_START'
@@ -34,6 +34,29 @@ export function setEvent(id, key, value) {
         value
     };
 }
+
+function getNextEventStart(){
+    return {
+        type: '@CALENDAR/GET_NEXT_EVENT_START'
+    };
+}
+
+function getNextEventEnd(event){
+    return {
+        type: '@CALENDAR/GET_NEXT_EVENT_END',
+        event
+    };
+}
+
+export function getNextEvent(){
+    return (dispatch) => {
+        dispatch(getNextEventStart());
+        return getNextEventFormAPI().then((data) => {
+            dispatch(getNextEventEnd(data));
+        });
+    };
+}
+
 
 function updateNextEventStart(){
     return {
