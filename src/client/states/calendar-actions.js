@@ -29,6 +29,7 @@ export function addEvent(event) {
         dispatch(addEventStart());
         return addEventFormAPI(event).then((data) => {
             dispatch(addEventEnd(data));
+            dispatch(getNextEvent());
         }).
         catch((err) => {
             console.error("Can't add event to server"  + err.message);
