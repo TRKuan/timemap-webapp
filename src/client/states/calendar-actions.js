@@ -130,13 +130,35 @@ export function setYear(year){
 export function updateMonthNumbers(year, month){
     let monthNumbers = [];
     let m = moment({
-        year,
+        year: year,
         month: month-1,
         date: 1
     });
+    let monthPrev = month - 2;
+    if(monthPrev < 0){
+      monthPrev = 11;
+    }
+    let mPrev = moment({
+        year: year,
+        month: monthPrev,
+        date: 1
+    });
     var firstDay = m.day();
-    for(let i=0;i<m.daysInMonth();i++){
-        monthNumbers[i+firstDay]=i+1;
+    var firstDayPrev = mPrev.daysInMonth() - firstDay;
+    let i = 0;
+    let j = 0;
+    let k = 0;
+    for(;i < 42;i++){
+      if(i < firstDay){
+        firstDayPrev++;
+        monthNumbers[i]={date: firstDayPrev, notThisMonth: true};
+      }else if(i<m.daysInMonth() + firstDay){
+        monthNumbers[k+firstDay]={date: k+1, notThisMonth: false};
+        k++;
+      }else{
+        j++;
+        monthNumbers[i]={date: j, notThisMonth: true};
+      }
     }
     return {
         type: '@CALENDAR/UPDATE_MONTH_NUMBERS',

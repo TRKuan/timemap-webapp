@@ -4,9 +4,9 @@
     height: 5rem;
     width: 100%;
     padding: 1.7rem;
-    border-left: 0.5rem blue solid;
     background-color: white;
     margin-bottom: 0.5rem;
+    border-left: 0.5rem solid transparent ;
 }
 
 .list-group-item{
