@@ -98,13 +98,6 @@ class MainClient extends React.Component {
     }
     updateDate() {
         let currentTime = moment();
-        /*
-        let currentYear = currentTime.year();
-        let currentMonth = currentTime.month();
-        let currentDate = currentTime.date();
-        let currentDay = currentTime.day();
-        */
-        console.log(this.props.todaysDate);
         try{
           if (currentTime.date() !== this.props.todaysDate.date()) {
               this.props.dispatch(updateCurrentDate(currentTime));
