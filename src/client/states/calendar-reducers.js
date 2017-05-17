@@ -6,7 +6,7 @@ const initCalendarState = {
     events: [],
     year: moment().year(),
     month: moment().month()+1,
-    day: moment().date(),
+    pickedDay: moment(),
     monthHasEventList: [],
     monthNumbers: [],
     nextEvent: null,
