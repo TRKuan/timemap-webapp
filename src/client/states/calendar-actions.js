@@ -2,7 +2,8 @@ import moment from 'moment';
 import {getDirection as getDirectionFormAPI} from 'api/mapboxAPI.js';
 import {addEvent as addEventFormAPI,
     getNextEvent as getNextEventFormAPI,
-    getDay as getDayFormAPI
+    getDay as getDayFormAPI,
+    getMonth as getMonthFormAPI
 } from 'api/calendarAPI.js';
 export function addEventStart() {
     return {
@@ -55,7 +56,6 @@ export function getNextEvent(){
     return (dispatch, getState) => {
         dispatch(getNextEventStart());
         return getNextEventFormAPI(getState().calendar.userId).then((data) => {
-            console.log(data);
             dispatch(getNextEventEnd(data));
             dispatch(updateNextEvent());
         });
@@ -114,21 +114,39 @@ export function getDayEvents(){
     };
 }
 
-function setDayAction(day){
+function getMonthStart(){
     return {
-        type: '@CALENDAR/SET_DAY',
-        day
+        type: '@CALENDAR/GET_MONTH_START'
+    };
+}
+
+function getMonthEnd(hasEventList){
+    return {
+        type: '@CALENDAR/GET_MONTH_END',
+        hasEventList
+    };
+}
+
+export function getMonth(){
+    return (dispatch, getState) => {
+        dispatch(getMonthStart());
+        let {userId, year, month} = getState().calendar;
+        return getMonthFormAPI(userId, year, month).then((data) => {
+            dispatch(getMonthEnd(data));
+        });
+    };
+}
+
+function setPickedDayAction(pickedDay){
+    return {
+        type: '@CALENDAR/SET_PICKED_DAY',
+        pickedDay
     };
 }
 
 export function setDay(day){
     return (dispatch, getState) => {
-        let m = moment({
-            year: getState().calendar.year,
-            month: getState().calendar.month-1
-        });
-        if(day<0||day>m.daysInMonth())return;
-        dispatch(setDayAction(day));
+        dispatch(setPickedDayAction(day));
         dispatch(getDayEvents());
     };
 }
@@ -144,7 +162,7 @@ export function setMonth(month){
     return (dispatch, getState) => {
         if(month<1||month>12)return;
         dispatch(setMonthAction(month));
-        dispatch(updateMonthNumbers(getState().calendar.year, month));
+        dispatch(updateMonth());
     };
 }
 
@@ -158,11 +176,18 @@ function setYearAction(year){
 export function setYear(year){
     return (dispatch, getState) => {
         dispatch(setYearAction(year));
-        dispatch(updateMonthNumbers(year, getState().calendar.month));
+        dispatch(updateMonth());
     };
 }
+export function datePicked(cellNum){
+  return {
+      type: '@CALENDAR/PICK_DAY',
+      cellNum
+  };
+}
 
-export function updateMonthNumbers(year, month){
+export function updateMonthNumbers(year, month, day, todaysDateMonth){
+    console.log(todaysDateMonth);
     let monthNumbers = [];
     let m = moment({
         year: year,
@@ -180,13 +205,13 @@ export function updateMonthNumbers(year, month){
     });
     var firstDay = m.day();
     var firstDayPrev = mPrev.daysInMonth() - firstDay;
-    let i = 0;
     let j = 0;
     let k = 0;
-    for(;i < 42;i++){
-      if(i < firstDay){
+    for(let i=0 ;i < 42;i++){
+      monthNumbers[i]={isToday: false, isPickedDay: false, hasEvent: false};
+      if( i < firstDay){
+        monthNumbers[i]={date: firstDayPrev +1, notThisMonth: true};
         firstDayPrev++;
-        monthNumbers[i]={date: firstDayPrev, notThisMonth: true};
       }else if(i<m.daysInMonth() + firstDay){
         monthNumbers[k+firstDay]={date: k+1, notThisMonth: false};
         k++;
@@ -195,8 +220,22 @@ export function updateMonthNumbers(year, month){
         monthNumbers[i]={date: j, notThisMonth: true};
       }
     }
+    for(let i=0; i<42; i++){
+        if(!monthNumbers[i].notThisMonth && month === todaysDateMonth+1 && monthNumbers[i].date === day ){
+          monthNumbers[i].isToday = true;
+          monthNumbers[i].isPickedDay = true;
+        }
+    }
     return {
         type: '@CALENDAR/UPDATE_MONTH_NUMBERS',
         monthNumbers
+    };
+}
+
+export function updateMonth(){
+    return (dispatch, getState) => {
+        return dispatch(getMonth()).then(() => {
+            dispatch(updateMonthNumbers(getState().calendar.year, getState().calendar.month));
+        });
     };
 }

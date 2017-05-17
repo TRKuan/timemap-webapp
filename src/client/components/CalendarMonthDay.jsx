@@ -1,12 +1,15 @@
 import React from 'react';
-
-
+import {connect} from 'react-redux';
+import moment from 'moment';
 import FontAwesome from 'react-fontawesome';
+import {setDay} from 'states/calendar-actions.js'
+
+import {datePicked} from 'states/calendar-actions.js'
 
 import './CalendarMonth.css';
 
 
-export default class CalendarMonthDay extends React.Component {
+class CalendarMonthDay extends React.Component {
     constructor(props) {
         super(props);
         this.onClick = this.onClick.bind(this);
@@ -40,12 +43,21 @@ export default class CalendarMonthDay extends React.Component {
         );
     }
     onClick(e){
-      if(!this.props.notThisMont){
-
+      if(!this.props.notThisMonth && !this.props.isPickedDay){
         console.log(this.props.cellNum);
-
+        let m = moment({
+            year: this.props.year,
+            month: this.props.month-1,
+            day: this.props.cellNum
+        });
+        this.props.dispatch(setDay(m));
       }
 
     }
 
 }
+export default connect((state) => {
+    return {
+        ...state.calendar
+    };
+})(CalendarMonthDay);

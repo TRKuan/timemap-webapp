@@ -57,6 +57,15 @@ export function calendar(state = initCalendarState, action) {
             ...state,
             nextEvent: action.event
         };
+    case '@CALENDAR/GET_MONTH_START':
+        return{
+            ...state
+        }
+    case '@CALENDAR/GET_MONTH_END':
+        return{
+            ...state,
+            monthHasEventList: action.hasEventList
+        }
     case '@CALENDAR/GET_DAY_EVENTS_START':
         return {
             ...state
@@ -66,10 +75,10 @@ export function calendar(state = initCalendarState, action) {
             ...state,
             dayEvents: action.events
         }
-    case '@CALENDAR/SET_DAY':
+    case '@CALENDAR/SET_PICKED_DAY':
         return {
             ...state,
-            day: action.day
+            pickedDay: action.pickedDay
         };
     case '@CALENDAR/SET_MONTH':
         return {
@@ -86,6 +95,18 @@ export function calendar(state = initCalendarState, action) {
             ...state,
             monthNumbers: action.monthNumbers
         };
+    case '@CALENDAR/PICK_DAY':
+        let newMonthNumbers = state.monthNumbers.slice();
+        for(let i=0; i<42; i++){
+          if(newMonthNumbers[i].isPickedDay){
+            newMonthNumbers[i].isPickedDay = false;
+          }
+        }
+        newMonthNumbers[action.cellNum].isPickedDay = true;
+        return {
+            ...state,
+            monthNumbers: newMonthNumbers
+          };
     default:
         return state;
     }

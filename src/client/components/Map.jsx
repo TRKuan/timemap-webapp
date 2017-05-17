@@ -154,7 +154,7 @@ class Map extends React.Component {
     }
 
     updateCurrentPosition(lngLat){
-        if(!lngLat)return;
+        if(!lngLat||!this.map)return;
         let data = {
             "type": "Feature",
             "geometry": {
