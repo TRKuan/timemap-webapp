@@ -1,12 +1,14 @@
 import React from 'react';
-
+import {connect} from 'react-redux';
 
 import FontAwesome from 'react-fontawesome';
+
+import {datePicked} from 'states/calendar-actions.js'
 
 import './CalendarMonth.css';
 
 
-export default class CalendarMonthDay extends React.Component {
+class CalendarMonthDay extends React.Component {
     constructor(props) {
         super(props);
         this.onClick = this.onClick.bind(this);
@@ -40,12 +42,16 @@ export default class CalendarMonthDay extends React.Component {
         );
     }
     onClick(e){
-      if(!this.props.notThisMont){
-
+      if(!this.props.notThisMonth && !this.props.isPickedDay){
         console.log(this.props.cellNum);
-
+        this.props.dispatch(datePicked(this.props.cellNum));
       }
 
     }
 
 }
+export default connect((state) => {
+    return {
+        ...state.calendar
+    };
+})(CalendarMonthDay);

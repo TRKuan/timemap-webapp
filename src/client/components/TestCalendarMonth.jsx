@@ -20,7 +20,7 @@ class TestCalendarMonth extends React.Component {
     }
 
     componentWillMount(){
-        this.props.dispatch(updateMonthNumbers(this.props.year, this.props.month));
+        this.props.dispatch(updateMonthNumbers(this.props.year, this.props.month, this.props.day, this.props.todaysDate.month()));
     }
     calendarBody(){
       let tempPickedDay = {date: 1, notThisMonth: false, isToday: false, isPickedDay: false, hasEvent: true};
@@ -109,6 +109,7 @@ class TestCalendarMonth extends React.Component {
 
 export default connect((state) => {
     return {
-        ...state.calendar
+        ...state.calendar,
+        ...state.main
     };
 })(TestCalendarMonth);
