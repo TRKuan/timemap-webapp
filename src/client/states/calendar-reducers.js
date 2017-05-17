@@ -119,6 +119,7 @@ export function calendar(state = initCalendarState, action) {
             monthNumbers: newMonthNumbers
         };
     case '@CALENDAR/SET_LEAVE_TIME':
+        if(!state.nextEvent.startTs)return state;
         let leaveTime = moment(state.nextEvent.startTs).unix()-moment().unix()-state.nextEvent.duration;
         return {
             ...state,
