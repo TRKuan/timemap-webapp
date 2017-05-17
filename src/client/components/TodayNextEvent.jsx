@@ -22,10 +22,10 @@ class TodayNextEvent extends React.Component {
     };
     constructor(props) {
         super(props);
-      //  this.checkLeaveTime = this.checkLeaveTime.bind(this);
+        this.checkLeaveTime = this.checkLeaveTime.bind(this);
     }
 
-    /*
+
     checkLeaveTime(){
       if(this.props.leaveTime < 6000){
         setTimeout(this.props.dispatch(setBackground('normal')), 900);
@@ -35,7 +35,7 @@ class TodayNextEvent extends React.Component {
         this.props.dispatch(setBackground('ok'));
       }
     }
-    */
+
     render() {
         return (
             <div className={`today-next-event ${this.props.nextBackColor}`}>
