@@ -120,6 +120,7 @@ export function calendar(state = initCalendarState, action) {
         };
     case '@CALENDAR/SET_LEAVE_TIME':
         let leaveTime = moment(state.nextEvent.startTs).unix()-moment().unix()-state.nextEvent.duration;
+        leaveTime = leaveTime.toFixed(0);
         return {
             ...state,
             leaveTime

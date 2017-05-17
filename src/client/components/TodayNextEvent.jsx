@@ -22,9 +22,7 @@ class TodayNextEvent extends React.Component {
     constructor(props) {
         super(props);
     }
-    componentWillMount(){
-        this.props.dispatch(getNextEvent());
-    }
+
     render() {
         return (
             <div className='today-next-event alert-leave'>

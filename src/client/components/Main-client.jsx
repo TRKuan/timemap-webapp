@@ -26,6 +26,8 @@ import CalendarPanel from 'components/CalendarPanel.jsx';
 import TodayPanel from 'components/TodayPanel.jsx';
 import EventsPanel from 'components/EventsPanel.jsx';
 
+import {initCalendar} from 'states/calendar-actions';
+
 import './Main.css';
 
 class MainClient extends React.Component {
@@ -43,6 +45,7 @@ class MainClient extends React.Component {
 
     }
     componentWillMount() {
+        this.props.dispatch(initCalendar());
         this.props.dispatch(updateCurrentDate(moment()));
         setInterval(this.updateDate, 1000);
     }

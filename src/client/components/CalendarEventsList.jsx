@@ -18,10 +18,6 @@ class CalendarEventsList extends React.Component {
 
     }
 
-    componentWillMount(){
-        this.props.dispatch(getDayEvents());
-    }
-
     render() {
         const events = this.props.dayEvents;
         let children = (

@@ -1,12 +1,16 @@
 import moment from 'moment';
+import {initMap} from 'states/map-actions.js'
 import {getDirection as getDirectionFormAPI} from 'api/mapboxAPI.js';
 import {addEvent as addEventFormAPI, getNextEvent as getNextEventFormAPI, getDay as getDayFormAPI, getMonth as getMonthFormAPI} from 'api/calendarAPI.js';
 
 export function initCalendar() {
-    return (dispatch, getState) => {
+    return (dispatch) => {
         dispatch(getDayEvents());
         dispatch(updateMonth());
-        return dispatch(getNextEvent()).then(() => {
+        return dispatch(initMap()).then(() => {
+            dispatch(getNextEvent());
+        }).
+        then(() => {
             dispatch(updateLeaveTimeStart());
         });
     };
@@ -81,7 +85,6 @@ export function updateNextEvent() {
             event.duration = data.duration;
             event.distance = data.distance;
             dispatch(updateNextEventEnd(event));
-            dispatch(updateLeaveTime());
         });
     };
 }

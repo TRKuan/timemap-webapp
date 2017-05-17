@@ -1,5 +1,14 @@
 import {updateNextEvent} from 'states/calendar-actions.js'
 import {getAccessToken as getAccessTokenFromAPI} from 'api/mapboxAPI.js';
+
+export function initMap(){
+    return (dispatch) => {
+        return dispatch(getAccessToken()).then(() => {
+            dispatch(getCurrentPosition());
+        });
+    };
+}
+
 function getAccessTokenStart(){
     return {
         type: '@MAP/GET_ACCESS_TOKEN_START'
@@ -87,7 +96,7 @@ export function getCurrentPosition(){
                 const lng = position.coords.longitude;
                 dispatch(getCurrentPositionEnd({lng, lat}));
                 dispatch(updateNextEvent());
-                dispatch(watchCurrentPosition());
+                //dispatch(watchCurrentPosition());
                 resolve({lng, lat});
             }, (error) => reject(error));
         });
