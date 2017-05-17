@@ -25,13 +25,20 @@ class Map extends React.Component {
     }
 
     componentWillReceiveProps(nextProps){
-        if(nextProps.events!==this.props.events){
-            this.updateEventPoints(nextProps.events);
-            this.removePinPoint();
-        }
+        //if(nextProps.events!==this.props.events){
+        //    this.updateEventPoints(nextProps.events);
+        //    this.removePinPoint();
+        //}
         if(nextProps.currentPosition!==this.props.currentPosition){
             if(this.map)
                 this.updateCurrentPosition(nextProps.currentPosition);
+        }
+        if(nextProps.nextEvent!==this.props.nextEvent){
+            try{
+                this.direction.setDestination([this.props.nextEvent.lng, this.props.nextEvent.lat]);
+            }catch(error){
+                console.error(error);
+            }
         }
     }
 
@@ -58,8 +65,35 @@ class Map extends React.Component {
             center,
             zoom: 17
         });
+        this.geocoder = new MapboxGeocoder({
+            accessToken: mapboxgl.accessToken
+        });
+        this.map.addControl(this.geocoder);
+        try{
+            this.direction = new MapboxDirections({
+                accessToken: mapboxgl.accessToken,
+                interactive: false,
+                profile: this.props.nextEvent.trans,
+                unit: "metric",
+                controls: {
+                    inputs: false,
+                    instructions: false
+                }
+            });
+            if(this.props.showRoute)
+                this.map.addControl(this.direction, 'top-left');
+        }catch(error){
+            console.error(error);
+        }
+
         this.map.on('load', () => {
-            this.initEventPoints();
+            try{
+                this.direction.setOrigin([this.props.currentPosition.lng, this.props.currentPosition.lat]);
+                  this.direction.setDestination([this.props.nextEvent.lng, this.props.nextEvent.lat]);
+            }catch(error){
+                console.error(error);
+            }
+            //this.initEventPoints();
             try{
                 this.initCurrentPosition();
             }catch(err){
@@ -72,7 +106,7 @@ class Map extends React.Component {
                 });
             }
 
-            this.updateEventPoints(this.props.events);
+            //this.updateEventPoints(this.props.events);
         });
     }
 

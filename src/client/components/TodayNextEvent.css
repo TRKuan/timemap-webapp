@@ -4,6 +4,9 @@
     color: white;
     padding: 2rem 3rem;
 }
+.normal-back{
+    background-color: #393947;
+}
 .still-ok{
     background-color: rgb(54, 208, 176);
 }
