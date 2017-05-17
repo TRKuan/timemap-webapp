@@ -109,6 +109,7 @@ class TestCalendarMonth extends React.Component {
 
 export default connect((state) => {
     return {
-        ...state.calendar
+        ...state.calendar,
+        ...state.main
     };
 })(TestCalendarMonth);

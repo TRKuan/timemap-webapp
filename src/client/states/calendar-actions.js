@@ -179,8 +179,15 @@ export function setYear(year){
         dispatch(updateMonth());
     };
 }
+export function datePicked(cellNum){
+  return {
+      type: '@CALENDAR/PICK_DAY',
+      cellNum
+  };
+}
 
-export function updateMonthNumbers(year, month){
+export function updateMonthNumbers(year, month, day, todaysDateMonth){
+    console.log(todaysDateMonth);
     let monthNumbers = [];
     let m = moment({
         year: year,
@@ -198,13 +205,13 @@ export function updateMonthNumbers(year, month){
     });
     var firstDay = m.day();
     var firstDayPrev = mPrev.daysInMonth() - firstDay;
-    let i = 0;
     let j = 0;
     let k = 0;
-    for(;i < 42;i++){
-      if(i < firstDay){
+    for(let i=0 ;i < 42;i++){
+      monthNumbers[i]={isToday: false, isPickedDay: false, hasEvent: false};
+      if( i < firstDay){
+        monthNumbers[i]={date: firstDayPrev +1, notThisMonth: true};
         firstDayPrev++;
-        monthNumbers[i]={date: firstDayPrev, notThisMonth: true};
       }else if(i<m.daysInMonth() + firstDay){
         monthNumbers[k+firstDay]={date: k+1, notThisMonth: false};
         k++;
@@ -212,6 +219,12 @@ export function updateMonthNumbers(year, month){
         j++;
         monthNumbers[i]={date: j, notThisMonth: true};
       }
+    }
+    for(let i=0; i<42; i++){
+        if(!monthNumbers[i].notThisMonth && month === todaysDateMonth+1 && monthNumbers[i].date === day ){
+          monthNumbers[i].isToday = true;
+          monthNumbers[i].isPickedDay = true;
+        }
     }
     return {
         type: '@CALENDAR/UPDATE_MONTH_NUMBERS',

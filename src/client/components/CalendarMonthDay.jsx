@@ -4,6 +4,8 @@ import moment from 'moment';
 import FontAwesome from 'react-fontawesome';
 import {setDay} from 'states/calendar-actions.js'
 
+import {datePicked} from 'states/calendar-actions.js'
+
 import './CalendarMonth.css';
 
 
@@ -41,8 +43,7 @@ class CalendarMonthDay extends React.Component {
         );
     }
     onClick(e){
-      if(!this.props.notThisMont){
-
+      if(!this.props.notThisMonth && !this.props.isPickedDay){
         console.log(this.props.cellNum);
         let m = moment({
             year: this.props.year,
@@ -55,7 +56,6 @@ class CalendarMonthDay extends React.Component {
     }
 
 }
-
 export default connect((state) => {
     return {
         ...state.calendar

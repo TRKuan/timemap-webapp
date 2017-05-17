@@ -95,6 +95,18 @@ export function calendar(state = initCalendarState, action) {
             ...state,
             monthNumbers: action.monthNumbers
         };
+    case '@CALENDAR/PICK_DAY':
+        let newMonthNumbers = state.monthNumbers.slice();
+        for(let i=0; i<42; i++){
+          if(newMonthNumbers[i].isPickedDay){
+            newMonthNumbers[i].isPickedDay = false;
+          }
+        }
+        newMonthNumbers[action.cellNum].isPickedDay = true;
+        return {
+            ...state,
+            monthNumbers: newMonthNumbers
+          };
     default:
         return state;
     }
