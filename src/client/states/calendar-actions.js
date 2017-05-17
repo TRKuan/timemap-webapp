@@ -22,7 +22,6 @@ export function addEvent(event) {
         dispatch(addEventStart());
         return addEventFormAPI(event).then((data) => {
             dispatch(addEventEnd(data));
-            dispatch(updateEventInfo(data.id));
         }).
         catch(() => {
             console.error("Can't add event to server");
@@ -53,10 +52,12 @@ function getNextEventEnd(event){
 }
 
 export function getNextEvent(){
-    return (dispatch) => {
+    return (dispatch, getState) => {
         dispatch(getNextEventStart());
-        return getNextEventFormAPI().then((data) => {
+        return getNextEventFormAPI(getState().calendar.userId).then((data) => {
+            console.log(data);
             dispatch(getNextEventEnd(data));
+            dispatch(updateNextEvent());
         });
     };
 }
@@ -79,9 +80,9 @@ export function updateNextEvent(){
     return (dispatch, getState) => {
         if(!getState().calendar.nextEvent)return;
         dispatch(updateNextEventStart());
-        let {geolocation, trans} = getState().calendar.nextEvent;
-        if(!geolocation||!trans)throw Error("geolocation or trans is null");
-        return getDirectionFormAPI(getState().map.currentPosition, geolocation, trans, getState().map.accessToken).then((data) => {
+        let {lng, lat, trans} = getState().calendar.nextEvent;
+        if(!lng||!lat||!trans||!getState().map.currentPosition)return;
+        return getDirectionFormAPI(getState().map.currentPosition, {lng, lat}, trans, getState().map.accessToken).then((data) => {
             let event = JSON.parse(JSON.stringify(getState().calendar.nextEvent));
             event.duration = data.duration;
             event.distance = data.distance;
