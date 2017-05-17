@@ -977,3 +977,36 @@
     at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
     at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\read.js:129:5
     at invokeCallback (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\raw-body\index.js:262:16)
+1495056285 ERROR  TypeError: moment(...).utcOffset(...).format is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:90:68
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1495056286 ERROR  TypeError: moment(...).utcOffset(...).format is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:90:68
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1495056287 ERROR  TypeError: moment(...).utcOffset(...).format is not a function
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:90:68
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
