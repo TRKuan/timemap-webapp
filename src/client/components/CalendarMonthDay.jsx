@@ -9,7 +9,7 @@ import './CalendarMonth.css';
 export default class CalendarMonthDay extends React.Component {
     constructor(props) {
         super(props);
-
+        this.onClick = this.onClick.bind(this);
     }
 
     render() {
@@ -30,7 +30,7 @@ export default class CalendarMonthDay extends React.Component {
           hasEvent = '';
         }
         return (
-          <div className={`day col ${currentDay} ${pickedDay}`}>
+          <div className={`day col ${currentDay} ${pickedDay}`} onClick={this.onClick}>
             <div className={`vertical-center-parent ${notThisMonth}`} style={{padding: 0}}>
               <div className='vertical-center-child'>
                 <div className={hasEvent}>{this.props.date}</div>
@@ -38,6 +38,9 @@ export default class CalendarMonthDay extends React.Component {
             </div>
           </div>
         );
+    }
+    onClick(e){
+      console.log(this.props.num);
     }
 
 }

@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {
     Button
 } from 'reactstrap';
-
+import moment from 'moment';
 import CalendarMonthDay from './CalendarMonthDay.jsx'
 
 import FontAwesome from 'react-fontawesome';
@@ -15,6 +15,7 @@ class TestCalendarMonth extends React.Component {
     constructor(props) {
         super(props);
         this.calendarBody = this.calendarBody.bind(this);
+        this.monthToString = this.monthToString.bind(this);
 
     }
 
@@ -35,15 +36,18 @@ class TestCalendarMonth extends React.Component {
       let week = [[],[],[],[],[],[],[]];
       let month = [];
       let maxWeek = 6;
-      //console.log(this.props.monthNumbers[35]);
-      //console.log(this.props.monthNumbers[35].notThisMonth);
-      if(0){
+      let m = moment({
+          year: this.props.year,
+          month: this.props.month-1,
+          date: 1
+      });
+      if(m.day()+m.daysInMonth()-1 < 35){
         maxWeek = 5;
       }
 
       for(let i=0; i<maxWeek; i++){
         for(let j=0; j<7; j++){
-            week[i].push(<CalendarMonthDay key={i*7+j} {...this.props.monthNumbers[i*7+j]}/>);
+            week[i].push(<CalendarMonthDay key={i*7+j} num={i*7+j} {...this.props.monthNumbers[i*7+j]}/>);
         }
       }
       for(let i=0; i<maxWeek; i++){
@@ -59,7 +63,7 @@ class TestCalendarMonth extends React.Component {
                   <div className='month-select row justify-content-center'>
                     <Button className='month-select-button btn' onClick={() => this.onLastMonthClick()}><i className='fa fa-angle-left fa-2x' aria-hidden="true"></i></Button>
                     <div className='vertical-center-parent current-month col-6'>
-                        <div className='vertical-center-child'>{this.props.month}&nbsp;&nbsp;{this.props.year}</div>
+                        <div className='vertical-center-child'>{this.monthToString()}&nbsp;&nbsp;{this.props.year}</div>
                     </div>
                     <Button className='month-select-button' onClick={() => this.onNextMonthClick()}><i className='fa fa-angle-right fa-2x' aria-hidden="true"></i></Button>
                   </div>
@@ -79,7 +83,10 @@ class TestCalendarMonth extends React.Component {
             </div>
         );
     }
-
+    monthToString(){
+      let t = moment({month: this.props.month-1});
+      return t.format('MMMM')
+    }
     onLastMonthClick(){
         if(this.props.month <= 1){
             this.props.dispatch(setMonth(12));
