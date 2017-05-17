@@ -16,9 +16,6 @@ class Map extends React.Component {
     componentDidMount() {
         this.initMap().catch((err) => {
             console.error("Can't init map\n" + err);
-        }).
-        then(() => {
-            this.props.dispatch(updateNextEvent());
         });
     }
 
@@ -86,6 +83,8 @@ class Map extends React.Component {
                     this.setPinPosition(e.lngLat);
                 });
             }
+
+            this.updateEventPoints(this.props.events);
         });
     }
 
@@ -110,14 +109,15 @@ class Map extends React.Component {
     }
 
     updateEventPoints(events){
+        if(!this.map)return;
         let features = [];
         for(const event of events){
-            if(!event.geolocation)continue;
+            if(!event.lng||!event.lat)continue;
             let feature = {
                 "type": "Feature",
                 "geometry": {
                     "type": "Point",
-                    "coordinates": [event.geolocation.lng, event.geolocation.lat]
+                    "coordinates": [event.lng, event.lat]
                 }
             };
             features.push(feature);
