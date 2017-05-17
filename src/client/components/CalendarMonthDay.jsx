@@ -50,6 +50,7 @@ class CalendarMonthDay extends React.Component {
             month: this.props.month-1,
             day: this.props.monthNumbers[this.props.cellNum].date
         });
+
         this.props.dispatch(setDay(m)).then(()=>{
           this.props.dispatch(updateMonthNumbersCalc(this.props.year, this.props.month, this.props.pickedDay));
         });
