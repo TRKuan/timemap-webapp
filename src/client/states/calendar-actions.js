@@ -123,7 +123,7 @@ function setPickedDayAction(pickedDay) {
 export function setDay(day) {
     return (dispatch, getState) => {
         dispatch(setPickedDayAction(day));
-        dispatch(getDayEvents());
+        return dispatch(getDayEvents());
     };
 }
 
@@ -247,17 +247,6 @@ export function updateMonthNumbersCalc(year, month, pickedDay) {
             dispatch(updateMonthNumbers(monthNumbers));
         });
     };
-}
-export function pickDay() {
-  return (dispatch, getState) => {
-      return dispatch(getMonth()).then(() => {
-      dispatch(pickDayCalc(getState().calendar.year, getState().calendar.month, getState().calendar.pickedDay));
-      });
-  };
-}
-export function pickDayDisplay(monthNumbers) {
-
-    return {type: '@CALENDAR/PICK_DAY_DISPLAY', monthNumbers};
 }
 export function updateMonthNumbers(monthNumbers) {
     return {type: '@CALENDAR/UPDATE_MONTH_NUMBERS', monthNumbers};

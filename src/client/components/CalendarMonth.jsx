@@ -4,7 +4,6 @@ import {
     Button
 } from 'reactstrap';
 import FontAwesome from 'react-fontawesome';
-import {updateMonthNumbers} from 'states/calendar-actions.js'
 import './CalendarMonth.css';
 
 
@@ -14,9 +13,7 @@ class CalendarMonth extends React.Component {
 
     }
 
-    componentWillMount(){
-        this.props.dispatch(updateMonthNumbers(this.props.year, this.props.month));
-    }
+    
 
     render() {
         return (

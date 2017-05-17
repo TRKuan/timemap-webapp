@@ -4,7 +4,7 @@ import moment from 'moment';
 import FontAwesome from 'react-fontawesome';
 import {setDay} from 'states/calendar-actions.js'
 
-import {datePicked} from 'states/calendar-actions.js'
+import {datePicked, updateMonth, updateMonthNumbersCalc} from 'states/calendar-actions.js'
 
 import './CalendarMonth.css';
 
@@ -50,7 +50,9 @@ class CalendarMonthDay extends React.Component {
             month: this.props.month-1,
             day: this.props.monthNumbers[this.props.cellNum].date
         });
-        this.props.dispatch(setDay(m));
+        this.props.dispatch(setDay(m)).then(()=>{
+          this.props.dispatch(updateMonthNumbersCalc(this.props.year, this.props.month, this.props.pickedDay));
+        });
       }
     }
 
