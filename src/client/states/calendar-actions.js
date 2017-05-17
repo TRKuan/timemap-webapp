@@ -154,7 +154,7 @@ export function datePicked(cellNum) {
     return {type: '@CALENDAR/PICK_DAY', cellNum};
 }
 
-export function updateMonthNumbersCalc(year, month, pickedDay) {
+export function updateMonthNumbersCalc(year, month, pickedDay, monthHasEventList) {
     let monthNumbers = [];
     let m = moment({
         year: year,
@@ -196,6 +196,20 @@ export function updateMonthNumbersCalc(year, month, pickedDay) {
             };
         }
     }
+
+    for(let i=0; i< 42; i++){
+        monthNumbers[i]['hasEvent'] = false;
+    }
+    let tmpList =[{startDay:1}, {startDay:12}, {startDay:6},{startDay:20}, {startDay:24}, {startDay:28}];
+    tmpList.map(t=>{
+      for(let i=0; i<42; i++){
+        if(t.startDay === monthNumbers[i].date){
+            monthNumbers[i]['hasEvent'] = true;
+        }
+
+      }
+    });
+
     console.log('in update');
     if (month - 1 === moment().month()) {
       //first mount
@@ -259,7 +273,8 @@ export function updateMonthNumbers(monthNumbers) {
 export function updateMonth() {
     return (dispatch, getState) => {
         return dispatch(getMonth()).then(() => {
-        dispatch(updateMonthNumbersCalc(getState().calendar.year, getState().calendar.month, getState().calendar.pickedDay));
+          console.log(getState().monthHasEventList);
+        dispatch(updateMonthNumbersCalc(getState().calendar.year, getState().calendar.month, getState().calendar.pickedDay, getState().monthHasEventList));
         });
     };
   }
