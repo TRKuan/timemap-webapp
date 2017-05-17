@@ -24,10 +24,7 @@ class TodayNextEvent extends React.Component {
         super(props);
         this.checkLeaveTime = this.checkLeaveTime.bind(this);
     }
-    componentWillMount(){
-        this.props.dispatch(getNextEvent());
-        setInterval(this.checkLeaveTime, 1000);
-    }
+
     checkLeaveTime(){
       if(this.props){
 
@@ -38,7 +35,7 @@ class TodayNextEvent extends React.Component {
       setTimeout(this.props.dispatch(turnRed()), 1000);
     }
     flashRed(){
-      
+
     }
     render() {
         return (

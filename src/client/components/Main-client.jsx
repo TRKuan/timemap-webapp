@@ -27,6 +27,7 @@ import TodayPanel from 'components/TodayPanel.jsx';
 import EventsPanel from 'components/EventsPanel.jsx';
 
 import {initCalendar} from 'states/calendar-actions';
+import {getCurrentPosition} from 'states/map-actions';
 
 import './Main.css';
 

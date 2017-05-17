@@ -3,9 +3,8 @@ import {getAccessToken as getAccessTokenFromAPI} from 'api/mapboxAPI.js';
 
 export function initMap(){
     return (dispatch) => {
-        return dispatch(getAccessToken()).then(() => {
-            dispatch(getCurrentPosition());
-        });
+        dispatch(getAccessToken());
+        return dispatch(getCurrentPosition());
     };
 }
 
@@ -95,7 +94,7 @@ export function getCurrentPosition(){
                 const lat = position.coords.latitude;
                 const lng = position.coords.longitude;
                 dispatch(getCurrentPositionEnd({lng, lat}));
-                dispatch(updateNextEvent());
+                //dispatch(updateNextEvent());
                 //dispatch(watchCurrentPosition());
                 resolve({lng, lat});
             }, (error) => reject(error));
