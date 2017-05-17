@@ -24,8 +24,8 @@ export function addEvent(event) {
         return addEventFormAPI(event).then((data) => {
             dispatch(addEventEnd(data));
         }).
-        catch(() => {
-            console.error("Can't add event to server");
+        catch((err) => {
+            console.error("Can't add event to server"  + err.message);
         });
     };
 }
@@ -58,6 +58,9 @@ export function getNextEvent(){
         return getNextEventFormAPI(getState().calendar.userId).then((data) => {
             dispatch(getNextEventEnd(data));
             dispatch(updateNextEvent());
+        }).
+        catch((err) => {
+            console.error("Can't get next event" + err.message);
         });
     };
 }
@@ -110,6 +113,9 @@ export function getDayEvents(){
         let {userId, pickedDay} = getState().calendar;
         return getDayFormAPI(userId, pickedDay.year(), pickedDay.month()+1, pickedDay.date()).then((data) => {
             dispatch(getDayEventsEnd(data));
+        }).
+        catch((err) => {
+            console.error("Can't get day events" + err.message);
         });
     };
 }
@@ -133,6 +139,9 @@ export function getMonth(){
         let {userId, year, month} = getState().calendar;
         return getMonthFormAPI(userId, year, month).then((data) => {
             dispatch(getMonthEnd(data));
+        }).
+        catch((err) => {
+            console.error("Can't get month" + err.message);
         });
     };
 }
