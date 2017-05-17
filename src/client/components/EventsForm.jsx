@@ -11,7 +11,7 @@ import {
     DatePicker,
     TimePicker
 } from 'antd';
-import {Row, Col} from 'antd';
+import {Row, Col, message} from 'antd';
 import moment from 'moment';
 const FormItem = Form.Item;
 const RadioButton = Radio.Button;
@@ -27,7 +27,18 @@ import './EventsForm.css';
 class EventsForm extends React.Component {
     constructor(props) {
         super(props);
+        this.success = this.success.bind(this);
+        this.added = this.added.bind(this);
     }
+    success(){
+      const hide = message.loading('Adding Event...', 0);
+      setTimeout(hide, 800);
+      setTimeout(this.added, 900);
+    }
+    added(){
+      const added = message.success('Event Added!');
+    }
+
 
     handleSubmit = (e) => {
         e.preventDefault();
@@ -59,7 +70,9 @@ class EventsForm extends React.Component {
                 //console.log(this.props.pinPosition);
 
                 //  this.props.dispatch(cleanForm());
+                this.success();
                 setTimeout(this.props.form.resetFields(), 1000);
+
             }
         });
     }

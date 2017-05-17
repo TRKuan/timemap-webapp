@@ -51,7 +51,7 @@ class MainClient extends React.Component {
             <LocaleProvider locale={enUS}>
             <Router>
                 <div className='main'>
-                    <div className='bg-inverse'>
+                    <div className='navbar-background'>
                         <div className='container'>
                             <Navbar className='' inverse toggleable>
                                 <NavbarToggler right onClick={this.handleNavbarToggle}/>
@@ -61,7 +61,7 @@ class MainClient extends React.Component {
                                 <Collapse isOpen={this.props.navbarToggle} navbar>
                                     <Nav navbar>
                                         <NavItem>
-                                            <NavLink tag={Link} to='/calendar'>Today</NavLink>
+                                            <NavLink tag={Link} to='/today'>Today</NavLink>
                                         </NavItem>
                                         <NavItem>
                                             <NavLink tag={Link} to='/'>Calendar</NavLink>
@@ -75,7 +75,7 @@ class MainClient extends React.Component {
                         </div>
                     </div>
 
-                    <Route exact path="/calendar" render={() => (<TodayPanel todaysDate={this.props.todaysDate}/>)}/>
+                    <Route exact path="/today" render={() => (<TodayPanel todaysDate={this.props.todaysDate}/>)}/>
                     <Route exact path="/" render={() => (<CalendarPanel todaysDate={this.props.todaysDate}/>)}/>
                     <Route exact path="/events" render={() => (<EventsPanel todaysDate={this.props.todaysDate}/>)}/> {/*<div className='footer'>
                         TimMap.

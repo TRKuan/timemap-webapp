@@ -1,9 +1,14 @@
 .today-next-event{
     width: 100%;
-    background-color: rgb(54, 208, 176);
+    background-color: #393947;
     color: white;
     padding: 2rem 3rem;
-
+}
+.still-ok{
+    background-color: rgb(54, 208, 176);
+}
+.alert-leave{
+  background-color: rgb(226, 37, 88);
 }
 
 .next-event{
@@ -30,5 +35,6 @@
     border-left: 0.5rem solid rgb(238, 233, 111);
 }
 .leave-time, .event-time, .event-location{
+    font-size: 1rem;
     margin: 0.2rem 0;
 }

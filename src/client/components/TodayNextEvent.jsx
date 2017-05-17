@@ -27,7 +27,7 @@ class TodayNextEvent extends React.Component {
     }
     render() {
         return (
-            <div className='today-next-event'>
+            <div className='today-next-event alert-leave'>
                 <div className='next-event-header'><i className='fa fa-bullseye fa-1x' aria-hidden="true"></i>Next Event</div>
                 <div className='next-event'>
                     <div className='event-title event-label'>{this.props.title}</div>

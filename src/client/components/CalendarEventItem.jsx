@@ -1,17 +1,23 @@
 import React from 'react';
 import {Button} from 'reactstrap';
-
+import { Popconfirm, message } from 'antd';
 import './CalendarEventItem.css';
 import moment from 'moment';
 
 export default class CalendarEventItem extends React.Component {
     constructor(props) {
         super(props);
-        this.handleDelete = this.handleDelete.bind(this);
-
+        this.confirm = this.confirm.bind(this);
+        this.cancel = this.cancel.bind(this);
 
     }
-    handleDelete(){
+    confirm(e) {
+      console.log(e);
+      message.success('Deleted');
+    }
+
+    cancel(e) {
+
 
     }
     render() {
@@ -31,7 +37,9 @@ export default class CalendarEventItem extends React.Component {
                         <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;&nbsp;{this.props.location}
                     </div>
                     <div className='col-1 delete-event'>
-                        <i className='delete-button fa fa-times' onClick={this.handleDelete}></i>
+                      <Popconfirm title="Are you sure to delete this task?" onConfirm={this.confirm} onCancel={this.cancel} okText="Yes" cancelText="No">
+                          <i className='delete-button fa fa-times'></i>
+                      </Popconfirm>
                     </div>
 
 

@@ -21,7 +21,7 @@
     padding: 0.3rem 0;
     border: none;
     border-radius: 0;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.8);
     color: grey;
     font-family: "Dosis",-apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Comic Sans MS", "微軟正黑體";
 }
@@ -31,16 +31,13 @@
 }
 .button-nav .btn:active{
     color: white;
-    background-color: rgb(54, 208, 176);
+    background-color: rgba(54, 208, 176, 0.8);
 }
 .button-nav .current-mode{
     color: white;
-    background-color: rgb(54, 208, 176);
+    background-color: rgba(54, 208, 176, 0.8);
 }
-.button-nav .month-button{
-  color: white;
-  background-color: rgb(54, 208, 176);
-}
+
 
 
 .today .posts .loading {

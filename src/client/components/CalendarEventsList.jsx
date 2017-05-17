@@ -25,9 +25,9 @@ class CalendarEventsList extends React.Component {
     render() {
         const events = this.props.dayEvents;
         let children = (
-            <ListGroupItem className='empty d-flex justify-content-center align-items-center'>
+            <div className='empty d-flex justify-content-center align-items-center'>
                 <div className='empty-text'>No Events. Time to relax!</div>
-            </ListGroupItem>
+            </div>
         );
         if(events){
             if (events.length) {
