@@ -42,6 +42,7 @@ const schemaSql = `
         trans           trans
     );
     CREATE INDEX events_idx_startTs ON events USING btree("startTs");
+    CREATE INDEX events_idx_endTs ON events USING btree("endTs");
     CREATE INDEX events_idx_startDay ON events USING btree("startDay");
     CREATE INDEX events_idx_startMonth ON events USING btree("startMonth");
     CREATE INDEX events_idx_userId ON events USING btree("userId");
