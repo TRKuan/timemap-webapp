@@ -2,8 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import mapboxgl from 'mapbox-gl';
 
-import {getAccessToken, getCurrentPosition, setPinPosition, clearWatchPosition} from 'states/map-actions.js';
-import {updateNextEvent} from 'states/calendar-actions.js';
+import {setPinPosition} from 'states/map-actions.js';
 
 import './Map.css';
 
@@ -14,13 +13,13 @@ class Map extends React.Component {
     }
 
     componentDidMount() {
-        this.initMap().catch((err) => {
-            console.error("Can't init map\n" + err);
-        });
+        while(!this.props.accessToken){
+
+        }
+        this.initMap();
     }
 
     componentWillUnmount(){
-        this.props.dispatch(clearWatchPosition());
         if(this.map)
             this.map.remove();
     }
@@ -43,23 +42,12 @@ class Map extends React.Component {
     }
 
     initMap() {
-        return this.props.dispatch(getAccessToken()).then(() => {
-            this.props.dispatch(getCurrentPosition()).
-            catch((err) => {
-                console.error("get current position faild: " + err.message);
-                this.props.dispatch(clearWatchPosition());
-            }).
-            then(() => {
-                if(this.props.currentPosition)
-                    this.createMap(this.props.currentPosition);
-                else
-                    this.createMap({lng: 120.9917471227813, lat: 24.79567369463787});
-            }).
-            catch((err) => {
-                console.error("creat map faild: " + err.message);
-            });
-        }).
-        catch((err) => console.error("get AccessToken faild: "+ err.message));
+
+        if(this.props.currentPosition)
+            this.createMap(this.props.currentPosition);
+        else
+            this.createMap({lng: 120.9917471227813, lat: 24.79567369463787});
+
     }
 
     createMap(center) {
@@ -155,6 +143,7 @@ class Map extends React.Component {
 
     updateCurrentPosition(lngLat){
         if(!lngLat||!this.map)return;
+        if(!this.map)return;
         let data = {
             "type": "Feature",
             "geometry": {
@@ -162,7 +151,11 @@ class Map extends React.Component {
                 "coordinates": [lngLat.lng, lngLat.lat]
             }
         };
-        this.map.getSource('current-position').setData(data);
+        try{
+            this.map.getSource('current-position').setData(data);
+        }catch(err){
+
+        }
         //this.map.panTo(lngLat);
     }
 

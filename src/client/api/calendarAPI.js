@@ -17,7 +17,7 @@ export function addEvent(event) {
         return res.data;
     });
 }
-//TODO:haven't test yet
+
 export function setEvent(event, eventID) {
     let url = `${baseUrl}/events/${eventID}`;
 

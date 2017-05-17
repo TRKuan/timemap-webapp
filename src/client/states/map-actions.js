@@ -87,15 +87,15 @@ export function clearWatchPosition(){
 }
 
 export function getCurrentPosition(){
-    return (dispatch) => {
+    return (dispatch, getState) => {
+        navigator.geolocation.clearWatch(getState().map.watchID);
         dispatch(getCurrentPositionStart());
         return new Promise((resolve, reject) => {
             navigator.geolocation.getCurrentPosition((position) => {
                 const lat = position.coords.latitude;
                 const lng = position.coords.longitude;
                 dispatch(getCurrentPositionEnd({lng, lat}));
-                //dispatch(updateNextEvent());
-                //dispatch(watchCurrentPosition());
+                dispatch(watchCurrentPosition());
                 resolve({lng, lat});
             }, (error) => reject(error));
         });
