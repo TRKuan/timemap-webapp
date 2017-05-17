@@ -75,10 +75,10 @@ export function calendar(state = initCalendarState, action) {
             ...state,
             dayEvents: action.events
         }
-    case '@CALENDAR/SET_DAY':
+    case '@CALENDAR/SET_PICKED_DAY':
         return {
             ...state,
-            day: action.day
+            pickedDay: action.pickedDay
         };
     case '@CALENDAR/SET_MONTH':
         return {

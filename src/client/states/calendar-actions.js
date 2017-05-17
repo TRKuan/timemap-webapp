@@ -137,21 +137,16 @@ export function getMonth(){
     };
 }
 
-function setDayAction(day){
+function setPickedDayAction(pickedDay){
     return {
-        type: '@CALENDAR/SET_DAY',
-        day
+        type: '@CALENDAR/SET_PICKED_DAY',
+        pickedDay
     };
 }
 
 export function setDay(day){
     return (dispatch, getState) => {
-        let m = moment({
-            year: getState().calendar.year,
-            month: getState().calendar.month-1
-        });
-        if(day<0||day>m.daysInMonth())return;
-        dispatch(setDayAction(day));
+        dispatch(setPickedDayAction(day));
         dispatch(getDayEvents());
     };
 }
