@@ -116,6 +116,18 @@ function next(userId) {
     return tmp;
 }
 
+function del(eventId, userId) {
+    const sql = `
+        DELETE FROM events
+        WHERE "eventId" = $1
+        AND "userId" = $2
+    `;
+    db.any(sql, [eventId, userId]);
+    return new Promise((resolve, reject) => {
+      resolve(JSON.parse('{"message":"You delete successfully"}'));
+    });
+}
+
 module.exports = {
     list,
     create,
@@ -123,5 +135,6 @@ module.exports = {
     modify,
     month,
     day,
-    next
+    next,
+    del
 };

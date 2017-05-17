@@ -154,6 +154,11 @@ router.get('/nextevent', function(req, res) {
 });
 
 //deleteEvent
-
+router.get('/deleteevent', function(req, res) {
+    const {eventId, userId} = req.query;
+    eventModel.del(eventId, userId).then(message => {
+        res.json(message);
+    });
+});
 
 module.exports = router;
