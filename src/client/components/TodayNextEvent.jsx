@@ -22,24 +22,23 @@ class TodayNextEvent extends React.Component {
     };
     constructor(props) {
         super(props);
-        this.checkLeaveTime = this.checkLeaveTime.bind(this);
+      //  this.checkLeaveTime = this.checkLeaveTime.bind(this);
     }
 
+    /*
     checkLeaveTime(){
-      if(this.props){
-
+      if(this.props.leaveTime < 6000){
+        setTimeout(this.props.dispatch(turnBlack()), 900);
+        setTimeout(this.props.dispatch(turnRed()), 1000);
+      }
+      else{
+        this.props.dispatch(turnGreen());
       }
     }
-    flash(){
-      setTimeout(this.props.dispatch(turnBlack()), 900);
-      setTimeout(this.props.dispatch(turnRed()), 1000);
-    }
-    flashRed(){
-
-    }
+    */
     render() {
         return (
-            <div className='today-next-event still-ok alert-leave'>
+            <div className={`today-next-event ${this.props.nextBackColor}`}>
                 <div className='next-event-header'><i className='fa fa-bullseye fa-1x' aria-hidden="true"></i>Next Event</div>
                 <div className='next-event'>
                     <div className='event-title event-label'>{this.props.title}</div>
