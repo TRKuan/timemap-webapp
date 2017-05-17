@@ -32,7 +32,7 @@ class TestCalendarMonth extends React.Component {
                           tempTodayDay, tempTodayDay, tempTodayDay, tempTodayDay, tempTodayDay, tempTodayDay, tempTodayDay,
                           tempPickedDay, tempPickedDay, tempPickedDay, tempPickedDay, tempPickedDay, tempPickedDay, tempPickedDay,
                           tempTodayDay, tempTodayDay, tempTodayDay, tempTodayDay, tempTodayDay, tempTodayDay, tempTodayDay
-                        ]
+                        ];
       let week = [[],[],[],[],[],[],[]];
       let month = [];
       let maxWeek = 6;

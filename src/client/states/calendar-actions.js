@@ -1,20 +1,11 @@
 import moment from 'moment';
 import {getDirection as getDirectionFormAPI} from 'api/mapboxAPI.js';
-import {addEvent as addEventFormAPI,
-    getNextEvent as getNextEventFormAPI,
-    getDay as getDayFormAPI,
-    getMonth as getMonthFormAPI
-} from 'api/calendarAPI.js';
+import {addEvent as addEventFormAPI, getNextEvent as getNextEventFormAPI, getDay as getDayFormAPI, getMonth as getMonthFormAPI} from 'api/calendarAPI.js';
 export function addEventStart() {
-    return {
-        type: '@CALENDAR/ADD_EVENT_START'
-    };
+    return {type: '@CALENDAR/ADD_EVENT_START'};
 }
 export function addEventEnd(event) {
-    return {
-        type: '@CALENDAR/ADD_EVENT_END',
-        event
-    };
+    return {type: '@CALENDAR/ADD_EVENT_END', event};
 }
 
 export function addEvent(event) {
@@ -31,28 +22,18 @@ export function addEvent(event) {
 }
 
 export function setEvent(id, key, value) {
-    return {
-        type: '@CALENDAR/SET_EVENT',
-        id,
-        key,
-        value
-    };
+    return {type: '@CALENDAR/SET_EVENT', id, key, value};
 }
 
-function getNextEventStart(){
-    return {
-        type: '@CALENDAR/GET_NEXT_EVENT_START'
-    };
+function getNextEventStart() {
+    return {type: '@CALENDAR/GET_NEXT_EVENT_START'};
 }
 
-function getNextEventEnd(event){
-    return {
-        type: '@CALENDAR/GET_NEXT_EVENT_END',
-        event
-    };
+function getNextEventEnd(event) {
+    return {type: '@CALENDAR/GET_NEXT_EVENT_END', event};
 }
 
-export function getNextEvent(){
+export function getNextEvent() {
     return (dispatch, getState) => {
         dispatch(getNextEventStart());
         return getNextEventFormAPI(getState().calendar.userId).then((data) => {
@@ -65,27 +46,26 @@ export function getNextEvent(){
     };
 }
 
-
-function updateNextEventStart(){
-    return {
-        type: '@CALENDAR/UPDATE_NEXT_EVENT_START'
-    };
+function updateNextEventStart() {
+    return {type: '@CALENDAR/UPDATE_NEXT_EVENT_START'};
 }
 
-function updateNextEventEnd(event){
-    return {
-        type: '@CALENDAR/UPDATE_NEXT_EVENT_END',
-        event
-    };
+function updateNextEventEnd(event) {
+    return {type: '@CALENDAR/UPDATE_NEXT_EVENT_END', event};
 }
 
-export function updateNextEvent(){
+export function updateNextEvent() {
     return (dispatch, getState) => {
-        if(!getState().calendar.nextEvent)return;
+        if (!getState().calendar.nextEvent)
+            return;
         dispatch(updateNextEventStart());
         let {lng, lat, trans} = getState().calendar.nextEvent;
-        if(!lng||!lat||!trans||!getState().map.currentPosition)return;
-        return getDirectionFormAPI(getState().map.currentPosition, {lng, lat}, trans, getState().map.accessToken).then((data) => {
+        if (!lng || !lat || !trans || !getState().map.currentPosition)
+            return;
+        return getDirectionFormAPI(getState().map.currentPosition, {
+            lng,
+            lat
+        }, trans, getState().map.accessToken).then((data) => {
             let event = JSON.parse(JSON.stringify(getState().calendar.nextEvent));
             event.duration = data.duration;
             event.distance = data.distance;
@@ -94,24 +74,19 @@ export function updateNextEvent(){
     };
 }
 
-function getDayEventsStart(){
-    return {
-        type: '@CALENDAR/GET_DAY_EVENTS_START'
-    };
+function getDayEventsStart() {
+    return {type: '@CALENDAR/GET_DAY_EVENTS_START'};
 }
 
-function getDayEventsEnd(events){
-    return {
-        type: '@CALENDAR/GET_DAY_EVENTS_END',
-        events
-    };
+function getDayEventsEnd(events) {
+    return {type: '@CALENDAR/GET_DAY_EVENTS_END', events};
 }
 
-export function getDayEvents(){
+export function getDayEvents() {
     return (dispatch, getState) => {
         dispatch(getDayEventsStart());
         let {userId, pickedDay} = getState().calendar;
-        return getDayFormAPI(userId, pickedDay.year(), pickedDay.month()+1, pickedDay.date()).then((data) => {
+        return getDayFormAPI(userId, pickedDay.year(), pickedDay.month() + 1, pickedDay.date()).then((data) => {
             dispatch(getDayEventsEnd(data));
         }).
         catch((err) => {
@@ -120,20 +95,15 @@ export function getDayEvents(){
     };
 }
 
-function getMonthStart(){
-    return {
-        type: '@CALENDAR/GET_MONTH_START'
-    };
+function getMonthStart() {
+    return {type: '@CALENDAR/GET_MONTH_START'};
 }
 
-function getMonthEnd(hasEventList){
-    return {
-        type: '@CALENDAR/GET_MONTH_END',
-        hasEventList
-    };
+function getMonthEnd(hasEventList) {
+    return {type: '@CALENDAR/GET_MONTH_END', hasEventList};
 }
 
-export function getMonth(){
+export function getMonth() {
     return (dispatch, getState) => {
         dispatch(getMonthStart());
         let {userId, year, month} = getState().calendar;
@@ -146,105 +116,157 @@ export function getMonth(){
     };
 }
 
-function setPickedDayAction(pickedDay){
-    return {
-        type: '@CALENDAR/SET_PICKED_DAY',
-        pickedDay
-    };
+function setPickedDayAction(pickedDay) {
+    return {type: '@CALENDAR/SET_PICKED_DAY', pickedDay};
 }
 
-export function setDay(day){
+export function setDay(day) {
     return (dispatch, getState) => {
         dispatch(setPickedDayAction(day));
         dispatch(getDayEvents());
     };
 }
 
-function setMonthAction(month){
-    return {
-        type: '@CALENDAR/SET_MONTH',
-        month
-    };
+function setMonthAction(month) {
+    return {type: '@CALENDAR/SET_MONTH', month};
 }
 
-export function setMonth(month){
+export function setMonth(month) {
     return (dispatch, getState) => {
-        if(month<1||month>12)return;
+        if (month < 1 || month > 12)
+            return;
         dispatch(setMonthAction(month));
         dispatch(updateMonth());
     };
 }
 
-function setYearAction(year){
-    return {
-        type: '@CALENDAR/SET_YEAR',
-        year
-    };
+function setYearAction(year) {
+    return {type: '@CALENDAR/SET_YEAR', year};
 }
 
-export function setYear(year){
+export function setYear(year) {
     return (dispatch, getState) => {
         dispatch(setYearAction(year));
         dispatch(updateMonth());
     };
 }
-export function datePicked(cellNum){
-  return {
-      type: '@CALENDAR/PICK_DAY',
-      cellNum
-  };
+export function datePicked(cellNum) {
+    return {type: '@CALENDAR/PICK_DAY', cellNum};
 }
 
-export function updateMonthNumbers(year, month, day, todaysDateMonth){
-    console.log(todaysDateMonth);
+export function updateMonthNumbersCalc(year, month, pickedDay) {
+    console.log('refreshed');
     let monthNumbers = [];
     let m = moment({
         year: year,
-        month: month-1,
+        month: month - 1,
         date: 1
     });
     let monthPrev = month - 2;
-    if(monthPrev < 0){
-      monthPrev = 11;
+    if (monthPrev < 0) {
+        monthPrev = 11;
     }
-    let mPrev = moment({
-        year: year,
-        month: monthPrev,
-        date: 1
-    });
+    let mPrev = moment({year: year, month: monthPrev, date: 1});
     var firstDay = m.day();
     var firstDayPrev = mPrev.daysInMonth() - firstDay;
     let j = 0;
     let k = 0;
-    for(let i=0 ;i < 42;i++){
-      monthNumbers[i]={isToday: false, isPickedDay: false, hasEvent: false};
-      if( i < firstDay){
-        monthNumbers[i]={date: firstDayPrev +1, notThisMonth: true};
-        firstDayPrev++;
-      }else if(i<m.daysInMonth() + firstDay){
-        monthNumbers[k+firstDay]={date: k+1, notThisMonth: false};
-        k++;
-      }else{
-        j++;
-        monthNumbers[i]={date: j, notThisMonth: true};
-      }
-    }
-    for(let i=0; i<42; i++){
-        if(!monthNumbers[i].notThisMonth && month === todaysDateMonth+1 && monthNumbers[i].date === day ){
-          monthNumbers[i].isToday = true;
-          monthNumbers[i].isPickedDay = true;
+    for (let i = 0; i < 42; i++) {
+        monthNumbers[i] = {
+            isToday: false,
+            isPickedDay: false,
+            hasEvent: false
+        };
+        if (i < firstDay) {
+            monthNumbers[i] = {
+                date: firstDayPrev + 1,
+                notThisMonth: true
+            };
+            firstDayPrev++;
+        } else if (i < m.daysInMonth() + firstDay) {
+            monthNumbers[k + firstDay] = {
+                date: k + 1,
+                notThisMonth: false
+            };
+            k++;
+        } else {
+            j++;
+            monthNumbers[i] = {
+                date: j,
+                notThisMonth: true
+            };
         }
     }
-    return {
-        type: '@CALENDAR/UPDATE_MONTH_NUMBERS',
-        monthNumbers
-    };
-}
+    if (month - 1 === moment().month()) {
+      //first mount
+        if (pickedDay.date() === moment().date() ) {
+            for (let i = 0; i < 42; i++) {
+                if (monthNumbers[i].date === moment().date()) {
+                    monthNumbers[i]['isToday'] = true;
+                    monthNumbers[i]['isPickedDay'] = true;
 
-export function updateMonth(){
-    return (dispatch, getState) => {
-        return dispatch(getMonth()).then(() => {
-            dispatch(updateMonthNumbers(getState().calendar.year, getState().calendar.month));
+                }
+            }
+        }
+        //today month change pickedDay
+        else {
+            for (let i = 0; i < 42; i++) {
+                if (monthNumbers[i].date === moment().date()) {
+                  monthNumbers[i]['isToday'] = true;
+                  monthNumbers[i]['isPickedDay'] = false;
+
+                }
+                if (pickedDay.month() === month-1 && monthNumbers[i].date === pickedDay.date()  && !monthNumbers[i].notThisMonth) {
+                  monthNumbers[i]['isToday'] = false;
+                  monthNumbers[i]['isPickedDay'] = true;
+
+                }
+            }
+        }
+    }
+    //change month
+    else if (month - 1 !== moment().month()) {
+        for (let i = 0; i < 42; i++) {
+          monthNumbers[i]['isToday'] = false;
+          monthNumbers[i]['isPickedDay'] = false;
+
+        }
+        if(pickedDay.month() === month-1){
+          for (let i = 0; i < 42; i++) {
+            if(pickedDay.date() === monthNumbers[i].date & !monthNumbers[i].notThisMonth){
+              monthNumbers[i]['isToday'] = false;
+              monthNumbers[i]['isPickedDay'] = true;
+
+            }
+
+          }
+        }
+    }
+    return (dispatch) => {
+        return dispatch(() => {
+            dispatch(updateMonthNumbers(monthNumbers));
         });
     };
 }
+export function pickDay() {
+  return (dispatch, getState) => {
+      return dispatch(getMonth()).then(() => {
+      dispatch(pickDayCalc(getState().calendar.year, getState().calendar.month, getState().calendar.pickedDay));
+      });
+  };
+}
+export function pickDayDisplay(monthNumbers) {
+
+    return {type: '@CALENDAR/PICK_DAY_DISPLAY', monthNumbers};
+}
+export function updateMonthNumbers(monthNumbers) {
+    return {type: '@CALENDAR/UPDATE_MONTH_NUMBERS', monthNumbers};
+}
+
+export function updateMonth() {
+    return (dispatch, getState) => {
+        return dispatch(getMonth()).then(() => {
+        dispatch(updateMonthNumbersCalc(getState().calendar.year, getState().calendar.month, getState().calendar.pickedDay));
+        });
+    };
+  }

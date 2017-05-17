@@ -33,7 +33,7 @@ class EventsForm extends React.Component {
         e.preventDefault();
         this.props.form.validateFields((err, values) => {
             if (!err) {
-                let startTime = moment({year: values.startTimeYMD.year(), month: values.startTimeYMD.month(), date: values.startTimeYMD.date(), hour: values.startTimeHM.hour(), minute: values.startTimeYMD.minute()});
+                let startTime = moment({year: values.startTimeYMD.year(), month: values.startTimeYMD.month(), date: values.startTimeYMD.date(), hour: values.startTimeHM.hour(), minute: values.startTimeHM.minute()});
                 let endTime = moment({year: values.endTimeYMD.year(), month: values.endTimeYMD.month(), date: values.endTimeYMD.date(), hour: values.endTimeHM.hour(), minute: values.endTimeHM.minute()});
                 let lng = null;
                 let lat = null;
