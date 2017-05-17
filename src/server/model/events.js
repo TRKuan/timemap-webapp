@@ -109,7 +109,7 @@ function next(userId) {
     `;
     let tmp = {};
     try{
-      tmp = db.one(sql, userId);
+      tmp = db.any(sql, userId);
     }catch(err){
 
     }

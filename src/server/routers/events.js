@@ -89,7 +89,7 @@ router.get('/day', function(req, res) {
 router.get('/month', function(req, res) {
     const {userId, year, month} = req.query;
     eventModel.month(userId, year, month).then(events => {
-        console.log(events[0].startDay);
+        /*console.log(events[0].startDay);
         let array = [];
         let m = moment({
           month: month-1
@@ -99,9 +99,9 @@ router.get('/month', function(req, res) {
         }
         for (var j = 0; j < events.length; j++){
           array[events[j].startDay-1]=true
-        }
-        res.json(array);
-
+        }*/
+        //res.json(array);
+        res.json(events);
     });
 });
 
