@@ -311,7 +311,7 @@ export function updateLeaveTimeStart() {
     return (dispatch) => {
         let id = setInterval(() => {
             dispatch(setLeaveTime());
-        }, 100000);
+        }, 1000);
         dispatch(setLeaveTimeId(id));
     };
 }
