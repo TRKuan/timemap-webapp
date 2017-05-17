@@ -19,9 +19,6 @@ class TestCalendarMonth extends React.Component {
 
     }
 
-    componentWillMount(){
-        this.props.dispatch(updateMonth());
-    }
     calendarBody(){
       let tempPickedDay = {date: 1, notThisMonth: false, isToday: false, isPickedDay: false, hasEvent: true};
       let tempTodayDay = {date: 2, notThisMonth: true, isToday: false, isPickedDay: false, hasEvent: true};

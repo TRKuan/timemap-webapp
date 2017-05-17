@@ -78,8 +78,8 @@ router.post('/events/:eventId', function(req, res) {
 router.get('/day', function(req, res) {
     const {userId, startTime, endTime} = req.query;
     eventModel.day(userId, startTime, endTime).then(events => {
-      console.log(startTime);
-      console.log(endTime);
+      //console.log(startTime);
+      //console.log(endTime);
         res.json(events);
     });
 });
@@ -89,8 +89,8 @@ router.get('/month', function(req, res) {
     const {userId, year, month, zone} = req.query;
     let startTime = moment({year, month: month-1}).utcOffset(zone).format('YYYY-MM-DD HH:mm:ssZZ');
     let endTime = moment({year, month: month-1}).month(month).utcOffset(zone).format('YYYY-MM-DD HH:mm:ssZZ');
-    console.log(startTime);
-    console.log(endTime);
+    //console.log(startTime);
+    //console.log(endTime);
     eventModel.month(userId, startTime, endTime).then(events => {
         /*console.log(events[0].startDay);
         let array = [];
