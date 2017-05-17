@@ -52,7 +52,7 @@ class TestCalendarMonth extends React.Component {
                   <div className='month-select row justify-content-center'>
                     <Button className='month-select-button btn'><i className='fa fa-angle-left fa-2x' aria-hidden="true"></i></Button>
                     <div className='vertical-center-parent current-month col-6'>
-                        <div className='vertical-center-child'>DECEMBER&nbsp;&nbsp;2017</div>
+                        <div className='vertical-center-child'>{this.props.month}&nbsp;&nbsp;{this.props.year}</div>
                     </div>
                     <Button className='month-select-button'><i className='fa fa-angle-right fa-2x' aria-hidden="true"></i></Button>
                   </div>
