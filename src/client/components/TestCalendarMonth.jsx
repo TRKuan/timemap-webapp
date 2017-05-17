@@ -73,7 +73,7 @@ class TestCalendarMonth extends React.Component {
                       <div className='col' style={{padding: 0}}>TUE</div>
                       <div className='col' style={{padding: 0}}>WED</div>
                       <div className='col' style={{padding: 0}}>THU</div>
-                      <div className='col' style={{padding: 0}}>FRE</div>
+                      <div className='col' style={{padding: 0}}>FRI</div>
                       <div className='col' style={{padding: 0}}>SAT</div>
                   </div>
                 </div>

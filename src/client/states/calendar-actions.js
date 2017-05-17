@@ -154,8 +154,7 @@ export function datePicked(cellNum) {
     return {type: '@CALENDAR/PICK_DAY', cellNum};
 }
 
-export function updateMonthNumbersCalc(year, month, pickedDay) {
-    console.log('refreshed');
+export function updateMonthNumbersCalc(year, month, pickedDay, monthHasEventList) {
     let monthNumbers = [];
     let m = moment({
         year: year,
@@ -197,9 +196,25 @@ export function updateMonthNumbersCalc(year, month, pickedDay) {
             };
         }
     }
+
+    for(let i=0; i< 42; i++){
+        monthNumbers[i]['hasEvent'] = false;
+    }
+    let tmpList =[{startDay:1}, {startDay:12}, {startDay:6},{startDay:20}, {startDay:24}, {startDay:28}];
+    tmpList.map(t=>{
+      for(let i=0; i<42; i++){
+        if(t.startDay === monthNumbers[i].date){
+            monthNumbers[i]['hasEvent'] = true;
+        }
+
+      }
+    });
+
+    console.log('in update');
     if (month - 1 === moment().month()) {
       //first mount
         if (pickedDay.date() === moment().date() ) {
+          console.log('first mount');
             for (let i = 0; i < 42; i++) {
                 if (monthNumbers[i].date === moment().date()) {
                     monthNumbers[i]['isToday'] = true;
@@ -211,6 +226,7 @@ export function updateMonthNumbersCalc(year, month, pickedDay) {
         //today month change pickedDay
         else {
             for (let i = 0; i < 42; i++) {
+              console.log('today month change pickedDay');
                 if (monthNumbers[i].date === moment().date()) {
                   monthNumbers[i]['isToday'] = true;
                   monthNumbers[i]['isPickedDay'] = false;
@@ -226,12 +242,14 @@ export function updateMonthNumbersCalc(year, month, pickedDay) {
     }
     //change month
     else if (month - 1 !== moment().month()) {
+      console.log('not on today month');
         for (let i = 0; i < 42; i++) {
           monthNumbers[i]['isToday'] = false;
           monthNumbers[i]['isPickedDay'] = false;
 
         }
         if(pickedDay.month() === month-1){
+          console.log('not on today month but has picked day');
           for (let i = 0; i < 42; i++) {
             if(pickedDay.date() === monthNumbers[i].date & !monthNumbers[i].notThisMonth){
               monthNumbers[i]['isToday'] = false;
@@ -255,7 +273,8 @@ export function updateMonthNumbers(monthNumbers) {
 export function updateMonth() {
     return (dispatch, getState) => {
         return dispatch(getMonth()).then(() => {
-        dispatch(updateMonthNumbersCalc(getState().calendar.year, getState().calendar.month, getState().calendar.pickedDay));
+          console.log(getState().monthHasEventList);
+        dispatch(updateMonthNumbersCalc(getState().calendar.year, getState().calendar.month, getState().calendar.pickedDay, getState().monthHasEventList));
         });
     };
   }

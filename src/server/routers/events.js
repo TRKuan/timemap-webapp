@@ -48,8 +48,8 @@ router.get('/accesstoken', function(req, res){
 // setEvent
 router.post('/events/:eventId', function(req, res) {
     const {eventId, userId, location, lng, lat, startTs, endTs, allDay, title, decription, lable, trans} = req.body;
-    console.log(moment(startTs).unix());
-    console.log(moment(endTs).unix());
+    //console.log(moment(startTs).unix());
+    //console.log(moment(endTs).unix());
     if (moment(startTs).unix() > moment(endTs).unix()){
       const err = new Error('startTs is more than endTs');
       err.status = 400;
@@ -78,15 +78,17 @@ router.post('/events/:eventId', function(req, res) {
 router.get('/day', function(req, res) {
     const {userId, startTime, endTime} = req.query;
     eventModel.day(userId, startTime, endTime).then(events => {
+      console.log(startTime);
+      console.log(endTime);
         res.json(events);
     });
 });
 
 //getMonth
 router.get('/month', function(req, res) {
-    const {userId, year, month} = req.query;
-    let startTime = moment({year, month: month-1}).format('YYYY-MM-DD HH:mm:ssZZ');
-    let endTime = moment({year, month: month-1}).month(month).format('YYYY-MM-DD HH:mm:ssZZ');
+    const {userId, year, month, zone} = req.query;
+    let startTime = moment({year, month: month-1}).utcOffset(zone).format('YYYY-MM-DD HH:mm:ssZZ');
+    let endTime = moment({year, month: month-1}).month(month).utcOffset(zone).format('YYYY-MM-DD HH:mm:ssZZ');
     console.log(startTime);
     console.log(endTime);
     eventModel.month(userId, startTime, endTime).then(events => {
@@ -115,7 +117,7 @@ router.get('/month', function(req, res) {
         for (var j = 0; j < events.length; j++){
           if(moment(events[j].startTs).unix() < moment(startTime).unix()){
             if(moment(events[j].endTs).unix() < moment(endTime).unix()){
-              for (var k = 0; k < events[j].endDay; k++){
+              for (var k = 0; k < moment(events[j].endTs).date(); k++){
                 array[k]=true;
               }
             }
@@ -127,12 +129,12 @@ router.get('/month', function(req, res) {
           }
           if(moment(events[j].startTs).unix() >= moment(startTime).unix()){
             if(moment(events[j].endTs).unix() < moment(endTime).unix()){
-              for (var k = events[j].startDay-1; k < events[j].endDay; k++){
+              for (var k = moment(events[j].startTs).date()-1; k < moment(events[j].endTs).date(); k++){
                 array[k]=true;
               }
             }
             if(moment(events[j].endTs).unix() >= moment(endTime).unix()){
-              for (var k = events[j].startDay-1; k < m; k++) {
+              for (var k = moment(events[j].startTs).date()-1; k < m; k++) {
                 array[k]=true;
               }
             }
