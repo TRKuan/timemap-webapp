@@ -114,6 +114,25 @@ export function getDayEvents(){
     };
 }
 
+function setDayAction(day){
+    return {
+        type: '@CALENDAR/SET_DAY',
+        day
+    };
+}
+
+export function setDay(day){
+    return (dispatch, getState) => {
+        let m = moment({
+            year: getState().calendar.year,
+            month: getState().calendar.month-1
+        });
+        if(day<0||day>m.daysInMonth())return;
+        dispatch(setDayAction(day));
+        dispatch(getDayEvents());
+    };
+}
+
 function setMonthAction(month){
     return {
         type: '@CALENDAR/SET_MONTH',
@@ -122,8 +141,8 @@ function setMonthAction(month){
 }
 
 export function setMonth(month){
-    if(month<1||month>12)return;
     return (dispatch, getState) => {
+        if(month<1||month>12)return;
         dispatch(setMonthAction(month));
         dispatch(updateMonthNumbers(getState().calendar.year, month));
     };
@@ -137,7 +156,6 @@ function setYearAction(year){
 }
 
 export function setYear(year){
-    if(year<0)return;
     return (dispatch, getState) => {
         dispatch(setYearAction(year));
         dispatch(updateMonthNumbers(year, getState().calendar.month));

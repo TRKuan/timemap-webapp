@@ -66,6 +66,11 @@ export function calendar(state = initCalendarState, action) {
             ...state,
             dayEvents: action.events
         }
+    case '@CALENDAR/SET_DAY':
+        return {
+            ...state,
+            day: action.day
+        };
     case '@CALENDAR/SET_MONTH':
         return {
             ...state,
