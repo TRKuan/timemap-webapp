@@ -7,7 +7,7 @@ import moment from 'moment';
 import CalendarMonthDay from './CalendarMonthDay.jsx'
 
 import FontAwesome from 'react-fontawesome';
-import {setMonth, setYear, updateMonthNumbers} from 'states/calendar-actions.js'
+import {setMonth, setYear, updateMonth} from 'states/calendar-actions.js'
 import './CalendarMonth.css';
 
 
@@ -20,7 +20,11 @@ class TestCalendarMonth extends React.Component {
     }
 
     componentWillMount(){
+<<<<<<< HEAD
         this.props.dispatch(updateMonthNumbers(this.props.year, this.props.month, this.props.day, this.props.todaysDate.month()));
+=======
+        this.props.dispatch(updateMonth());
+>>>>>>> 40e34655eca6029d99d006cc27cf8dbe594e012c
     }
     calendarBody(){
       let tempPickedDay = {date: 1, notThisMonth: false, isToday: false, isPickedDay: false, hasEvent: true};

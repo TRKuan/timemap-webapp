@@ -74,17 +74,16 @@ function modify(eventId, userId, location, lng, lat, startTs, endTs, allDay, tit
     return db.one(sql, [eventId, userId, location, lng, lat, startTs, endTs, allDay, title, decription, lable, trans]);
 }
 
-function day(userId, year, month, day) {
+function day(userId, startTime, endTime) {
     const sql = `
         SELECT *
         FROM events
         WHERE "userId" = $1
-        AND "startYear" = $2
-        AND "startMonth" = $3
-        AND "startDay" = $4
+        AND "endTs" >= $2
+        AND "startTs" < $3
         ORDER BY "startTs" ASC
     `;
-    return db.any(sql, [userId, year, month, day]);
+    return db.any(sql, [userId, startTime, endTime]);
 }
 
 function month(userId, year, month) {
@@ -110,7 +109,7 @@ function next(userId) {
     `;
     let tmp = {};
     try{
-      tmp = db.one(sql, userId);
+      tmp = db.any(sql, userId);
     }catch(err){
 
     }

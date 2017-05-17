@@ -1,4 +1,5 @@
 import axios from 'axios';
+import moment from 'moment';
 
 const baseUrl = 'http://localhost:8080/api';
 
@@ -33,7 +34,9 @@ export function setEvent(event, eventID) {
 }
 
 export function getDay(userId, year, month, day) {
-    let url = `${baseUrl}/day?userId=${userId}&year=${year}&month=${month}&day=${day}`;
+    let startTime = moment({year, month:month-1, day}).format('YYYY-MM-DDZZ');
+    let endTime = moment({year, month:month-1, day:day+1}).format('YYYY-MM-DDZZ');
+    let url = `${baseUrl}/day?userId=${userId}&startTime=${startTime}&endTime=${endTime}`;
 
     console.log(`Making GET request to: ${url}`);
 
@@ -66,7 +69,7 @@ export function getNextEvent(userId) {
     return axios.get(url).then((res) => {
         if (res.status !== 200)
             throw new Error(`Unexpected response code: ${res.status}`);
-        return res.data;
+        return res.data[0];
     });
 }
 
