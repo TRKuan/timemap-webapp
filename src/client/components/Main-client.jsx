@@ -14,6 +14,7 @@ import {
     Row,
     Container
 } from 'reactstrap';
+import moment from 'moment';
 
 import {connect} from 'react-redux';
 import {toggleNavbar, updateCurrentDate} from 'states/main-client-actions.js';
@@ -41,8 +42,8 @@ class MainClient extends React.Component {
         this.updateDate = this.updateDate.bind(this);
 
     }
-    componentDidMount() {
-        this.updateDate();
+    componentWillMount() {
+        this.props.dispatch(updateCurrentDate(moment()));
         setInterval(this.updateDate, 1000);
     }
     render() {
@@ -89,45 +90,14 @@ class MainClient extends React.Component {
         console.log(this.props.navbarToggle);
     }
     updateDate() {
-        let currentTime = new Date();
-        let currentYear = currentTime.getFullYear();
-        let currentMonth = currentTime.getMonth();
-        let currentDate = currentTime.getDate();
-        let currentDay = currentTime.getDay();
-
-        let month = [
-            "January",
-            "February",
-            "March",
-            "April",
-            "May",
-            "June",
-            "July",
-            "August",
-            "September",
-            "October",
-            "November",
-            "December"
-        ];
-        let day = [
-            "Sunday",
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday"
-        ];
-        currentMonth = month[currentMonth];
-        currentDay = day[currentDay];
-
-        currentTime = {
-            month: currentMonth,
-            date: currentDate,
-            year: currentYear,
-            day: currentDay
-        };
-        if (currentDate !== this.props.todaysDate.date) {
+        let currentTime = moment();
+        /*
+        let currentYear = currentTime.year();
+        let currentMonth = currentTime.month();
+        let currentDate = currentTime.date();
+        let currentDay = currentTime.day();
+        */
+        if (currentTime.date() !== this.props.todaysDate.date()) {
             this.props.dispatch(updateCurrentDate(currentTime));
         }
     }

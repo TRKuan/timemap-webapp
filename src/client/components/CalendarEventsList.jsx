@@ -4,6 +4,7 @@ import {
   ListGroup,
   ListGroupItem
 } from 'reactstrap';
+import moment from 'moment';
 
 import CalendarEventItem from 'components/CalendarEventItem.jsx';
 
@@ -18,12 +19,31 @@ export default class CalendarEventsList extends React.Component {
     render() {
         {/*const {events} = this.props;*/}
 
-        let event = {
-            title: 'SS project QQ',
+        let event1 = {
+            id : 1,
+            title: 'Event 1',
             time: '3:00AM - 6:30AM',
+            startTs: moment(),
+            endTs: moment(),
             location: 'Shu Dormitory'
         };
-        let events ={event,event,event};
+        let event2 = {
+            id : 2,
+            title: 'Event 2',
+            time: '3:00AM - 6:30AM',
+            startTs: moment(),
+            endTs: moment(),
+            location: 'Shu Dormitory'
+        }
+        let event3 = {
+            id : 3,
+            title: 'SS project QQ',
+            time: '3:00AM - 6:30AM',
+            startTs: moment(),
+            endTs: moment(),
+            location: 'Shu Dormitory'
+        }
+        let events =[event1,event2,event3];
         let children = (
             <ListGroupItem className='empty d-flex justify-content-center align-items-center'>
                 <div className='empty-text'>No Events. Time to relax!</div>
@@ -31,7 +51,7 @@ export default class CalendarEventsList extends React.Component {
         );
         if (events.length) {
             children = events.map(e => (
-                  <CalendarEventItem {...e}/>
+                  <CalendarEventItem key={e.id} {...e}/>
             ));
         }
 

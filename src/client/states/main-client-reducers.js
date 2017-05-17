@@ -1,6 +1,8 @@
+
+
 const initMainState = {
     navbarToggle: false,
-    todaysDate: {}
+    todaysDate: null
 };
 export function main(state = initMainState, action) {
     switch (action.type) {

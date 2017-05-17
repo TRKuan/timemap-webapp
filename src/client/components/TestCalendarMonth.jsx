@@ -14,14 +14,14 @@ import './CalendarMonth.css';
 class TestCalendarMonth extends React.Component {
     constructor(props) {
         super(props);
-        this.updateCalendarMonth = this.updateCalendarMonth.bind(this);
+        this.calendarBody = this.calendarBody.bind(this);
 
     }
 
     componentWillMount(){
         this.props.dispatch(updateMonthNumbers(this.props.year, this.props.month));
     }
-    updateCalendarMonth(){
+    calendarBody(){
       let tempPickedDay = {date: 1, notThisMonth: false, isToday: false, isPickedDay: false, hasEvent: true};
       let tempTodayDay = {date: 2, notThisMonth: true, isToday: false, isPickedDay: false, hasEvent: true};
       let monthNumbers = [tempTodayDay, tempPickedDay, tempTodayDay, tempTodayDay, tempTodayDay, tempTodayDay, tempTodayDay,
@@ -67,7 +67,7 @@ class TestCalendarMonth extends React.Component {
                   </div>
                 </div>
                 <div className='calendar-body container-fluid'>
-                  {this.updateCalendarMonth()}
+                  {this.calendarBody()}
                 </div>
             </div>
         );
