@@ -2,7 +2,8 @@ import moment from 'moment';
 import {getDirection as getDirectionFormAPI} from 'api/mapboxAPI.js';
 import {addEvent as addEventFormAPI,
     getNextEvent as getNextEventFormAPI,
-    getDay as getDayFormAPI
+    getDay as getDayFormAPI,
+    getMonth as getMonthFormAPI
 } from 'api/calendarAPI.js';
 export function addEventStart() {
     return {
@@ -113,6 +114,29 @@ export function getDayEvents(){
     };
 }
 
+function getMonthStart(){
+    return {
+        type: '@CALENDAR/GET_MONTH_START'
+    };
+}
+
+function getMonthEnd(hasEventList){
+    return {
+        type: '@CALENDAR/GET_MONTH_END',
+        hasEventList
+    };
+}
+
+export function getMonth(){
+    return (dispatch, getState) => {
+        dispatch(getMonthStart());
+        let {userId, year, month} = getState().calendar;
+        return getMonthFormAPI(userId, year, month).then((data) => {
+            dispatch(getMonthEnd(data));
+        });
+    };
+}
+
 function setDayAction(day){
     return {
         type: '@CALENDAR/SET_DAY',
@@ -143,7 +167,7 @@ export function setMonth(month){
     return (dispatch, getState) => {
         if(month<1||month>12)return;
         dispatch(setMonthAction(month));
-        dispatch(updateMonthNumbers(getState().calendar.year, month));
+        dispatch(updateMonth());
     };
 }
 
@@ -157,7 +181,7 @@ function setYearAction(year){
 export function setYear(year){
     return (dispatch, getState) => {
         dispatch(setYearAction(year));
-        dispatch(updateMonthNumbers(year, getState().calendar.month));
+        dispatch(updateMonth());
     };
 }
 
@@ -197,5 +221,13 @@ export function updateMonthNumbers(year, month){
     return {
         type: '@CALENDAR/UPDATE_MONTH_NUMBERS',
         monthNumbers
+    };
+}
+
+export function updateMonth(){
+    return (dispatch, getState) => {
+        return dispatch(getMonth()).then(() => {
+            dispatch(updateMonthNumbers(getState().calendar.year, getState().calendar.month));
+        });
     };
 }

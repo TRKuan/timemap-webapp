@@ -57,6 +57,15 @@ export function calendar(state = initCalendarState, action) {
             ...state,
             nextEvent: action.event
         };
+    case '@CALENDAR/GET_MONTH_START':
+        return{
+            ...state
+        }
+    case '@CALENDAR/GET_MONTH_END':
+        return{
+            ...state,
+            monthHasEventList: action.hasEventList
+        }
     case '@CALENDAR/GET_DAY_EVENTS_START':
         return {
             ...state
