@@ -11,7 +11,8 @@ const initCalendarState = {
     monthNumbers: [],
     nextEvent: null,
     dayEvents: [],
-    leaveTime: 0
+    leaveTime: 0,
+    LeaveTimeId:0
 };
 
 export function calendar(state = initCalendarState, action) {
@@ -116,7 +117,22 @@ export function calendar(state = initCalendarState, action) {
         return {
             ...state,
             monthNumbers: newMonthNumbers
-          };
+        };
+    case '@CALENDAR/SET_LEAVE_TIME':
+        let leaveTime = moment(state.nextEvent.startTs).unix()-moment().unix()-state.nextEvent.duration;
+        return {
+            ...state,
+            leaveTime
+        };
+    case '@CALENDAR/SET_LEAVE_TIME_ID':
+        return {
+            ...state,
+            leaveTimeId: action.id
+        };
+    case '@CALENDAR/CLEAR_LEAVE_TIME':
+        return {
+            ...state
+        }
     default:
         return state;
     }

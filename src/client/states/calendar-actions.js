@@ -70,6 +70,7 @@ export function updateNextEvent() {
             event.duration = data.duration;
             event.distance = data.distance;
             dispatch(updateNextEventEnd(event));
+            dispatch(updateLeaveTime());
         });
     };
 }
@@ -277,4 +278,39 @@ export function updateMonth() {
         dispatch(updateMonthNumbersCalc(getState().calendar.year, getState().calendar.month, getState().calendar.pickedDay, getState().monthHasEventList));
         });
     };
-  }
+}
+
+function setLeaveTime() {
+    return {
+        type: '@CALENDAR/SET_LEAVE_TIME'
+    };
+}
+
+function setLeaveTimeId(id){
+    return {
+        type: '@CALENDAR/SET_LEAVE_TIME_ID',
+        id
+    };
+}
+
+export function updateLeaveTimeStart() {
+    return (dispatch) => {
+        let id = setInterval(() => {
+            dispatch(setLeaveTime());
+        }, 1000);
+        dispatch(setLeaveTimeId(id));
+    };
+}
+
+function clearLeaveTimeAction(){
+    return {
+        type: '@CALENDAR/CLEAR_LEAVE_TIME'
+    };
+}
+
+export function clearLeaveTime() {
+    return (dispatch, getState) => {
+        clearInterval(getState().calendar.leaveTimeId);
+        dispatch(clearLeaveTimeAction());
+    };
+}
