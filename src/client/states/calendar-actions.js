@@ -1,6 +1,17 @@
 import moment from 'moment';
 import {getDirection as getDirectionFormAPI} from 'api/mapboxAPI.js';
 import {addEvent as addEventFormAPI, getNextEvent as getNextEventFormAPI, getDay as getDayFormAPI, getMonth as getMonthFormAPI} from 'api/calendarAPI.js';
+
+export function initCalendar() {
+    return (dispatch, getState) => {
+        dispatch(getDayEvents());
+        dispatch(updateMonth());
+        return dispatch(getNextEvent()).then(() => {
+            dispatch(updateLeaveTimeStart());
+        });
+    };
+}
+
 export function addEventStart() {
     return {type: '@CALENDAR/ADD_EVENT_START'};
 }
