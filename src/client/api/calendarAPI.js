@@ -37,7 +37,7 @@ export function getDay(userId, year, month, day) {
     let startTime = moment({year, month:month-1, day}).format('YYYY-MM-DDZZ');
     let endTime = moment({year, month:month-1, day});
     endTime = endTime.date(day+1).format('YYYY-MM-DDZZ')
-    let url = `${baseUrl}/day?userId=${userId}&startTime=${startTime}&endTime=${endTime}`;
+    let url = `${baseUrl}/day?userId=${userId}&startTime="${startTime}"&endTime="${endTime}"`;
 
     console.log(`Making GET request to: ${url}`);
 
