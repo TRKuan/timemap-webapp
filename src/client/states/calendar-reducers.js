@@ -12,7 +12,7 @@ const initCalendarState = {
     nextEvent: null,
     dayEvents: [],
     leaveTime: 0,
-    LeaveTimeId:0
+    leaveTimeId:0
 };
 
 export function calendar(state = initCalendarState, action) {
