@@ -51,7 +51,7 @@ class MainClient extends React.Component {
             <LocaleProvider locale={enUS}>
             <Router>
                 <div className='main'>
-                    <div className='bg-inverse'>
+                    <div className='navbar-background'>
                         <div className='container'>
                             <Navbar className='' inverse toggleable>
                                 <NavbarToggler right onClick={this.handleNavbarToggle}/>
