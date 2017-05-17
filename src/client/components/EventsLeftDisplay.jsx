@@ -15,7 +15,7 @@ export default class EventsLeftDisplay extends React.Component {
           <div className='events-left-display'>
               <div className='new-event-header'>New Event</div>
               <div className='map'>
-                <Map id="eventMap" pinnable={true}/>
+                <Map id="eventMap" pinnable={true} showRoute={false}/>
               </div>
 
           </div>
