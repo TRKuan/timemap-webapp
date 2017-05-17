@@ -28,6 +28,15 @@ export function calendar(state = initCalendarState, action) {
             ...state,
             events
         };
+    case '@CALENDAR/DELETE_EVENT':
+        events = state.events.slice();
+        events = events.filter(function(el) {
+          return el.evntId !== action.eventId;
+        });
+        return {
+            ...state,
+            events
+        };
     case '@CALENDAR/SET_EVENT':
         events = state.events.slice();
         for(let event of events){

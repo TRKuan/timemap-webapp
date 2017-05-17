@@ -15,3 +15,15 @@
 .event-time, .event-location{
   font-size: 0.8rem;
 }
+delete-event{
+    position: relative;
+}
+.delete-button{
+    position: absolute;
+    top: 0.25rem;
+    right: 1rem;
+    color: rgb(122, 133, 119);
+}
+.delete-button:hover {
+    color: rgb(54, 208, 176);
+}
