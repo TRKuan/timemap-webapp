@@ -31,7 +31,7 @@ export default class CalendarEventItem extends React.Component {
                         <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;&nbsp;{this.props.location}
                     </div>
                     <div className='col-1 delete-event'>
-                        <i className='delete-button fa fa-times' onclick={this.handleDelete}></i>
+                        <i className='delete-button fa fa-times' onClick={this.handleDelete}></i>
                     </div>
 
 
