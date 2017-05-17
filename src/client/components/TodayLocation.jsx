@@ -14,7 +14,7 @@ export default class TodayLocation extends React.Component {
     render() {
         return (
             <div className='today-location'>
-              <Map id="todayMap" pinnable={false}/>
+              <Map id="todayMap" pinnable={false} showRoute={true}/>
             </div>
         );
     }

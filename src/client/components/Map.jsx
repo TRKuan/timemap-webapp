@@ -33,6 +33,10 @@ class Map extends React.Component {
             if(this.map)
                 this.updateCurrentPosition(nextProps.currentPosition);
         }
+        if(nextProps.nextEvent!==this.props.nextEvent){
+            if(nextProps.nextEvent)
+                this.direction.setDestination([this.props.nextEvent.lng, this.props.nextEvent.lat]);
+        }
     }
 
     render() {
@@ -58,7 +62,26 @@ class Map extends React.Component {
             center,
             zoom: 17
         });
+        this.geocoder = new MapboxGeocoder({
+            accessToken: mapboxgl.accessToken
+        });
+        this.map.addControl(this.geocoder);
+        this.direction = new MapboxDirections({
+            accessToken: mapboxgl.accessToken,
+            interactive: false,
+            profile: this.props.nextEvent.trans?this.props.nextEvent.trans:"walking",
+            unit: "metric",
+            controls: {
+                inputs: false,
+                instructions: false
+            }
+        });
+        if(this.props.showRoute)
+            this.map.addControl(this.direction, 'top-left');
+
         this.map.on('load', () => {
+            this.direction.setOrigin([this.props.currentPosition.lng, this.props.currentPosition.lat]);
+            this.direction.setDestination([this.props.nextEvent.lng, this.props.nextEvent.lat]);
             this.initEventPoints();
             try{
                 this.initCurrentPosition();

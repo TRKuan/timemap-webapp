@@ -27,7 +27,6 @@
     "cors": "^2.8.3",
     "express": "^4.15.2",
     "mapbox-gl": "^0.37.0",
-    "mapbox-gl-geocoder": "^2.0.1",
     "moment": "^2.18.1",
     "pg-promise": "^5.7.0",
     "react": "^15.4.2",
