@@ -27,3 +27,13 @@
 .delete-button:hover {
     color: rgb(54, 208, 176);
 }
+
+/**/
+.example-appear {
+  opacity: 0.01;
+}
+
+.example-appear.example-appear-active {
+  opacity: 1;
+  transition: opacity .5s ease-in;
+}
