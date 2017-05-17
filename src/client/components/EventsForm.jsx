@@ -33,7 +33,7 @@ class EventsForm extends React.Component {
     success(){
       const hide = message.loading('Adding Event...', 0);
       setTimeout(hide, 800);
-      setTimeout(this.added, 900);
+      setTimeout(this.added, 1000);
     }
     added(){
       const added = message.success('Event Added!');

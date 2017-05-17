@@ -1,5 +1,6 @@
 import React from 'react';
 import {Button} from 'reactstrap';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { Popconfirm, message } from 'antd';
 import './CalendarEventItem.css';
 import moment from 'moment';
@@ -26,7 +27,14 @@ export default class CalendarEventItem extends React.Component {
         let endTime = moment(this.props.endTs).format('LT');
         var labelColor={borderColor: color};
 
+
         return (
+          <ReactCSSTransitionGroup
+            transitionName="example"
+            transitionAppear={true}
+            transitionAppearTimeout={500}
+            transitionEnter={false}
+            transitionLeave={false}>
             <div className='calendar-event-item' style={labelColor}>
                 <div className='row'>
                     <div className='col-5'>{this.props.title}</div>
@@ -41,10 +49,10 @@ export default class CalendarEventItem extends React.Component {
                           <i className='delete-button fa fa-times'></i>
                       </Popconfirm>
                     </div>
-
-
                 </div>
             </div>
+          </ReactCSSTransitionGroup>
+
         );
     }
 
