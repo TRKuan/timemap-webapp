@@ -48,7 +48,10 @@ class MainClient extends React.Component {
     componentWillMount() {
         this.props.dispatch(initCalendar());
         this.props.dispatch(updateCurrentDate(moment()));
-        setInterval(this.updateDate, 1000);
+
+    }
+    componentDidMount(){
+      setInterval(this.updateDate, 1000);
     }
     render() {
         return (
@@ -101,9 +104,15 @@ class MainClient extends React.Component {
         let currentDate = currentTime.date();
         let currentDay = currentTime.day();
         */
-        if (currentTime.date() !== this.props.todaysDate.date()) {
-            this.props.dispatch(updateCurrentDate(currentTime));
+        console.log(this.props.todaysDate);
+        try{
+          if (currentTime.date() !== this.props.todaysDate.date()) {
+              this.props.dispatch(updateCurrentDate(currentTime));
+          }
+        }catch(err){
+          console.error(err);
         }
+
     }
 }
 

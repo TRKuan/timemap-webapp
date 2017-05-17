@@ -28,11 +28,11 @@ class TodayNextEvent extends React.Component {
 
     checkLeaveTime(){
       if(this.props.leaveTime < 6000){
-        setTimeout(this.props.dispatch(setBackground('normal-back')), 900);
-        setTimeout(this.props.dispatch(setBackground('alert-leave')), 1000);
-      }
-      else{
-        this.props.dispatch(setBackground('stil-ok'));
+        this.props.dispatch(setBackground('normal-back'));
+        setTimeout(()=>this.props.dispatch(setBackground('alert-leave')), 300);
+
+      }else{
+        this.props.dispatch(setBackground('still-ok'));
       }
     }
     componentDidMount(){
