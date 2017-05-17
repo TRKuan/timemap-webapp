@@ -114,17 +114,33 @@ export function getDayEvents(){
     };
 }
 
-export function setMonth(month){
+function setMonthAction(month){
     return {
         type: '@CALENDAR/SET_MONTH',
         month
     };
 }
 
-export function setYear(year){
+export function setMonth(month){
+    if(month<1||month>12)return;
+    return (dispatch, getState) => {
+        dispatch(setMonthAction(month));
+        dispatch(updateMonthNumbers(getState().calendar.year, month));
+    };
+}
+
+function setYearAction(year){
     return {
         type: '@CALENDAR/SET_YEAR',
         year
+    };
+}
+
+export function setYear(year){
+    if(year<0)return;
+    return (dispatch, getState) => {
+        dispatch(setYearAction(year));
+        dispatch(updateMonthNumbers(year, getState().calendar.month));
     };
 }
 
