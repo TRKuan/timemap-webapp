@@ -86,16 +86,16 @@ function day(userId, startTime, endTime) {
     return db.any(sql, [userId, startTime, endTime]);
 }
 
-function month(userId, year, month) {
+function month(userId, startTime, endTime) {
     const sql = `
-        SELECT "startDay"
+        SELECT "startTs", "endTs", "startMonth", "startDay", "endMonth", "endDay"
         FROM events
         WHERE "userId" = $1
-        AND "startYear" = $2
-        AND "startMonth" = $3
+        AND "endTs" >= $2
+        AND "startTs" <= $3
         ORDER BY "startTs" ASC
     `;
-    return db.any(sql, [userId, year, month]);
+    return db.any(sql, [userId, startTime, endTime]);
 }
 
 function next(userId) {
@@ -116,6 +116,18 @@ function next(userId) {
     return tmp;
 }
 
+function del(eventId, userId) {
+    const sql = `
+        DELETE FROM events
+        WHERE "eventId" = $1
+        AND "userId" = $2
+    `;
+    db.any(sql, [eventId, userId]);
+    return new Promise((resolve, reject) => {
+      resolve(JSON.parse('{"message":"You delete successfully"}'));
+    });
+}
+
 module.exports = {
     list,
     create,
@@ -123,5 +135,6 @@ module.exports = {
     modify,
     month,
     day,
-    next
+    next,
+    del
 };

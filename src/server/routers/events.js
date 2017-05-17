@@ -88,7 +88,11 @@ router.get('/day', function(req, res) {
 //getMonth
 router.get('/month', function(req, res) {
     const {userId, year, month} = req.query;
-    eventModel.month(userId, year, month).then(events => {
+    let startTime = moment({year, month: month-1}).format('YYYY-MM-DD HH:mm:ssZZ');
+    let endTime = moment({year, month: month-1}).month(month).format('YYYY-MM-DD HH:mm:ssZZ');
+    console.log(startTime);
+    console.log(endTime);
+    eventModel.month(userId, startTime, endTime).then(events => {
         /*console.log(events[0].startDay);
         let array = [];
         let m = moment({
@@ -99,9 +103,45 @@ router.get('/month', function(req, res) {
         }
         for (var j = 0; j < events.length; j++){
           array[events[j].startDay-1]=true
-        }*/
-        //res.json(array);
-        res.json(events);
+        }
+        res.json(array);
+        console.log(moment(startTime).unix());
+        console.log(moment(events[0].startTs).unix());*/
+        let array = [];
+        let m = moment({
+          month: month-1
+        }).daysInMonth();
+        for (var i = 0; i < m; i++) {
+          array[i]=false;
+        }
+        //console.log(events.length);
+        for (var j = 0; j < events.length; j++){
+          if(moment(events[j].startTs).unix() < moment(startTime).unix()){
+            if(moment(events[j].endTs).unix() < moment(endTime).unix()){
+              for (var k = 0; k < events[j].endDay; k++){
+                array[k]=true;
+              }
+            }
+            if(moment(events[j].endTs).unix() >= moment(endTime).unix()){
+              for (var k = 0; k < m; k++) {
+                array[k]=true;
+              }
+            }
+          }
+          if(moment(events[j].startTs).unix() >= moment(startTime).unix()){
+            if(moment(events[j].endTs).unix() < moment(endTime).unix()){
+              for (var k = events[j].startDay-1; k < events[j].endDay; k++){
+                array[k]=true;
+              }
+            }
+            if(moment(events[j].endTs).unix() >= moment(endTime).unix()){
+              for (var k = events[j].startDay-1; k < m; k++) {
+                array[k]=true;
+              }
+            }
+          }
+        }
+        res.json(array);
     });
 });
 
@@ -110,6 +150,14 @@ router.get('/nextevent', function(req, res) {
     const {userId} = req.query;
     eventModel.next(userId).then(events => {
         res.json(events);
+    });
+});
+
+//deleteEvent
+router.get('/deleteevent', function(req, res) {
+    const {eventId, userId} = req.query;
+    eventModel.del(eventId, userId).then(message => {
+        res.json(message);
     });
 });
 

@@ -31,7 +31,7 @@ class TodayNextEvent extends React.Component {
                 <div className='next-event-header'><i className='fa fa-bullseye fa-1x' aria-hidden="true"></i>Next Event</div>
                 <div className='next-event'>
                     <div className='event-title event-label'>{this.props.title}</div>
-                    <div className='leave-time'><i className='fa fa-bell-o fa-1x ' aria-hidden="true"></i>Leave in {moment(this.props.startTs).subtract(moment.duration({seconds: this.props.duration})).format()}</div>
+                    <div className='leave-time'><i className='fa fa-bell-o fa-1x ' aria-hidden="true"></i>Leave in {(moment(this.props.startTs).unix()-moment().unix()-this.props.duration)/60} min(s)</div>
                     <div className='event-time'><i className='fa fa-clock-o fa-1x ' aria-hidden="true"></i>{this.props.startTs}</div>
                     <div className='event-location'><i className='fa fa-map-marker fa-1x ' aria-hidden="true"></i>{this.props.location}</div>
                 </div>
