@@ -19,8 +19,8 @@ class CalendarMonthDay extends React.Component {
         const notThisMonth = this.props.notThisMonth ? 'not-this-month' : '';
         const currentDay = this.props.isToday ? 'current-day' : '';
         const pickedDay = this.props.isPickedDay ? 'picked-day' : '';
-        let hasEvent = '';
-        if(this.props.hasEvent && !this.props.notThisMonth){
+        let hasEvent = this.props.monthHasEventList[this.props.date-1]&&!this.props.notThisMonth;
+        if(hasEvent && !this.props.notThisMonth){
             if(this.props.isToday){
                 hasEvent = 'has-event-current';
             }

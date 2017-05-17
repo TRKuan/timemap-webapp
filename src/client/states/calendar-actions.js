@@ -31,6 +31,7 @@ export function addEvent(event) {
             dispatch(addEventEnd(data));
             dispatch(getNextEvent());
             dispatch(getDayEvents());
+            dispatch(updateMonth());
         }).
         catch((err) => {
             console.error("Can't add event to server"  + err.message);
