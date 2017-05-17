@@ -330,3 +330,9 @@ export function clearLeaveTime() {
         dispatch(clearLeaveTimeAction());
     };
 }
+export function setBackground(back){
+    return {
+        type: '@CALENDAR/SET_BACK',
+        back
+    };
+}

@@ -6,7 +6,7 @@ import {
 } from 'reactstrap';
 
 import {connect} from 'react-redux';
-import {getNextEvent} from 'states/calendar-actions.js';
+import {getNextEvent, setBackground} from 'states/calendar-actions.js';
 
 import './TodayNextEvent.css';
 
@@ -28,17 +28,20 @@ class TodayNextEvent extends React.Component {
 
     checkLeaveTime(){
       if(this.props.leaveTime < 6000){
-        setTimeout(this.props.dispatch(setBackground('normal')), 900);
-        setTimeout(this.props.dispatch(setBackground('leave')), 1000);
+        setTimeout(this.props.dispatch(setBackground('normal-back')), 900);
+        setTimeout(this.props.dispatch(setBackground('alert-leave')), 1000);
       }
       else{
-        this.props.dispatch(setBackground('ok'));
+        this.props.dispatch(setBackground('stil-ok'));
       }
+    }
+    componentDidMount(){
+      setInterval(this.checkLeaveTime, 1000)
     }
 
     render() {
         return (
-            <div className={`today-next-event ${this.props.nextBackColor}`}>
+            <div className={`today-next-event ${this.props.nextBack}`}>
                 <div className='next-event-header'><i className='fa fa-bullseye fa-1x' aria-hidden="true"></i>Next Event</div>
                 <div className='next-event'>
                     <div className='event-title event-label'>{this.props.title}</div>
