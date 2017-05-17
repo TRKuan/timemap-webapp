@@ -103,10 +103,10 @@ router.get('/month', function(req, res) {
         }
         for (var j = 0; j < events.length; j++){
           array[events[j].startDay-1]=true
-        }*/
-        //res.json(array);
+        }
+        res.json(array);
         console.log(moment(startTime).unix());
-        console.log(moment(events[0].startTs).unix());
+        console.log(moment(events[0].startTs).unix());*/
         let array = [];
         let m = moment({
           month: month-1
@@ -114,6 +114,7 @@ router.get('/month', function(req, res) {
         for (var i = 0; i < m; i++) {
           array[i]=false;
         }
+        //console.log(events.length);
         for (var j = 0; j < events.length; j++){
           if(moment(events[j].startTs).unix() < moment(startTime).unix()){
             if(moment(events[j].endTs).unix() < moment(endTime).unix()){
@@ -151,5 +152,8 @@ router.get('/nextevent', function(req, res) {
         res.json(events);
     });
 });
+
+//deleteEvent
+
 
 module.exports = router;
