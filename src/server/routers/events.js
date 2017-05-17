@@ -21,19 +21,17 @@ router.get('/events', function(req, res) {
 // Create
 router.post('/events', function(req, res) {
     const {userId, location, lng, lat, startTs, endTs, allDay, title, decription, lable, trans} = req.body;
-    //console.log(geolocation);
-    if(!allDay){
-      if (!startTs || !title || !userId || !endTs) {
-          const err = new Error('ts and title and endts and userId are required');
-          err.status = 400;
-          throw err;
-      }
-    }else if(allDay){
-      if (!startTs || !title || !userId) {
-          const err = new Error('ts and title and userId are required');
-          err.status = 400;
-          throw err;
-      }
+    if (!startTs || !title || !userId || !endTs) {
+      const err = new Error('ts and title and endts and userId are required');
+      err.status = 400;
+      throw err;
+    }
+    //console.log(moment(startTs).unix());
+    //console.log(moment(endTs).unix());
+    if (moment(startTs).unix() > moment(endTs).unix()){
+      const err = new Error('startTs is more than endTs');
+      err.status = 400;
+      throw err;
     }
     eventModel.create(userId, location, lng, lat, startTs, endTs, allDay, title, decription, lable, trans).then(event => {
         res.json(event);
@@ -50,18 +48,17 @@ router.get('/accesstoken', function(req, res){
 // setEvent
 router.post('/events/:eventId', function(req, res) {
     const {eventId, userId, location, lng, lat, startTs, endTs, allDay, title, decription, lable, trans} = req.body;
-    if(allDay == 0){
-      if (!startTs || !title || !userId || !endTs) {
-          const err = new Error('ts and title and endts and userId are required');
-          err.status = 400;
-          throw err;
-      }
-    }else if(allDay == 1){
-      if (!startTs || !title || !userId) {
-          const err = new Error('ts and title and userId are required');
-          err.status = 400;
-          throw err;
-      }
+    console.log(moment(startTs).unix());
+    console.log(moment(endTs).unix());
+    if (moment(startTs).unix() > moment(endTs).unix()){
+      const err = new Error('startTs is more than endTs');
+      err.status = 400;
+      throw err;
+    }
+    if (!startTs || !title || !userId || !endTs) {
+      const err = new Error('ts and title and endts and userId are required');
+      err.status = 400;
+      throw err;
     }
     console.log(trans);
     //console.log(geolocation);
