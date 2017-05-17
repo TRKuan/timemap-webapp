@@ -55,7 +55,6 @@ export function getNextEvent(){
     return (dispatch, getState) => {
         dispatch(getNextEventStart());
         return getNextEventFormAPI(getState().calendar.userId).then((data) => {
-            console.log(data);
             dispatch(getNextEventEnd(data));
             dispatch(updateNextEvent());
         });

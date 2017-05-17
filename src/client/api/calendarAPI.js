@@ -69,7 +69,7 @@ export function getNextEvent(userId) {
     return axios.get(url).then((res) => {
         if (res.status !== 200)
             throw new Error(`Unexpected response code: ${res.status}`);
-        return res.data;
+        return res.data[0];
     });
 }
 
