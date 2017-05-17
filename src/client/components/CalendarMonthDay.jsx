@@ -48,11 +48,10 @@ class CalendarMonthDay extends React.Component {
         let m = moment({
             year: this.props.year,
             month: this.props.month-1,
-            day: this.props.cellNum
+            day: this.props.monthNumbers[this.props.cellNum].date
         });
         this.props.dispatch(setDay(m));
       }
-
     }
 
 }
