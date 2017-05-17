@@ -10,6 +10,7 @@ import {getNextEvent} from 'states/calendar-actions.js';
 
 import './TodayNextEvent.css';
 
+var flashInterval;
 class TodayNextEvent extends React.Component {
     static propTypes = {
         timeLeft: PropTypes.number,
@@ -21,13 +22,27 @@ class TodayNextEvent extends React.Component {
     };
     constructor(props) {
         super(props);
+        this.checkLeaveTime = this.checkLeaveTime.bind(this);
     }
     componentWillMount(){
         this.props.dispatch(getNextEvent());
+        setInterval(this.checkLeaveTime, 1000);
+    }
+    checkLeaveTime(){
+      if(this.props){
+
+      }
+    }
+    flash(){
+      setTimeout(this.props.dispatch(turnBlack()), 900);
+      setTimeout(this.props.dispatch(turnRed()), 1000);
+    }
+    flashRed(){
+      
     }
     render() {
         return (
-            <div className='today-next-event alert-leave'>
+            <div className='today-next-event still-ok alert-leave'>
                 <div className='next-event-header'><i className='fa fa-bullseye fa-1x' aria-hidden="true"></i>Next Event</div>
                 <div className='next-event'>
                     <div className='event-title event-label'>{this.props.title}</div>
