@@ -13,8 +13,8 @@ export default class CalendarEventItem extends React.Component {
     }
 
     render() {
-        let startTime = this.props.startTs.format('LT');
-        let endTime = this.props.endTs.format('LT');
+        let startTime = moment(this.props.startTs).format('LT');
+        let endTime = moment(this.props.endTs).format('LT');
         return (
             <div className='calendar-event-item'>
                 <div className='row'>

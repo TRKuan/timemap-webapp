@@ -105,10 +105,11 @@ function getDayEventsEnd(events){
 }
 
 export function getDayEvents(){
-    return (dispatch) => {
+    return (dispatch, getState) => {
         dispatch(getDayEventsStart());
-        return getDayFormAPI().then((data) => {
-            dispatch(getDayEventsStart(data));
+        let {userId, year, month, day} = getState().calendar;
+        return getDayFormAPI(userId, year, month, day).then((data) => {
+            dispatch(getDayEventsEnd(data));
         });
     };
 }

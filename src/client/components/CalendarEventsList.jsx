@@ -4,21 +4,27 @@ import {
   ListGroup,
   ListGroupItem
 } from 'reactstrap';
+import {connect} from 'react-redux';
 import moment from 'moment';
 
 import CalendarEventItem from 'components/CalendarEventItem.jsx';
+import {getDayEvents} from 'states/calendar-actions';
 
 import './CalendarEventList.css';
 
-export default class CalendarEventsList extends React.Component {
+class CalendarEventsList extends React.Component {
     constructor(props) {
         super(props);
 
     }
 
-    render() {
-        {/*const {events} = this.props;*/}
+    componentWillMount(){
+        this.props.dispatch(getDayEvents());
+    }
 
+    render() {
+        const events = this.props.dayEvents;
+        /*
         let event1 = {
             id : 1,
             title: 'Event 1',
@@ -44,15 +50,18 @@ export default class CalendarEventsList extends React.Component {
             location: 'Shu Dormitory'
         }
         let events =[event1,event2,event3];
+        */
         let children = (
             <ListGroupItem className='empty d-flex justify-content-center align-items-center'>
                 <div className='empty-text'>No Events. Time to relax!</div>
             </ListGroupItem>
         );
-        if (events.length) {
-            children = events.map(e => (
-                  <CalendarEventItem key={e.id} {...e}/>
-            ));
+        if(events){
+            if (events.length) {
+                children = events.map((e, i) => (
+                      <CalendarEventItem key={i} {...e}/>
+                ));
+            }
         }
 
         return (
@@ -63,3 +72,6 @@ export default class CalendarEventsList extends React.Component {
     }
 
 }
+export default connect(state => ({
+    dayEvents: state.calendar.dayEvents
+}))(CalendarEventsList);
