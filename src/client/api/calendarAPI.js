@@ -36,7 +36,7 @@ export function setEvent(event, eventID) {
 export function getDay(userId, year, month, day) {
     let startTime = moment({year, month:month-1, day}).format('YYYY-MM-DDZZ');
     let endTime = moment({year, month:month-1, day});
-    endTime = endTime.date(day+1).format('YYYY-MM-DDZZ')
+    endTime = endTime.date(day+1).format('YYYY-MM-DDZZ');
     let url = `${baseUrl}/day?userId=${userId}&startTime=${encodeURIComponent(startTime)}&endTime=${encodeURIComponent(endTime)}`;
 
     console.log(`Making GET request to: ${url}`);
@@ -50,7 +50,8 @@ export function getDay(userId, year, month, day) {
 }
 
 export function getMonth(userId, year, month) {
-    let url = `${baseUrl}/month?userId=${userId}&year=${year}&month=${month}`;
+    let zone = moment().format('ZZ');
+    let url = `${baseUrl}/month?userId=${userId}&year=${year}&month=${month}&zone=${encodeURIComponent(zone)}`;
 
     console.log(`Making GET request to: ${url}`);
 
