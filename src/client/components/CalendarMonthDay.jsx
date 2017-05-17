@@ -40,7 +40,12 @@ export default class CalendarMonthDay extends React.Component {
         );
     }
     onClick(e){
-      console.log(this.props.num);
+      if(!this.props.notThisMont){
+
+        console.log(this.props.cellNum);
+
+      }
+
     }
 
 }

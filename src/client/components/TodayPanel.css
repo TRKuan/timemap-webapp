@@ -2,7 +2,7 @@
     padding: 1.5rem;
     width: 100%;
     height: 100%;
-    background-color: rgb(240, 240, 240);
+    /*background-color: rgb(240, 240, 240);*/
 }
 .today-panel .row{
   max-width: 50rem;

@@ -2,7 +2,7 @@
 .calendar-panel {
     height: 100%;
     padding: 1rem;
-    background-color: rgb(240, 240, 240);
+  /*  background-color: rgb(240, 240, 240);*/
 }
 
 .calendar-panel .calendars, .button-nav {
