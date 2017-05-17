@@ -107,8 +107,8 @@ function getDayEventsEnd(events){
 export function getDayEvents(){
     return (dispatch, getState) => {
         dispatch(getDayEventsStart());
-        let {userId, year, month, day} = getState().calendar;
-        return getDayFormAPI(userId, year, month, day).then((data) => {
+        let {userId, pickedDay} = getState().calendar;
+        return getDayFormAPI(userId, pickedDay.year(), pickedDay.month()+1, pickedDay.date()).then((data) => {
             dispatch(getDayEventsEnd(data));
         });
     };
