@@ -10,7 +10,8 @@ const initCalendarState = {
     monthHasEventList: [],
     monthNumbers: [],
     nextEvent: null,
-    dayEvents: []
+    dayEvents: [],
+    leaveTime: 0
 };
 
 export function calendar(state = initCalendarState, action) {
