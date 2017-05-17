@@ -6,6 +6,7 @@ const initCalendarState = {
     events: [],
     year: moment().year(),
     month: moment().month()+1,
+    day: moment().date(),
     monthHasEventList: [],
     monthNumbers: [],
     nextEvent: null,
@@ -65,6 +66,11 @@ export function calendar(state = initCalendarState, action) {
             ...state,
             dayEvents: action.events
         }
+    case '@CALENDAR/SET_DAY':
+        return {
+            ...state,
+            day: action.day
+        };
     case '@CALENDAR/SET_MONTH':
         return {
             ...state,

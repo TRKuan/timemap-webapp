@@ -7,7 +7,7 @@ import {
 import CalendarMonthDay from './CalendarMonthDay.jsx'
 
 import FontAwesome from 'react-fontawesome';
-import {updateMonthNumbers} from 'states/calendar-actions.js'
+import {setMonth, setYear, updateMonthNumbers} from 'states/calendar-actions.js'
 import './CalendarMonth.css';
 
 
@@ -35,7 +35,8 @@ class TestCalendarMonth extends React.Component {
       let week = [[],[],[],[],[],[],[]];
       let month = [];
       let maxWeek = 6;
-      console.log(this.props.monthNumbers[35].notThisMonth);
+      //console.log(this.props.monthNumbers[35]);
+      //console.log(this.props.monthNumbers[35].notThisMonth);
       if(0){
         maxWeek = 5;
       }
@@ -56,11 +57,11 @@ class TestCalendarMonth extends React.Component {
             <div className='calendar-month'>
                 <div className='calendar-header container-fluid'>
                   <div className='month-select row justify-content-center'>
-                    <Button className='month-select-button btn'><i className='fa fa-angle-left fa-2x' aria-hidden="true"></i></Button>
+                    <Button className='month-select-button btn' onClick={() => this.onLastMonthClick()}><i className='fa fa-angle-left fa-2x' aria-hidden="true"></i></Button>
                     <div className='vertical-center-parent current-month col-6'>
-                        <div className='vertical-center-child'>DECEMBER&nbsp;&nbsp;2017</div>
+                        <div className='vertical-center-child'>{this.props.month}&nbsp;&nbsp;{this.props.year}</div>
                     </div>
-                    <Button className='month-select-button'><i className='fa fa-angle-right fa-2x' aria-hidden="true"></i></Button>
+                    <Button className='month-select-button' onClick={() => this.onNextMonthClick()}><i className='fa fa-angle-right fa-2x' aria-hidden="true"></i></Button>
                   </div>
                   <div className='days-of-the-week row'>
                       <div className='col' style={{padding: 0}}>SUN</div>
@@ -77,6 +78,24 @@ class TestCalendarMonth extends React.Component {
                 </div>
             </div>
         );
+    }
+
+    onLastMonthClick(){
+        if(this.props.month <= 1){
+            this.props.dispatch(setMonth(12));
+            this.props.dispatch(setYear(this.props.year-1));
+        }else{
+            this.props.dispatch(setMonth(this.props.month-1));
+        }
+    }
+
+    onNextMonthClick(){
+        if(this.props.month >= 12){
+            this.props.dispatch(setMonth(1));
+            this.props.dispatch(setYear(this.props.year+1));
+        }else{
+            this.props.dispatch(setMonth(this.props.month+1));
+        }
     }
 
 }

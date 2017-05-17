@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import mapboxgl from 'mapbox-gl';
 
 import {getAccessToken, getCurrentPosition, setPinPosition, clearWatchPosition} from 'states/map-actions.js';
+import {updateNextEvent} from 'states/calendar-actions.js';
 
 import './Map.css';
 
@@ -13,11 +14,12 @@ class Map extends React.Component {
     }
 
     componentDidMount() {
-        try{
-            this.initMap();//so the map can find the container
-        }catch (err){
+        this.initMap().catch((err) => {
             console.error("Can't init map\n" + err);
-        }
+        }).
+        then(() => {
+            this.props.dispatch(updateNextEvent());
+        });
     }
 
     componentWillUnmount(){
@@ -44,7 +46,7 @@ class Map extends React.Component {
     }
 
     initMap() {
-        this.props.dispatch(getAccessToken()).then(() => {
+        return this.props.dispatch(getAccessToken()).then(() => {
             this.props.dispatch(getCurrentPosition()).
             catch((err) => {
                 console.error("get current position faild: " + err.message);
