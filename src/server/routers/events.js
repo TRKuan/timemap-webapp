@@ -79,8 +79,8 @@ router.post('/events/:eventId', function(req, res) {
 
 //getDay
 router.get('/day', function(req, res) {
-    const {userId, year, month, day} = req.query;
-    eventModel.day(userId, year, month, day).then(events => {
+    const {userId, startTime, endTime} = req.query;
+    eventModel.day(userId, startTime, endTime).then(events => {
         res.json(events);
     });
 });
