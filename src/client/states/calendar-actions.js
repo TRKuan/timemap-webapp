@@ -281,6 +281,11 @@ export function updateMonthNumbers(monthNumbers) {
 
 export function updateMonth() {
     return (dispatch, getState) => {
+        let arr = [];
+        for(let i=0;i<32;i++){
+            arr[i] = false;
+        }
+        dispatch(getMonthEnd(arr));
         dispatch(updateMonthNumbersCalc(getState().calendar.year, getState().calendar.month, getState().calendar.pickedDay, getState().monthHasEventList));
         return dispatch(getMonth());
     };
