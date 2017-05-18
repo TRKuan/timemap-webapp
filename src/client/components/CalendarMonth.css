@@ -43,11 +43,11 @@
 }
 
 .calendar-month .current-day{
-    background-color: LightGrey;
+    background-color: rgb(74, 228, 196);
     color: white;
 }
 .calendar-month .picked-day{
-    background-color: rgb(74, 228, 196);
+    background-color: LightGrey;
     color: white;
 }
 .has-event-picked, .has-event-current, .has-event-others{
@@ -76,8 +76,8 @@
 }
 
 .calendar-month .calendar-body .day:hover{
-  color: rgb(74, 228, 196);
-  background-color: white;
+  color: rgb(74, 228, 196) ;
+  background-color: rgb(237, 237, 237);
   border-color: transparent;
 }
 
