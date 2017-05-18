@@ -328,3 +328,10 @@ export function setBackground(back){
         back
     };
 }
+
+export function setUserId(id){
+    return {
+        type: '@CALENDAR/SET_USER_ID',
+        id
+    }
+}
