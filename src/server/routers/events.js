@@ -92,7 +92,7 @@ router.get('/month', function(req, res) {
     console.log(zone);
     //console.log(endTime);
     eventModel.month(userId, startTime, endTime).then(events => {
-        console.log(events[0].startTs);
+        //console.log(events[0].startTs);
         /*let array = [];
         let m = moment({
           month: month-1
