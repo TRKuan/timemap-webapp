@@ -89,11 +89,11 @@ router.get('/month', function(req, res) {
     const {userId, year, month, zone} = req.query;
     let startTime = moment({year, month: month-1}).utcOffset(zone).format('YYYY-MM-DD HH:mm:ssZZ');
     let endTime = moment({year, month: month-1}).month(month).utcOffset(zone).format('YYYY-MM-DD HH:mm:ssZZ');
-    //console.log(startTime);
+    console.log(zone);
     //console.log(endTime);
     eventModel.month(userId, startTime, endTime).then(events => {
-        /*console.log(events[0].startDay);
-        let array = [];
+        console.log(events[0].startTs);
+        /*let array = [];
         let m = moment({
           month: month-1
         }).daysInMonth();
@@ -117,7 +117,7 @@ router.get('/month', function(req, res) {
         for (var j = 0; j < events.length; j++){
           if(moment(events[j].startTs).unix() < moment(startTime).unix()){
             if(moment(events[j].endTs).unix() < moment(endTime).unix()){
-              for (var k = 0; k < moment(events[j].endTs).date(); k++){
+              for (var k = 0; k < moment(events[j].endTs).utcOffset(zone).date(); k++){
                 array[k]=true;
               }
             }
@@ -129,12 +129,12 @@ router.get('/month', function(req, res) {
           }
           if(moment(events[j].startTs).unix() >= moment(startTime).unix()){
             if(moment(events[j].endTs).unix() < moment(endTime).unix()){
-              for (var k = moment(events[j].startTs).date()-1; k < moment(events[j].endTs).date(); k++){
+              for (var k = moment(events[j].startTs).utcOffset(zone).date()-1; k < moment(events[j].endTs).utcOffset(zone).date(); k++){
                 array[k]=true;
               }
             }
             if(moment(events[j].endTs).unix() >= moment(endTime).unix()){
-              for (var k = moment(events[j].startTs).date()-1; k < m; k++) {
+              for (var k = moment(events[j].startTs).utcOffset(zone).date()-1; k < m; k++) {
                 array[k]=true;
               }
             }
