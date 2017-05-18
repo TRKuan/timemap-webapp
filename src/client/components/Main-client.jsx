@@ -15,7 +15,7 @@ import {
     Container
 } from 'reactstrap';
 import moment from 'moment';
-
+import uuid from 'uuid/v4'
 import {connect} from 'react-redux';
 import {toggleNavbar, updateCurrentDate} from 'states/main-client-actions.js';
 
@@ -26,7 +26,7 @@ import CalendarPanel from 'components/CalendarPanel.jsx';
 import TodayPanel from 'components/TodayPanel.jsx';
 import EventsPanel from 'components/EventsPanel.jsx';
 
-import {initCalendar} from 'states/calendar-actions';
+import {initCalendar, setUserId} from 'states/calendar-actions';
 import {getCurrentPosition} from 'states/map-actions';
 
 import './Main.css';
@@ -40,9 +40,14 @@ class MainClient extends React.Component {
     };
     constructor(props) {
         super(props);
-
         this.handleNavbarToggle = this.handleNavbarToggle.bind(this);
         this.updateDate = this.updateDate.bind(this);
+        let userId = localStorage.getItem("userId");
+        if(!userId){
+            userId = uuid();
+            localStorage.setItem("userId", userId);
+        }
+        this.props.dispatch(setUserId(userId));
 
     }
     componentWillMount() {

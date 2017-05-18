@@ -281,10 +281,8 @@ export function updateMonthNumbers(monthNumbers) {
 
 export function updateMonth() {
     return (dispatch, getState) => {
-        return dispatch(getMonth()).then(() => {
-          console.log(getState().monthHasEventList);
         dispatch(updateMonthNumbersCalc(getState().calendar.year, getState().calendar.month, getState().calendar.pickedDay, getState().monthHasEventList));
-        });
+        return dispatch(getMonth());
     };
 }
 
@@ -327,4 +325,11 @@ export function setBackground(back){
         type: '@CALENDAR/SET_BACK',
         back
     };
+}
+
+export function setUserId(id){
+    return {
+        type: '@CALENDAR/SET_USER_ID',
+        id
+    }
 }

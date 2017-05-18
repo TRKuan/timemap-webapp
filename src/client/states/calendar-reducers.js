@@ -1,8 +1,7 @@
 import moment from 'moment';
 import uuid from 'uuid/v4'
 const initCalendarState = {
-    //userId: Math.floor((Math.random() * 1000000) + 1),
-    userId: 662590,
+    userId: uuid(),
     events: [],
     year: moment().year(),
     month: moment().month()+1,
@@ -139,6 +138,11 @@ export function calendar(state = initCalendarState, action) {
         return {
             ...state,
             nextBack: action.back
+        }
+    case '@CALENDAR/SET_USER_ID':
+        return {
+            ...state,
+            userId: action.id
         }
     default:
         return state;
