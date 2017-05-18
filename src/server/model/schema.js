@@ -23,7 +23,7 @@ const schemaSql = `
     );
     CREATE TABLE events (
         "eventId"       serial PRIMARY KEY NOT NULL,
-        "userId"        integer NOT NULL,
+        "userId"        text NOT NULL,
         location        text,
         lng             double precision,
         lat             double precision,
