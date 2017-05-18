@@ -63,7 +63,8 @@ class Map extends React.Component {
             container: this.props.id,
             style: 'mapbox://styles/mapbox/streets-v9',
             center,
-            zoom: 17
+            zoom: 17,
+            pitch: this.props.use3D?60:0 // pitch in degrees
         });
         this.geocoder = new MapboxGeocoder({
             accessToken: mapboxgl.accessToken
