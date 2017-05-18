@@ -22,7 +22,7 @@ export default class CalendarEventItem extends React.Component {
 
     }
     render() {
-        let color = '#d6d7da';
+        let color = 'rgb(74, 228, 196)';
         let startTime = moment(this.props.startTs).format('LT');
         let endTime = moment(this.props.endTs).format('LT');
         var labelColor={borderColor: color};
