@@ -4,13 +4,14 @@ import PropTypes from 'prop-types';
 import {
     Button
 } from 'reactstrap';
+import { notification, Icon } from 'antd';
 
 import {connect} from 'react-redux';
-import {getNextEvent, setBackground} from 'states/calendar-actions.js';
+import {getNextEvent, setBackground, setNotify} from 'states/calendar-actions.js';
 
 import './TodayNextEvent.css';
 
-var flashInterval;
+
 class TodayNextEvent extends React.Component {
     static propTypes = {
         timeLeft: PropTypes.number,
@@ -23,21 +24,36 @@ class TodayNextEvent extends React.Component {
     constructor(props) {
         super(props);
         this.checkLeaveTime = this.checkLeaveTime.bind(this);
+        this.openNotification - this.openNotification.bind(this);
+        this.state={notified:false};
     }
 
+    openNotification(){
+      notification.open({
+        message: 'Time to LEAVE!!!',
+        description: 'You are going to be late, leave right now!',
 
+        icon: <Icon type="exclamation" style={{ color: '#e22558' }}/>
+      });
+    };
     checkLeaveTime(){
       console.log(this.props.nextEvent.distance);
       if(this.props.leaveTime < 0 && this.props.nextEvent.distance > 100){
+
+        if(!this.props.notified){
+          this.openNotification();
+          this.props.dispatch(setNotify(true));
+        }
         this.props.dispatch(setBackground('normal-back'));
         setTimeout(()=>this.props.dispatch(setBackground('alert-leave')), 100);
-
       }else{
         this.props.dispatch(setBackground('still-ok'));
+        this.props.dispatch(setNotify(false));
+        console.log(this.props.leaveTime , this.props.nextEvent.distance);
       }
     }
     componentDidMount(){
-      setInterval(this.checkLeaveTime, 1000)
+      setInterval(this.checkLeaveTime, 1000);
     }
 
     render() {

@@ -331,6 +331,11 @@ export function setBackground(back){
         back
     };
 }
+export function setNotify(notified){
+    return {
+        type: '@CALENDAR/SET_NOTIFIED',
+        notified
+    };
 
 export function setUserId(id){
     return {

@@ -12,7 +12,8 @@ const initCalendarState = {
     dayEvents: [],
     leaveTime: 0,
     leaveTimeId:0,
-    nextBack: 'normal-back'
+    nextBack: 'normal-back',
+    notified: false
 };
 
 export function calendar(state = initCalendarState, action) {
@@ -138,6 +139,11 @@ export function calendar(state = initCalendarState, action) {
         return {
             ...state,
             nextBack: action.back
+        }
+    case '@CALENDAR/SET_NOTIFIED':
+        return {
+            ...state,
+            notified: action.notified
         }
     case '@CALENDAR/SET_USER_ID':
         return {

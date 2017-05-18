@@ -977,6 +977,19 @@
     at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
     at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\read.js:129:5
     at invokeCallback (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\raw-body\index.js:262:16)
+<<<<<<< HEAD
+1495067966 ERROR  Error: startTs is more than endTs
+    at D:\School\Sophomore_spring\Software_Studio\TimeMap\timemap-webapp\src\server\routers\events.js:32:19
+    at Layer.handle [as handle_request] (D:\School\Sophomore_spring\Software_Studio\TimeMap\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\School\Sophomore_spring\Software_Studio\TimeMap\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\School\Sophomore_spring\Software_Studio\TimeMap\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\School\Sophomore_spring\Software_Studio\TimeMap\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at D:\School\Sophomore_spring\Software_Studio\TimeMap\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (D:\School\Sophomore_spring\Software_Studio\TimeMap\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (D:\School\Sophomore_spring\Software_Studio\TimeMap\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at D:\School\Sophomore_spring\Software_Studio\TimeMap\timemap-webapp\node_modules\body-parser\lib\read.js:129:5
+    at invokeCallback (D:\School\Sophomore_spring\Software_Studio\TimeMap\timemap-webapp\node_modules\raw-body\index.js:262:16)
+=======
 1495056285 ERROR  TypeError: moment(...).utcOffset(...).format is not a function
     at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\src\server\routers\events.js:90:68
     at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
@@ -1010,3 +1023,4 @@
     at next (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
     at jsonParser (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
     at Layer.handle [as handle_request] (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+>>>>>>> 9f211ef16b3efa4b6ec60e4a4a990e3a6ffa7f66
