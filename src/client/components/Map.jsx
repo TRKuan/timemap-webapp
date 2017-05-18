@@ -88,8 +88,10 @@ class Map extends React.Component {
 
         this.map.on('load', () => {
             try{
-                this.direction.setOrigin([this.props.currentPosition.lng, this.props.currentPosition.lat]);
-                if(this.props.nextEvent.lat)this.direction.setDestination([this.props.nextEvent.lng, this.props.nextEvent.lat]);
+                if(this.props.nextEvent.lat){
+                    this.direction.setOrigin([this.props.currentPosition.lng, this.props.currentPosition.lat]);
+                    this.direction.setDestination([this.props.nextEvent.lng, this.props.nextEvent.lat]);
+                }
             }catch(error){
                 console.error(error);
             }
