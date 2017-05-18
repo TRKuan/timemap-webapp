@@ -336,7 +336,7 @@ export function setNotify(notified){
         type: '@CALENDAR/SET_NOTIFIED',
         notified
     };
-
+}
 export function setUserId(id){
     return {
         type: '@CALENDAR/SET_USER_ID',
