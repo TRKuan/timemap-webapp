@@ -43,7 +43,7 @@ module.exports = {
                                 'transform-object-rest-spread',
                                 [
                                     "import", {
-                                        libraryName: "antd", style: "css" 
+                                        libraryName: "antd", style: "css"
                                     }
                                 ] // `style: true` for less
                             ]

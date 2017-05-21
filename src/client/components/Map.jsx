@@ -1,6 +1,5 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import mapboxgl from 'mapbox-gl';
 
 import {setPinPosition} from 'states/map-actions.js';
 

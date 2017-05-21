@@ -1,5 +1,5 @@
 import axios from 'axios';
-const baseUrl = 'http://localhost:8080/api';//url for server
+const baseUrl = 'http://localhost:8080/api';
 export function getDirection(coords1, coords2, profile, accessToken){
     const directionURL = `https://api.mapbox.com/directions/v5/mapbox/${profile}/${coords1.lng},${coords1.lat};${coords2.lng},${coords2.lat}.json?access_token=${accessToken}`;
     console.log(`Making GET request to: ${directionURL}`);

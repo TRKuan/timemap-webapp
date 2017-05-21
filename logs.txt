@@ -1038,3 +1038,351 @@
     at C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\body-parser\lib\read.js:129:5
     at invokeCallback (C:\Users\Yu-Shhuo\CS_git\timemap-webapp\node_modules\raw-body\index.js:262:16)
 >>>>>>> Stashed changes
+1495091172 ERROR  TypeError: moment(...).utcOffset(...).format is not a function
+    at D:\SoftwareStudio\timemap-webapp\src\server\routers\events.js:90:68
+    at Layer.handle [as handle_request] (D:\SoftwareStudio\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\SoftwareStudio\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\SoftwareStudio\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\SoftwareStudio\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at D:\SoftwareStudio\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (D:\SoftwareStudio\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (D:\SoftwareStudio\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (D:\SoftwareStudio\timemap-webapp\node_modules\body-parser\lib\types\json.js:103:7)
+    at Layer.handle [as handle_request] (D:\SoftwareStudio\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+1495092914 GET    /
+1495092914 GET    /vendor.bundle.js
+1495092914 GET    /index.bundle.js
+1495092915 GET    /images/backPic8.jpg
+1495092915 GET    /images/logo.svg
+1495092915 GET    /fonts/fontawesome-webfont.woff2?v=4.7.0
+1495092965 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-18%20%2B0800&endTime=2017-05-19%20%2B0800
+1495092965 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=5&zone=%2B0800
+1495092965 GET    /api/accesstoken
+1495092966 GET    /api/nextevent?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c
+1495093094 OPTIONS/api/events
+1495093094 POST   /api/events
+1495093094 GET    /api/nextevent?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c
+1495093094 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-18%20%2B0800&endTime=2017-05-19%20%2B0800
+1495093094 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=5&zone=%2B0800
+1495093098 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-03%20%2B0800&endTime=2017-05-04%20%2B0800
+1495093131 OPTIONS/api/events
+1495093131 POST   /api/events
+1495093131 GET    /api/nextevent?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c
+1495093131 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-03%20%2B0800&endTime=2017-05-04%20%2B0800
+1495093131 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=5&zone=%2B0800
+1495093193 OPTIONS/api/events
+1495093193 POST   /api/events
+1495093193 GET    /api/nextevent?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c
+1495093193 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-03%20%2B0800&endTime=2017-05-04%20%2B0800
+1495093193 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=5&zone=%2B0800
+1495093228 OPTIONS/api/events
+1495093228 POST   /api/events
+1495093228 GET    /api/nextevent?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c
+1495093228 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-03%20%2B0800&endTime=2017-05-04%20%2B0800
+1495093228 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=5&zone=%2B0800
+1495093231 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=4&zone=%2B0800
+1495093232 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-04-11%20%2B0800&endTime=2017-04-12%20%2B0800
+1495093234 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-04-19%20%2B0800&endTime=2017-04-20%20%2B0800
+1495093235 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-04-20%20%2B0800&endTime=2017-04-21%20%2B0800
+1495093235 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-04-29%20%2B0800&endTime=2017-04-30%20%2B0800
+1495093236 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-04-28%20%2B0800&endTime=2017-04-29%20%2B0800
+1495093236 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-04-26%20%2B0800&endTime=2017-04-27%20%2B0800
+1495093240 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=5&zone=%2B0800
+1495093241 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-12%20%2B0800&endTime=2017-05-13%20%2B0800
+1495093242 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-11%20%2B0800&endTime=2017-05-12%20%2B0800
+1495093243 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-03%20%2B0800&endTime=2017-05-04%20%2B0800
+1495093244 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-04%20%2B0800&endTime=2017-05-05%20%2B0800
+1495093245 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-05%20%2B0800&endTime=2017-05-06%20%2B0800
+1495093333 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=4&zone=%2B0800
+1495093334 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=5&zone=%2B0800
+1495093335 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-03%20%2B0800&endTime=2017-05-04%20%2B0800
+1495093360 OPTIONS/api/events
+1495093360 POST   /api/events
+1495093360 GET    /api/nextevent?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c
+1495093360 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-03%20%2B0800&endTime=2017-05-04%20%2B0800
+1495093360 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=5&zone=%2B0800
+1495093363 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=4&zone=%2B0800
+1495093364 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=5&zone=%2B0800
+1495093397 OPTIONS/api/events
+1495093397 POST   /api/events
+1495093397 GET    /api/nextevent?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c
+1495093397 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-03%20%2B0800&endTime=2017-05-04%20%2B0800
+1495093397 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=5&zone=%2B0800
+1495093401 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=6&zone=%2B0800
+1495093431 OPTIONS/api/events
+1495093431 POST   /api/events
+1495093431 GET    /api/nextevent?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c
+1495093431 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-03%20%2B0800&endTime=2017-05-04%20%2B0800
+1495093431 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=6&zone=%2B0800
+1495093437 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=7&zone=%2B0800
+1495093439 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=6&zone=%2B0800
+1495093439 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=5&zone=%2B0800
+1495093440 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=4&zone=%2B0800
+1495093441 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=5&zone=%2B0800
+1495093441 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=6&zone=%2B0800
+1495093443 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=5&zone=%2B0800
+1495093444 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=4&zone=%2B0800
+1495093445 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=5&zone=%2B0800
+1495093454 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=4&zone=%2B0800
+1495093456 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=5&zone=%2B0800
+1495093456 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=6&zone=%2B0800
+1495093461 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=5&zone=%2B0800
+1495093462 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-18%20%2B0800&endTime=2017-05-19%20%2B0800
+1495093463 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-03%20%2B0800&endTime=2017-05-04%20%2B0800
+1495093490 OPTIONS/api/events
+1495093490 POST   /api/events
+1495093490 GET    /api/nextevent?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c
+1495093490 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-03%20%2B0800&endTime=2017-05-04%20%2B0800
+1495093490 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=5&zone=%2B0800
+1495093534 OPTIONS/api/events
+1495093534 POST   /api/events
+1495093534 GET    /api/nextevent?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c
+1495093534 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=5&zone=%2B0800
+1495093534 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-03%20%2B0800&endTime=2017-05-04%20%2B0800
+1495093539 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-18%20%2B0800&endTime=2017-05-19%20%2B0800
+1495093542 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-03%20%2B0800&endTime=2017-05-04%20%2B0800
+1495093543 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-05%20%2B0800&endTime=2017-05-06%20%2B0800
+1495093544 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-06%20%2B0800&endTime=2017-05-07%20%2B0800
+1495093544 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-18%20%2B0800&endTime=2017-05-19%20%2B0800
+1495093583 OPTIONS/api/events
+1495093583 POST   /api/events
+1495093583 ERROR  Error: startTs is more than endTs
+    at D:\SoftwareStudio\timemap-webapp\src\server\routers\events.js:32:19
+    at Layer.handle [as handle_request] (D:\SoftwareStudio\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\SoftwareStudio\timemap-webapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\SoftwareStudio\timemap-webapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\SoftwareStudio\timemap-webapp\node_modules\express\lib\router\layer.js:95:5)
+    at D:\SoftwareStudio\timemap-webapp\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (D:\SoftwareStudio\timemap-webapp\node_modules\express\lib\router\index.js:335:12)
+    at next (D:\SoftwareStudio\timemap-webapp\node_modules\express\lib\router\index.js:275:10)
+    at D:\SoftwareStudio\timemap-webapp\node_modules\body-parser\lib\read.js:129:5
+    at invokeCallback (D:\SoftwareStudio\timemap-webapp\node_modules\raw-body\index.js:262:16)
+1495093589 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=6&zone=%2B0800
+1495093589 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=7&zone=%2B0800
+1495093590 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=6&zone=%2B0800
+1495093591 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-06-21%20%2B0800&endTime=2017-06-22%20%2B0800
+1495093593 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-06-22%20%2B0800&endTime=2017-06-23%20%2B0800
+1495093593 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-06-20%20%2B0800&endTime=2017-06-21%20%2B0800
+1495093595 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=7&zone=%2B0800
+1495093596 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-07-11%20%2B0800&endTime=2017-07-12%20%2B0800
+1495093596 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-07-18%20%2B0800&endTime=2017-07-19%20%2B0800
+1495093597 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-07-17%20%2B0800&endTime=2017-07-18%20%2B0800
+1495093597 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-07-10%20%2B0800&endTime=2017-07-11%20%2B0800
+1495093597 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-07-09%20%2B0800&endTime=2017-07-10%20%2B0800
+1495093599 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=8&zone=%2B0800
+1495093601 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=7&zone=%2B0800
+1495093601 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=6&zone=%2B0800
+1495093602 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-06-20%20%2B0800&endTime=2017-06-21%20%2B0800
+1495093603 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-06-21%20%2B0800&endTime=2017-06-22%20%2B0800
+1495093603 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-06-22%20%2B0800&endTime=2017-06-23%20%2B0800
+1495093604 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-06-21%20%2B0800&endTime=2017-06-22%20%2B0800
+1495093605 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-06-20%20%2B0800&endTime=2017-06-21%20%2B0800
+1495093605 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-06-06%20%2B0800&endTime=2017-06-07%20%2B0800
+1495093606 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=5&zone=%2B0800
+1495093608 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-18%20%2B0800&endTime=2017-05-19%20%2B0800
+1495093608 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-03%20%2B0800&endTime=2017-05-04%20%2B0800
+1495093609 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-12%20%2B0800&endTime=2017-05-13%20%2B0800
+1495093609 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-05%20%2B0800&endTime=2017-05-06%20%2B0800
+1495093610 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-06%20%2B0800&endTime=2017-05-07%20%2B0800
+1495093611 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-07%20%2B0800&endTime=2017-05-08%20%2B0800
+1495093613 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=4&zone=%2B0800
+1495093613 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=3&zone=%2B0800
+1495093614 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=4&zone=%2B0800
+1495093615 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=5&zone=%2B0800
+1495093615 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=6&zone=%2B0800
+1495093616 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=5&zone=%2B0800
+1495093617 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-05%20%2B0800&endTime=2017-05-06%20%2B0800
+1495093618 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-06%20%2B0800&endTime=2017-05-07%20%2B0800
+1495093619 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=6&zone=%2B0800
+1495093620 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-06-21%20%2B0800&endTime=2017-06-22%20%2B0800
+1495093621 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-06-22%20%2B0800&endTime=2017-06-23%20%2B0800
+1495093621 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-06-20%20%2B0800&endTime=2017-06-21%20%2B0800
+1495093622 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-06-21%20%2B0800&endTime=2017-06-22%20%2B0800
+1495093623 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-06-06%20%2B0800&endTime=2017-06-07%20%2B0800
+1495093624 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=7&zone=%2B0800
+1495093651 OPTIONS/api/events
+1495093651 POST   /api/events
+1495093651 GET    /api/nextevent?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c
+1495093651 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=7&zone=%2B0800
+1495093651 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-06-06%20%2B0800&endTime=2017-06-07%20%2B0800
+1495093654 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=6&zone=%2B0800
+1495093655 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=5&zone=%2B0800
+1495093656 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-24%20%2B0800&endTime=2017-05-25%20%2B0800
+1495093658 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-18%20%2B0800&endTime=2017-05-19%20%2B0800
+1495093661 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-03%20%2B0800&endTime=2017-05-04%20%2B0800
+1495093688 OPTIONS/api/events
+1495093688 POST   /api/events
+1495093688 GET    /api/nextevent?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c
+1495093688 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-03%20%2B0800&endTime=2017-05-04%20%2B0800
+1495093688 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=5&zone=%2B0800
+1495093693 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-04%20%2B0800&endTime=2017-05-05%20%2B0800
+1495093695 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-05%20%2B0800&endTime=2017-05-06%20%2B0800
+1495093696 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-06%20%2B0800&endTime=2017-05-07%20%2B0800
+1495093696 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-04%20%2B0800&endTime=2017-05-05%20%2B0800
+1495093697 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-03%20%2B0800&endTime=2017-05-04%20%2B0800
+1495093699 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-04%20%2B0800&endTime=2017-05-05%20%2B0800
+1495093701 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-24%20%2B0800&endTime=2017-05-25%20%2B0800
+1495093702 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-05%20%2B0800&endTime=2017-05-06%20%2B0800
+1495093703 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-03%20%2B0800&endTime=2017-05-04%20%2B0800
+1495093725 OPTIONS/api/events
+1495093725 POST   /api/events
+1495093725 GET    /api/nextevent?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c
+1495093725 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-03%20%2B0800&endTime=2017-05-04%20%2B0800
+1495093725 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=5&zone=%2B0800
+1495093728 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-22%20%2B0800&endTime=2017-05-23%20%2B0800
+1495093748 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-03%20%2B0800&endTime=2017-05-04%20%2B0800
+1495093752 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-18%20%2B0800&endTime=2017-05-19%20%2B0800
+1495093754 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-04%20%2B0800&endTime=2017-05-05%20%2B0800
+1495093756 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-05%20%2B0800&endTime=2017-05-06%20%2B0800
+1495093757 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-06%20%2B0800&endTime=2017-05-07%20%2B0800
+1495093757 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-03%20%2B0800&endTime=2017-05-04%20%2B0800
+1495093760 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-24%20%2B0800&endTime=2017-05-25%20%2B0800
+1495093762 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-22%20%2B0800&endTime=2017-05-23%20%2B0800
+1495093780 OPTIONS/api/events
+1495093780 POST   /api/events
+1495093780 GET    /api/nextevent?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c
+1495093780 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-22%20%2B0800&endTime=2017-05-23%20%2B0800
+1495093780 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=5&zone=%2B0800
+1495093799 OPTIONS/api/events
+1495093799 POST   /api/events
+1495093799 GET    /api/nextevent?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c
+1495093799 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-22%20%2B0800&endTime=2017-05-23%20%2B0800
+1495093799 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=5&zone=%2B0800
+1495093817 OPTIONS/api/events
+1495093817 POST   /api/events
+1495093817 GET    /api/nextevent?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c
+1495093817 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-22%20%2B0800&endTime=2017-05-23%20%2B0800
+1495093817 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=5&zone=%2B0800
+1495093826 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-18%20%2B0800&endTime=2017-05-19%20%2B0800
+1495093828 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-24%20%2B0800&endTime=2017-05-25%20%2B0800
+1495093829 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-03%20%2B0800&endTime=2017-05-04%20%2B0800
+1495093830 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-04%20%2B0800&endTime=2017-05-05%20%2B0800
+1495093831 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-05%20%2B0800&endTime=2017-05-06%20%2B0800
+1495093833 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-06%20%2B0800&endTime=2017-05-07%20%2B0800
+1495093833 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-05%20%2B0800&endTime=2017-05-06%20%2B0800
+1495093835 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-07%20%2B0800&endTime=2017-05-08%20%2B0800
+1495093836 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-06%20%2B0800&endTime=2017-05-07%20%2B0800
+1495093861 OPTIONS/api/events
+1495093861 POST   /api/events
+1495093861 GET    /api/nextevent?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c
+1495093861 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-06%20%2B0800&endTime=2017-05-07%20%2B0800
+1495093861 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=5&zone=%2B0800
+1495093865 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-07%20%2B0800&endTime=2017-05-08%20%2B0800
+1495093867 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-06%20%2B0800&endTime=2017-05-07%20%2B0800
+1495093869 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-05%20%2B0800&endTime=2017-05-06%20%2B0800
+1495093870 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-04%20%2B0800&endTime=2017-05-05%20%2B0800
+1495093885 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=4&zone=%2B0800
+1495093886 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-04-12%20%2B0800&endTime=2017-04-13%20%2B0800
+1495093887 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-04-11%20%2B0800&endTime=2017-04-12%20%2B0800
+1495093889 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=5&zone=%2B0800
+1495093889 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=6&zone=%2B0800
+1495093890 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-06-22%20%2B0800&endTime=2017-06-23%20%2B0800
+1495093891 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-06-21%20%2B0800&endTime=2017-06-22%20%2B0800
+1495093891 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-06-20%20%2B0800&endTime=2017-06-21%20%2B0800
+1495093892 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-06-06%20%2B0800&endTime=2017-06-07%20%2B0800
+1495093894 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=7&zone=%2B0800
+1495093898 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-07-12%20%2B0800&endTime=2017-07-13%20%2B0800
+1495093899 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-07-11%20%2B0800&endTime=2017-07-12%20%2B0800
+1495093899 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-07-04%20%2B0800&endTime=2017-07-05%20%2B0800
+1495093900 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=6&zone=%2B0800
+1495093902 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-06-06%20%2B0800&endTime=2017-06-07%20%2B0800
+1495093903 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=7&zone=%2B0800
+1495093904 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-07-06%20%2B0800&endTime=2017-07-07%20%2B0800
+1495093906 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=6&zone=%2B0800
+1495093907 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-06-06%20%2B0800&endTime=2017-06-07%20%2B0800
+1495093910 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=5&zone=%2B0800
+1495093911 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-18%20%2B0800&endTime=2017-05-19%20%2B0800
+1495096324 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-18%20%2B0800&endTime=2017-05-19%20%2B0800
+1495096324 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=5&zone=%2B0800
+1495096324 GET    /api/accesstoken
+1495096327 GET    /api/nextevent?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c
+1495096531 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-17%20%2B0800&endTime=2017-05-18%20%2B0800
+1495096554 GET    /
+1495096554 GET    /vendor.bundle.js
+1495096554 GET    /index.bundle.js
+1495096555 GET    /images/backPic8.jpg
+1495096556 GET    /images/logo.svg
+1495096556 GET    /fonts/fontawesome-webfont.woff2?v=4.7.0
+1495096602 GET    /api/day?userId=5dc54fac-ea48-4968-a192-8d502bb341e4&startTime=2017-05-18%20%2B0800&endTime=2017-05-19%20%2B0800
+1495096602 GET    /api/month?userId=5dc54fac-ea48-4968-a192-8d502bb341e4&year=2017&month=5&zone=%2B0800
+1495096602 GET    /api/accesstoken
+1495096604 GET    /api/nextevent?userId=5dc54fac-ea48-4968-a192-8d502bb341e4
+1495096728 OPTIONS/api/events
+1495096728 POST   /api/events
+1495096728 GET    /api/nextevent?userId=5dc54fac-ea48-4968-a192-8d502bb341e4
+1495096728 GET    /api/day?userId=5dc54fac-ea48-4968-a192-8d502bb341e4&startTime=2017-05-18%20%2B0800&endTime=2017-05-19%20%2B0800
+1495096728 GET    /api/month?userId=5dc54fac-ea48-4968-a192-8d502bb341e4&year=2017&month=5&zone=%2B0800
+1495096756 GET    /api/day?userId=5dc54fac-ea48-4968-a192-8d502bb341e4&startTime=2017-05-18%20%2B0800&endTime=2017-05-19%20%2B0800
+1495096756 GET    /api/month?userId=5dc54fac-ea48-4968-a192-8d502bb341e4&year=2017&month=5&zone=%2B0800
+1495096756 GET    /api/accesstoken
+1495096761 GET    /api/nextevent?userId=5dc54fac-ea48-4968-a192-8d502bb341e4
+1495096784 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-16%20%2B0800&endTime=2017-05-17%20%2B0800
+1495096791 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-24%20%2B0800&endTime=2017-05-25%20%2B0800
+1495096792 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-18%20%2B0800&endTime=2017-05-19%20%2B0800
+1495096794 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-24%20%2B0800&endTime=2017-05-25%20%2B0800
+1495096795 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-17%20%2B0800&endTime=2017-05-18%20%2B0800
+1495096796 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-19%20%2B0800&endTime=2017-05-20%20%2B0800
+1495096811 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-18%20%2B0800&endTime=2017-05-19%20%2B0800
+1495096811 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=5&zone=%2B0800
+1495096811 GET    /api/accesstoken
+1495096816 GET    /api/nextevent?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c
+1495096831 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-18%20%2B0800&endTime=2017-05-19%20%2B0800
+1495096831 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=5&zone=%2B0800
+1495096831 GET    /api/accesstoken
+1495096841 GET    /api/nextevent?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c
+1495096880 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-18%20%2B0800&endTime=2017-05-19%20%2B0800
+1495096880 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=5&zone=%2B0800
+1495096880 GET    /api/accesstoken
+1495096890 GET    /api/nextevent?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c
+1495096930 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-17%20%2B0800&endTime=2017-05-18%20%2B0800
+1495096931 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-18%20%2B0800&endTime=2017-05-19%20%2B0800
+1495096933 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-17%20%2B0800&endTime=2017-05-18%20%2B0800
+1495096998 OPTIONS/api/events
+1495096998 POST   /api/events
+1495096998 GET    /api/nextevent?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c
+1495096998 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=5&zone=%2B0800
+1495096998 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-17%20%2B0800&endTime=2017-05-18%20%2B0800
+1495097005 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-24%20%2B0800&endTime=2017-05-25%20%2B0800
+1495097007 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-22%20%2B0800&endTime=2017-05-23%20%2B0800
+1495097009 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-18%20%2B0800&endTime=2017-05-19%20%2B0800
+1495097009 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-17%20%2B0800&endTime=2017-05-18%20%2B0800
+1495097010 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-03%20%2B0800&endTime=2017-05-04%20%2B0800
+1495097013 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-11%20%2B0800&endTime=2017-05-12%20%2B0800
+1495097013 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-04%20%2B0800&endTime=2017-05-05%20%2B0800
+1495097015 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=6&zone=%2B0800
+1495097016 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=7&zone=%2B0800
+1495097017 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=6&zone=%2B0800
+1495097018 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-06-07%20%2B0800&endTime=2017-06-08%20%2B0800
+1495097019 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-06-06%20%2B0800&endTime=2017-06-07%20%2B0800
+1495097020 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=5&zone=%2B0800
+1495097023 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-22%20%2B0800&endTime=2017-05-23%20%2B0800
+1495097024 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-24%20%2B0800&endTime=2017-05-25%20%2B0800
+1495097025 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-18%20%2B0800&endTime=2017-05-19%20%2B0800
+1495097026 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=4&zone=%2B0800
+1495097028 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-04-07%20%2B0800&endTime=2017-04-08%20%2B0800
+1495097028 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=5&zone=%2B0800
+1495097029 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-18%20%2B0800&endTime=2017-05-19%20%2B0800
+1495097030 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-19%20%2B0800&endTime=2017-05-20%20%2B0800
+1495097033 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-17%20%2B0800&endTime=2017-05-18%20%2B0800
+1495097170 GET    /api/day?userId=5dc54fac-ea48-4968-a192-8d502bb341e4&startTime=2017-05-17%20%2B0800&endTime=2017-05-18%20%2B0800
+1495098358 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-18%20%2B0800&endTime=2017-05-19%20%2B0800
+1495098362 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-20%20%2B0800&endTime=2017-05-21%20%2B0800
+1495098364 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-18%20%2B0800&endTime=2017-05-19%20%2B0800
+1495098363 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-24%20%2B0800&endTime=2017-05-25%20%2B0800
+1495098366 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-18%20%2B0800&endTime=2017-05-19%20%2B0800
+1495098371 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-24%20%2B0800&endTime=2017-05-25%20%2B0800
+1495098372 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-23%20%2B0800&endTime=2017-05-24%20%2B0800
+1495098374 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=6&zone=%2B0800
+1495098375 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-06-08%20%2B0800&endTime=2017-06-09%20%2B0800
+1495098376 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-06-06%20%2B0800&endTime=2017-06-07%20%2B0800
+1495098378 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=5&zone=%2B0800
+1495098382 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-23%20%2B0800&endTime=2017-05-24%20%2B0800
+1495098383 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-22%20%2B0800&endTime=2017-05-23%20%2B0800
+1495098402 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-18%20%2B0800&endTime=2017-05-19%20%2B0800
+1495098402 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=5&zone=%2B0800
+1495098402 GET    /api/accesstoken
+1495098420 GET    /api/day?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&startTime=2017-05-18%20%2B0800&endTime=2017-05-19%20%2B0800
+1495098420 GET    /api/month?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c&year=2017&month=5&zone=%2B0800
+1495098420 GET    /api/accesstoken
+1495098429 GET    /api/nextevent?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c
+1495098529 GET    /api/nextevent?userId=66fc6a96-6483-42c5-bd4a-8f5e0e5ff96c
