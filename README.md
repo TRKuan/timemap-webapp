@@ -9,7 +9,7 @@ Install
 1. [nodejs](https://nodejs.org/en/)
 2. [postgresql](https://www.postgresql.org/) (you may need to set up the database)
 
-Then enter the following commend.
+Then enter the following commend at the root directory.
 ```
 npm install
 ```
@@ -49,10 +49,12 @@ npm run server
 ```
 
 #### Start the client
-To run the webpack-dev-server
+To run the webpack-dev-server, start another terminal and enter:
 ```
 npm start
 ```
+
+The webite is now runung on localhost:7070.
 
 ## Deploy
 #### Client side
