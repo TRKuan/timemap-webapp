@@ -4,7 +4,7 @@ It's also a personal assitant that reminds you of your upcoming events and the t
 <https://TimeMap.github.io>
 
 ## Getting Started
-### Set up the enviroment
+#### Set up the enviroment
 Install
 1. [nodejs](https://nodejs.org/en/)
 2. [postgresql](https://www.postgresql.org/) (you may need to set up the database)
