@@ -3,6 +3,8 @@ TimeMap is a calendar that makes your scheduling easy and simple.
 It's also a personal assitant that reminds you of your upcoming events and the time to leave for your next event.
 <https://TimeMap.github.io>
 
+We use `reactjs` with `redux` for the client side. `Nodejs` and `postgresql` for the server side. Also `webpack` for project menagment.
+
 ## Getting Started
 #### Set up the enviroment
 Install
